@@ -1,9 +1,22 @@
-import LottieComp from '@/components/lottie/Lottie';
+const getData = async () => {
+  const response = await fetch(
+    'https://github.com/WebKBS/GitBookDocker/raw/main/docker-image.md'
+  );
+  const data = await response.text();
 
-export default function Home() {
+  return data;
+};
+
+export default async function Home() {
+  const rawHTML = await getData();
+
+  console.log(rawHTML);
   return (
-    <main>
-      <LottieComp />
-    </main>
+    <>
+      <main
+        className="whitespace-pre-line"
+        dangerouslySetInnerHTML={{ __html: rawHTML }}
+      ></main>
+    </>
   );
 }
