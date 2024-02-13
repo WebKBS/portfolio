@@ -7,8 +7,10 @@ const Header = () => {
     <header className="border-b px-5 py-2 h-14 flex items-center">
       <div className="flex w-full items-center justify-between">
         <Navi />
-        <ThemeToggle />
-        <Sns />
+        <div className="flex items-center gap-4">
+          <ThemeToggle />
+          <Sns />
+        </div>
       </div>
     </header>
   );

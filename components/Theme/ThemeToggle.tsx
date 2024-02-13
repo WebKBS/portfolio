@@ -38,6 +38,7 @@ export default function ThemeToggle() {
         onClick={toggleTheme}
         aria-label="색상 테마 변경"
         title="색상 테마 변경"
+        className="w-9 h-9"
       >
         {themeState}
       </Button>
