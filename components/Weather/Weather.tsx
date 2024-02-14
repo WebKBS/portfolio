@@ -8,7 +8,7 @@ const weatherdata = async () => {
     const res = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?lat=37.5642135&lon=127.0016985&lang=kr&appid=${process.env.WEATHER_API_KEY}`,
 
-      { next: { revalidate: 60 * 30 } } // 30분마다 캐시 갱신
+      { next: { revalidate: 60 * 15 } } // 15분마다 캐시 갱신
     );
 
     if (!res.ok) {
@@ -28,7 +28,7 @@ const Weather = async () => {
   console.log(data.weather[0]);
 
   return (
-    <div className="flex gap-2 items-center text-xs">
+    <div className="flex gap- items-center text-xs">
       <p>날씨:</p>
       <div className="flex items-center">
         <p>

@@ -8,8 +8,8 @@ const Header = () => {
       <div className="flex w-full items-center justify-between">
         <Navi />
         <div className="flex items-center gap-4">
-          <ThemeToggle />
           <Sns />
+          <ThemeToggle />
         </div>
       </div>
     </header>

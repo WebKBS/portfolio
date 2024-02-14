@@ -2,7 +2,8 @@
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
-import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
+import { FaRegLightbulb } from 'react-icons/fa';
+import { MdOutlineDarkMode } from 'react-icons/md';
 import { Button } from '../ui/button';
 
 export default function ThemeToggle() {
@@ -13,7 +14,7 @@ export default function ThemeToggle() {
     // resolveTheme가 바뀔 때마다 아이콘 변경
 
     if (resolvedTheme === 'dark') {
-      setThemeState(<MdOutlineLightMode size="20" />);
+      setThemeState(<FaRegLightbulb size="20" />);
     } else {
       setThemeState(<MdOutlineDarkMode size="20" />);
     }
@@ -25,7 +26,7 @@ export default function ThemeToggle() {
       setThemeState(<MdOutlineDarkMode size="20" />);
     } else {
       setTheme('dark');
-      setThemeState(<MdOutlineLightMode size="20" />);
+      setThemeState(<FaRegLightbulb size="20" />);
     }
   };
 
