@@ -1,7 +1,12 @@
+import Weather from '@/components/Weather/Weather';
+
 export default async function Home() {
   return (
     <>
-      <main>{/* <LottieComp /> */}</main>
+      <main className="flex-1">
+        <Weather />
+        {/* <LottieComp /> */}
+      </main>
     </>
   );
 }
