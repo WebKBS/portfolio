@@ -1,8 +1,5 @@
 'use server';
 
-import Image from 'next/image';
-import styles from './Weather.module.css';
-
 const weatherdata = async () => {
   try {
     const res = await fetch(
@@ -25,26 +22,35 @@ const weatherdata = async () => {
 
 const Weather = async () => {
   const data = await weatherdata();
-  console.log(data.weather[0]);
+
+  let weatherIcon = '';
+  if (data.weather[0].id >= 200 && data.weather[0].id < 300) {
+    weatherIcon = '⛈️';
+  } else if (data.weather[0].id >= 300 && data.weather[0].id < 600) {
+    weatherIcon = '🌧️';
+  } else if (data.weather[0].id >= 600 && data.weather[0].id < 700) {
+    weatherIcon = '❄️';
+  } else if (data.weather[0].id >= 700 && data.weather[0].id < 800) {
+    weatherIcon = '🌫️';
+  } else if (data.weather[0].id === 800) {
+    weatherIcon = '☀️';
+  } else if (data.weather[0].id > 800) {
+    weatherIcon = '☁️';
+  } else {
+    weatherIcon = '❓';
+  }
 
   return (
-    <div className="flex gap- items-center text-xs">
-      <p>서울 날씨:</p>
-      <div className="flex items-center">
-        <p>
-          <Image
-            src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
-            alt="weather icon"
-            width={36}
-            height={36}
-            className={styles.filter}
-          />
-        </p>
+    <aside className="text-xs absolute right-2 top-16 text-right">
+      <p className="mb-1">서울 날씨:</p>
+      <div className="flex items-center gap-1">
+        <p>{(data.main.temp - 273.15).toFixed(2)}°C</p>
+        <p className="text-lg">{weatherIcon}</p>
         <p>
           {data.weather[0].description} ( {data.weather[0].main} )
         </p>
       </div>
-    </div>
+    </aside>
   );
 };
 

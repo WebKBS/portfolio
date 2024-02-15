@@ -11,7 +11,7 @@ const SideMenu = () => {
   const sideMenuActive = menuOpen ? 'translate-x-0' : '-translate-x-full';
 
   return (
-    <div
+    <aside
       className={`fixed top-0 left-0 z-50 ${sideMenuActive} transition-transform duration-300 ease-in-out transform flex w-full h-full`}
     >
       <div
@@ -25,7 +25,7 @@ const SideMenu = () => {
           <Sns className="flex gap-4 justify-center mt-8" />
         </div>
       </div>
-    </div>
+    </aside>
   );
 };
 
