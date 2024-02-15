@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
+import SideMenu from '@/components/SideMenu/SideMenu';
 import { ThemeProvider } from '@/provider/theme-provider';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -28,6 +29,7 @@ export default function RootLayout({
         >
           <div className="flex flex-col min-h-[100%]">
             <Header />
+            <SideMenu />
             {children}
             <Footer />
           </div>

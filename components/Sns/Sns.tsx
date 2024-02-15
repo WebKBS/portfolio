@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { sns } from './Sns-data';
 
-const Sns = () => {
+const Sns = ({ className }: { className: string }) => {
   const { theme } = useTheme();
   const [icon, setIcon] = useState(sns);
 
@@ -33,7 +33,7 @@ const Sns = () => {
   }, [theme]);
 
   return (
-    <ul className="hidden md:flex md:items-center md:gap-2">
+    <ul className={className}>
       {sns.map((item, index) => (
         <li key={index} title={item.title}>
           <Link href={item.link} target="_blank">

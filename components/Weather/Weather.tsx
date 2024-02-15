@@ -29,7 +29,7 @@ const Weather = async () => {
 
   return (
     <div className="flex gap- items-center text-xs">
-      <p>날씨:</p>
+      <p>서울 날씨:</p>
       <div className="flex items-center">
         <p>
           <Image
