@@ -1,5 +1,7 @@
 'use server';
 
+import { revalidatePath } from 'next/cache';
+
 const weatherdata = async () => {
   try {
     const res = await fetch(
@@ -40,11 +42,12 @@ const Weather = async () => {
     weatherIcon = '❓';
   }
 
+  revalidatePath('/');
+
   return (
     <aside className="text-xs absolute right-2 top-16 text-right">
-      <p className="mb-1">서울 날씨:</p>
       <div className="flex items-center gap-1">
-        <p>{(data.main.temp - 273.15).toFixed(2)}°C</p>
+        <p>서울: {(data.main.temp - 273.15).toFixed(2)}°C</p>
         <p className="text-lg">{weatherIcon}</p>
         <p>
           {data.weather[0].description} ( {data.weather[0].main} )
