@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { useQRCode } from 'next-qrcode';
+import { useQRCode } from "next-qrcode";
 
 const QrCode = ({ url }: { url: string }) => {
   const { SVG } = useQRCode();
 
   return (
     <div className="hidden lg:block">
-      <div className="flex gap-3 items-end">
+      <div className="flex items-end gap-3">
         <SVG
           text={url}
           options={{

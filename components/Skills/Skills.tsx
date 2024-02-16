@@ -50,7 +50,7 @@ const skillImages = [
 
 const Skills = () => {
   return (
-    <div className="flex h-[120px] w-[5000px] items-center ">
+    <div className="flex h-[80px] w-[10000px] items-center md:w-[120px]">
       <ul className={`flex items-center ${styles.slide}`}>
         {skillImages.map((skill, index) => (
           <li key={index} className="px-12">
@@ -59,7 +59,7 @@ const Skills = () => {
               width={200}
               height={50}
               alt={skill.alt}
-              className="h-14 w-auto"
+              className="h-9 w-auto md:h-14"
             />
           </li>
         ))}
@@ -72,7 +72,7 @@ const Skills = () => {
               width={200}
               height={50}
               alt={skill.alt}
-              className="h-14 w-auto"
+              className="h-9 w-auto md:h-14"
             />
           </li>
         ))}

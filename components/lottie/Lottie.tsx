@@ -1,14 +1,27 @@
-'use client';
-import LottieAnimation from '@/lottie/animation.json';
-import Lottie from 'lottie-react';
+"use client";
+
+import Lottie from "lottie-react";
+import { useEffect, useState } from "react";
+import { Skeleton } from "../ui/skeleton";
 
 const LottieComp = () => {
+  const [animationData, setAnimationData] = useState<any>();
+
+  const styles = "mx-auto w-64 sm:mx-0 sm:ml-auto sm:mr-0 md:w-96";
+
+  useEffect(() => {
+    import("../../lottie/animation.json").then((res) => {
+      setAnimationData(res.default);
+    });
+  }, []);
+
+  if (!animationData)
+    return <Skeleton className={`${styles} h-64 rounded-full md:h-96`} />;
+
   return (
-    <Lottie
-      className="w-64 md:w-96 mx-auto sm:mx-0 sm:mr-0 sm:ml-auto"
-      animationData={LottieAnimation}
-      loop={true}
-    ></Lottie>
+    <>
+      <Lottie className={styles} animationData={animationData} loop={true} />
+    </>
   );
 };
 
