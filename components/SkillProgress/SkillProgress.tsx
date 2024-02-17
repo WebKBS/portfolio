@@ -26,7 +26,7 @@ const SkillProgress = ({ percentage, lang, color }: SkillProgressProps) => {
           const step = (percentage - prevCount) / 10;
           return Math.floor(prevCount + step);
         });
-      }, 80);
+      }, 70);
 
       return () => clearInterval(interval);
     }
@@ -58,7 +58,7 @@ const SkillProgress = ({ percentage, lang, color }: SkillProgressProps) => {
           strokeDasharray={dashArray}
           strokeDashoffset={dashOffset}
           transform="rotate(-90 80 80)"
-          style={{ transition: "all 5s" }}
+          style={{ transition: "all 4s" }}
         />
       </svg>
     </div>

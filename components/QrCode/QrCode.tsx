@@ -15,7 +15,7 @@ const QrCode = ({ url }: { url: string }) => {
             margin: 1,
           }}
         />
-        <p className="text-sm">모바일에서 보기</p>
+        <p className="text-xs">모바일 바로보기</p>
       </div>
     </div>
   );
