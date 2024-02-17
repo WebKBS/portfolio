@@ -1,3 +1,7 @@
+"use client";
+
+import useObserverAction from "@/hooks/observer";
+import { useObserver } from "@/store/observer-store";
 import SkillProgress from "./SkillProgress";
 
 const SkillList = [
@@ -10,10 +14,21 @@ const SkillList = [
 ];
 
 const SkillProgressList = () => {
+  const ref = useObserverAction("skills");
+  const { skills } = useObserver();
+
   return (
-    <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-center gap-8">
+    <div
+      ref={ref}
+      className={`mx-auto flex max-w-[1200px] flex-wrap items-center justify-center gap-8`}
+    >
       {SkillList.map((skill, index) => (
-        <SkillProgress key={index} {...skill} />
+        <SkillProgress
+          key={index}
+          color={skill.color}
+          lang={skill.lang}
+          percentage={skills ? skill.percentage : null}
+        />
       ))}
     </div>
   );
