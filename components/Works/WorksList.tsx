@@ -5,7 +5,6 @@ import Works from "./Works";
 
 const WorksList = () => {
   const filterData = works.slice(0, 4);
-  console.log(filterData);
 
   return (
     <>

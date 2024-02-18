@@ -7,6 +7,7 @@ export interface IWorks {
   url: string;
   date: string;
   tags: string[];
+  slug: string;
 }
 
 export const works = [
@@ -19,6 +20,7 @@ export const works = [
     url: "https://depos.kr",
     date: "2024-02",
     tags: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    slug: "depos",
   },
   {
     id: 2,
@@ -29,5 +31,6 @@ export const works = [
     url: "https://depos.kr",
     date: "2024-02",
     tags: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    slug: "depos2",
   },
 ];

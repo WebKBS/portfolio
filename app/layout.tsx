@@ -4,6 +4,7 @@ import SideMenu from "@/components/SideMenu/SideMenu";
 import { ThemeProvider } from "@/provider/theme-provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import React from "react";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,8 +16,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <html lang="ko" suppressHydrationWarning>
@@ -31,9 +34,11 @@ export default function RootLayout({
             <Header />
             <SideMenu />
             {children}
+            {modal}
             <Footer />
           </div>
         </ThemeProvider>
+        <div id="modal-root"></div>
       </body>
     </html>
   );
