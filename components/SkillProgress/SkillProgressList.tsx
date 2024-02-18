@@ -18,7 +18,7 @@ const SkillProgressList = () => {
   const { skills } = useObserver();
 
   return (
-    <div
+    <ul
       ref={ref}
       className={`mx-auto flex max-w-[1200px] flex-wrap items-center justify-center gap-8`}
     >
@@ -30,7 +30,7 @@ const SkillProgressList = () => {
           percentage={skills ? skill.percentage : null}
         />
       ))}
-    </div>
+    </ul>
   );
 };
 

@@ -3,6 +3,7 @@ import QrCode from "@/components/QrCode/QrCode";
 import SkillProgressList from "@/components/SkillProgress/SkillProgressList";
 import Skills from "@/components/Skills/Skills";
 import Weather from "@/components/Weather/Weather";
+import WorksList from "@/components/Works/WorksList";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -45,9 +46,12 @@ export default async function Home() {
         <section className="mx-auto max-w-[1920px] overflow-hidden bg-gray-200 dark:bg-gray-600">
           <Skills />
         </section>
-        <section className="px-5 py-40 lg:px-6">
+        <section className="px-5 pb-20 pt-40 lg:px-6">
           <h2 className="mb-12 text-center text-3xl font-bold">SKILLS</h2>
           <SkillProgressList />
+        </section>
+        <section className="mx-auto max-w-screen-lg px-5 py-20 lg:px-6">
+          <WorksList />
         </section>
       </main>
     </>

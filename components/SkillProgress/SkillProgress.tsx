@@ -33,7 +33,7 @@ const SkillProgress = ({ percentage, lang, color }: SkillProgressProps) => {
   }, [percentage]);
 
   return (
-    <div className="relative flex h-[160px] w-[160px] items-center justify-center">
+    <li className="relative flex h-[160px] w-[160px] items-center justify-center">
       <div className="gap- absolute flex flex-col items-center gap-1">
         <p className="text-center text-sm font-semibold uppercase">{lang}</p>
         <span className="text-2xl font-bold">{count}%</span>
@@ -61,7 +61,7 @@ const SkillProgress = ({ percentage, lang, color }: SkillProgressProps) => {
           style={{ transition: "all 4s" }}
         />
       </svg>
-    </div>
+    </li>
   );
 };
 
