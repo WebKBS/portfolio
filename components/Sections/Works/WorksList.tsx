@@ -8,7 +8,7 @@ const WorksList = () => {
 
   return (
     <>
-      <h2 className="mb-12 text-center text-3xl font-bold">Works</h2>
+      <h2 className="mb-12 text-center text-3xl font-bold">WORKS</h2>
       <Link href="/works" className="">
         More +
       </Link>

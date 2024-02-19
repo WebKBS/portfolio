@@ -1,9 +1,9 @@
 import LottieComp from "@/components/Lottie/Lottie";
 import QrCode from "@/components/QrCode/QrCode";
-import SkillProgressList from "@/components/SkillProgress/SkillProgressList";
-import Skills from "@/components/Skills/Skills";
+import SkillProgressList from "@/components/Sections/SkillProgress/SkillProgressList";
+import Skills from "@/components/Sections/Skills/Skills";
+import WorksList from "@/components/Sections/Works/WorksList";
 import Weather from "@/components/Weather/Weather";
-import WorksList from "@/components/Works/WorksList";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
