@@ -1,26 +1,29 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { useRouterModalToggle } from "@/store/modal-store";
 import { works } from "@/works/worksData";
 import { useRouter } from "next/navigation";
 import { Modal } from "./modal";
 
 const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
-  console.log(slug);
+  // console.log(slug);
+  const router = useRouter();
+  const { setRouterModalState } = useRouterModalToggle();
 
   const data = works.find((work) => work.slug === slug);
 
-  const router = useRouter();
+  function goToWorks() {
+    setRouterModalState(false);
+    router.push(`/works/${slug}`);
+  }
 
   return (
     <Modal>
-      <div
-        className="h-full w-full overflow-hidden rounded-lg"
-        onClick={() => router.back()}
-      ></div>
-      <div className="absolute left-0 top-0 h-4/5 w-4/5 bg-gray-700">
+      <div className="absolute left-0 top-0 z-50 h-4/5 w-4/5 bg-gray-700">
         asdasd
-        <Button onClick={() => router.refresh()}>바로가기</Button>
+        <Button onClick={goToWorks}>바로가기</Button>
+        <a href={`/works/${slug}`}>완전바로가기</a>
       </div>
     </Modal>
   );

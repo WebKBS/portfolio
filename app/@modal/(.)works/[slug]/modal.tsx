@@ -1,34 +1,29 @@
 "use client";
 
+import { useRouterModalToggle } from "@/store/modal-store";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, type ElementRef } from "react";
-import { createPortal } from "react-dom";
 
 export function Modal({ children }: { children: React.ReactNode }) {
   const router = useRouter();
-  const dialogRef = useRef<ElementRef<"dialog">>(null);
+  const { modalOpen, setRouterModalState } = useRouterModalToggle();
 
-  useEffect(() => {
-    if (!dialogRef.current?.open) {
-      dialogRef.current?.showModal();
-    }
-  }, []);
-
-  function onDismiss() {
+  function onDismiss(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
+    if (event.target !== event.currentTarget) return;
+    setRouterModalState(false);
     router.back();
   }
 
-  return createPortal(
-    <aside className="fixed left-0 top-0 h-screen w-screen">
-      <dialog
-        ref={dialogRef}
-        className="h-screen w-screen bg-transparent"
-        onClose={onDismiss}
-      >
-        {children}
-      </dialog>
-    </aside>,
-    document.getElementById("modal-root")!,
+  return (
+    <>
+      {modalOpen ? (
+        <aside
+          className="fixed left-0 top-0 z-50 h-screen w-screen"
+          onClick={onDismiss}
+        >
+          {children}
+        </aside>
+      ) : null}
+    </>
   );
 }
 

@@ -5,14 +5,14 @@ import { IoClose, IoMenu } from "react-icons/io5";
 import { Button } from "../ui/button";
 
 const SideMenuButton = ({ className }: { className: string }) => {
-  const { menuOpen, toggleMenu } = useMenuToggle();
+  const { menuOpen, setToggleMenu } = useMenuToggle();
 
   return (
     <Button
       size="sm"
       variant="outline"
       className={className}
-      onClick={toggleMenu}
+      onClick={setToggleMenu}
       title="메뉴열기"
       aria-label="메뉴열기"
     >
