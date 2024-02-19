@@ -20,7 +20,7 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
 
   return (
     <Modal>
-      <div className="absolute left-0 top-0 z-50 h-4/5 w-4/5 bg-gray-700">
+      <div className="absolute left-0 top-0 z-50 h-4/5 w-4/5 bg-gray-200 dark:bg-gray-700">
         asdasd
         <Button onClick={goToWorks}>바로가기</Button>
         <a href={`/works/${slug}`}>완전바로가기</a>

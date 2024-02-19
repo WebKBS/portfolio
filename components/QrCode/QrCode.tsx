@@ -7,7 +7,7 @@ const QrCode = ({ url }: { url: string }) => {
 
   return (
     <div className="hidden lg:block">
-      <div className="flex items-end gap-3">
+      <div className="inline-flex flex-col gap-3">
         <SVG
           text={url}
           options={{
@@ -15,7 +15,7 @@ const QrCode = ({ url }: { url: string }) => {
             margin: 1,
           }}
         />
-        <p className="text-xs">모바일 바로보기</p>
+        <p className="text-center text-xs">모바일</p>
       </div>
     </div>
   );

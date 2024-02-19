@@ -1,6 +1,4 @@
-const WorksDetailPage = ({ slug }: { slug: string }) => {
-  console.log(slug);
-
+const WorksDetailPage = () => {
   return <div>WorksDetailPage</div>;
 };
 

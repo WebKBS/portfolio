@@ -10,9 +10,15 @@ import Link from "next/link";
 export default async function Home() {
   return (
     <>
-      <main className="flex-1">
+      <main className="relative flex-1">
         <Weather />
-        <section className="mx-auto max-w-screen-lg gap-6 px-5 py-24 sm:flex sm:py-48 lg:px-6">
+        <p
+          className="absolute left-0 top-5 -z-10 -scale-100 text-[100px] font-extrabold leading-none text-gray-400 opacity-30 sm:text-[140px]"
+          style={{ writingMode: "vertical-rl" }}
+        >
+          PORTFOLIO
+        </p>
+        <section className="mx-auto max-w-screen-md gap-6 px-5 py-24 sm:flex sm:py-60 lg:px-6">
           <div className="flex flex-col justify-between gap-12">
             <div>
               <h2 className="mb-4 text-center text-3xl font-bold leading-normal sm:text-left md:text-5xl md:leading-snug">
@@ -22,18 +28,12 @@ export default async function Home() {
               </h2>
               <div className="mb-8 flex justify-center gap-2 sm:mb-0 sm:justify-normal">
                 <Link href="/about">
-                  <Button
-                    className="bg-gray-800 text-xs text-gray-100"
-                    size="sm"
-                  >
+                  <Button className="text-xs" variant={"secondary"} size="sm">
                     제가 궁금한가요?
                   </Button>
                 </Link>
                 <Link href="/works">
-                  <Button
-                    className="bg-gray-800 text-xs text-gray-100"
-                    size="sm"
-                  >
+                  <Button className="text-xs " variant={"secondary"} size="sm">
                     작업 목록
                   </Button>
                 </Link>
