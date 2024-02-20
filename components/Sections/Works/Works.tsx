@@ -13,7 +13,7 @@ const Works = ({ filterData }: { filterData: IWorks[] }) => {
       {filterData.map((work: IWorks) => (
         <li
           key={work.id}
-          className="w-full max-w-80 flex-1 rounded-xl border bg-white px-3 py-4 shadow-md transition-all duration-300 ease-in-out hover:shadow-lg dark:border-gray-700 dark:bg-gray-800 sm:min-w-56 sm:max-w-56"
+          className="w-full max-w-80 flex-1 rounded-xl border bg-white px-3 py-4 shadow-md transition-all duration-300 ease-in-out hover:shadow-lg dark:border-gray-700 dark:bg-gray-800 sm:min-w-80"
         >
           <Link
             href={`/works/${work.slug}`}
@@ -34,11 +34,22 @@ const Works = ({ filterData }: { filterData: IWorks[] }) => {
                 <h3 className="line-clamp-1 font-semibold">{work.title}</h3>
                 <p className="mb-4 line-clamp-2 text-sm">{work.description}</p>
               </div>
+              <div className="mb-3 flex flex-wrap gap-1">
+                {work.tags.map((tag) => (
+                  <Badge
+                    key={tag}
+                    variant={"outline"}
+                    className="bg-gray-100 dark:bg-gray-900"
+                  >
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
               <div className="flex justify-between">
                 <time className="text-sm" dateTime={work.date}>
                   {work.date}
                 </time>
-                <Badge variant={"default"}>Detail</Badge>
+                <Badge variant={"default"}>Preview</Badge>
               </div>
             </div>
           </Link>
