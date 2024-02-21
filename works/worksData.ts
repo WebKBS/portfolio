@@ -5,7 +5,7 @@ export interface IWorks {
   title: string;
   description: string;
   thumbnail: string;
-  image: StaticImageData;
+  image: StaticImageData | string;
   mobileImage: StaticImageData | string;
   url: string;
   date: string;
