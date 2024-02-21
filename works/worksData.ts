@@ -1,13 +1,16 @@
+import { StaticImageData } from "next/image";
+
 export interface IWorks {
   id: number;
   title: string;
   description: string;
   thumbnail: string;
-  image: string;
+  image: StaticImageData | string;
   url: string;
   date: string;
   tags: string[];
   slug: string;
+  macDuration?: string;
 }
 
 export const works = [
@@ -18,9 +21,17 @@ export const works = [
     thumbnail: "/works/depos/thumbnails.png",
     image: "/works/depos/main.png",
     url: "https://depos.kr",
-    date: "2024-02",
-    tags: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    date: "2024-02 ~ 진행중",
+    tags: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Zustand",
+      "Shadcn Ui",
+    ],
     slug: "depos",
+    macDuration: "10s",
   },
   {
     id: 2,

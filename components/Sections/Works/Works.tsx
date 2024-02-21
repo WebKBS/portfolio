@@ -32,7 +32,9 @@ const Works = ({ filterData }: { filterData: IWorks[] }) => {
             <div className="mx-2 mt-4 flex flex-col">
               <div className="flex flex-col gap-2">
                 <h3 className="line-clamp-1 font-semibold">{work.title}</h3>
-                <p className="mb-4 line-clamp-2 text-sm">{work.description}</p>
+                <p className="mb-4 line-clamp-2 break-keep text-sm">
+                  {work.description}
+                </p>
               </div>
               <div className="mb-3 flex flex-wrap gap-1">
                 {work.tags.map((tag) => (
