@@ -6,9 +6,7 @@ import styles from "./page.module.css";
 
 const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
   const data = works.find((work) => work.slug === slug);
-  console.log(data);
-
-  // if (!data) return notFound();
+  // console.log(data);
 
   return (
     <Modal>
@@ -29,7 +27,7 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
             <Mockup
               title={data!.title}
               image={data!.image}
-              macDuration={data?.macDuration}
+              mobileImage={data!.mobileImage}
             />
           </div>
           <div className="sticky bottom-0 right-0">

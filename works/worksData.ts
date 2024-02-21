@@ -5,12 +5,12 @@ export interface IWorks {
   title: string;
   description: string;
   thumbnail: string;
-  image: StaticImageData | string;
+  image: StaticImageData;
+  mobileImage: StaticImageData | string;
   url: string;
   date: string;
   tags: string[];
   slug: string;
-  macDuration?: string;
 }
 
 export const works = [
@@ -20,6 +20,7 @@ export const works = [
     description: "개인 프로젝트로 제작한 임대료 보증금 상호전환 계산기입니다.",
     thumbnail: "/works/depos/thumbnails.png",
     image: "/works/depos/main.png",
+    mobileImage: "/works/depos/mobile.png",
     url: "https://depos.kr",
     date: "2024-02 ~ 진행중",
     tags: [
@@ -31,7 +32,6 @@ export const works = [
       "Shadcn Ui",
     ],
     slug: "depos",
-    macDuration: "10s",
   },
   {
     id: 2,
@@ -39,6 +39,7 @@ export const works = [
     description: "개인 프로젝트로 제작한 임대료 보증금 상호전환 계산기입니다.",
     thumbnail: "/works/depos/thumbnails.png",
     image: "/works/depos/main.png",
+    mobileImage: "/works/depos/mobile.png",
     url: "https://depos.kr",
     date: "2024-02",
     tags: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
@@ -50,6 +51,7 @@ export const works = [
     description: "개인 프로젝트로 제작한 임대료 보증금 상호전환 계산기입니다.",
     thumbnail: "/works/depos/thumbnails.png",
     image: "/works/depos/main.png",
+    mobileImage: "/works/depos/mobile.png",
     url: "https://depos.kr",
     date: "2024-02",
     tags: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
@@ -61,6 +63,7 @@ export const works = [
     description: "개인 프로젝트로 제작한 임대료 보증금 상호전환 계산기입니다.",
     thumbnail: "/works/depos/thumbnails.png",
     image: "/works/depos/main.png",
+    mobileImage: "/works/depos/mobile.png",
     url: "https://depos.kr",
     date: "2024-02",
     tags: ["React", "Next.js", "TypeScript", "Tailwind CSS"],

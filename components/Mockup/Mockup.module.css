@@ -11,7 +11,6 @@
 .macImageBox {
   width: 78%;
   height: 85%;
-  background: #f5f5f5;
   position: absolute;
   top: 5%;
   left: 50%;
@@ -19,15 +18,33 @@
   overflow: hidden;
 }
 
-.macImage {
-  animation: slide ease-in-out infinite alternate;
+.iphoneBox {
+  position: relative;
+  margin-bottom: 1rem;
 }
 
-@keyframes slide {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(calc(-100% + 228px));
-  }
+.iphoneImageBox {
+  width: 63%;
+  height: 88.9%;
+  position: absolute;
+  top: 5.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.topBox {
+  position: relative;
+  padding-top: 7%;
+  z-index: 2;
+}
+
+.topImage {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
