@@ -16,6 +16,7 @@
   left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
+  background: #000;
 }
 
 .iphoneBox {
@@ -32,6 +33,7 @@
   transform: translateX(-50%);
   overflow: hidden;
   border-radius: 22px;
+  background: #000;
 }
 
 .topBox {
