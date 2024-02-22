@@ -1,9 +1,10 @@
 "use client";
+
 import topMockup from "@/public/mockup/iphone-top.png";
 import iphoneMockup from "@/public/mockup/iphone.png";
 import macMockup from "@/public/mockup/mac.png";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import styles from "./Mockup.module.css";
 
 const Mockup = ({
@@ -15,74 +16,68 @@ const Mockup = ({
   image: string;
   mobileImage: string;
 }) => {
-  const macRef = useRef<HTMLDivElement | null>(null);
-  const iphoneRef = useRef<HTMLDivElement | null>(null);
+  const macBoxRef = useRef<HTMLDivElement | null>(null);
+  const iphoneBoxRef = useRef<HTMLDivElement | null>(null);
   const macImageRef = useRef<HTMLImageElement | null>(null);
   const iphoneImageRef = useRef<HTMLImageElement | null>(null);
 
-  const [macClientHeight, setMacClientHeight] = useState<number>(0);
-  const [iphoneClientHeight, setIphoneClientHeight] = useState<number>(0);
-  const [macImageLoaded, setMacImageLoaded] = useState<boolean>(false);
-  const [iphoneImageLoaded, setIphoneImageLoaded] = useState<boolean>(false);
+  const [macBoxClientHeight, setMacBoxClientHeight] = useState<number>(0);
+  const [iphoneBoxClientHeight, setIphoneBoxClientHeight] = useState<number>(0);
 
-  useEffect(() => {
-    if (macClientHeight && macImageRef.current && macImageLoaded) {
-      macImageRef.current.animate(
-        [
-          { transform: "translateY(0)" },
-          { transform: `translateY(calc(-100% + ${macClientHeight}px))` },
-        ],
-        {
-          duration: (macClientHeight / 100) * 10000,
-          iterations: Infinity,
-          direction: "alternate",
-        },
-      );
+  const macOnloadHandler = () => {
+    if (macBoxRef.current) {
+      setMacBoxClientHeight(macBoxRef.current.clientHeight);
     }
-
-    if (iphoneClientHeight && iphoneImageRef.current && iphoneImageLoaded) {
-      iphoneImageRef.current.animate(
-        [
-          { transform: "translateY(0)" },
-          {
-            transform: `translateY(calc(-100% + ${iphoneClientHeight}px))`,
-          },
-        ],
-        {
-          duration: (iphoneClientHeight / 100) * 10000,
-          iterations: Infinity,
-          direction: "alternate",
-        },
-      );
-    }
-  }, [macClientHeight, iphoneClientHeight, macImageLoaded, iphoneImageLoaded]);
-
-  const handleMacImageLoad = () => {
-    if (macRef.current) {
-      setMacClientHeight(macRef.current.clientHeight);
-    }
-    setMacImageLoaded(true);
   };
 
-  const handleIphoneImageLoad = () => {
-    if (iphoneRef.current) {
-      setIphoneClientHeight(iphoneRef.current.clientHeight);
+  const iphoneOnloadHandler = () => {
+    if (iphoneBoxRef.current) {
+      setIphoneBoxClientHeight(iphoneBoxRef.current.clientHeight);
     }
-    setIphoneImageLoaded(true);
   };
+
+  if (macBoxClientHeight && macImageRef.current) {
+    macImageRef.current.animate(
+      [
+        { transform: "translateY(0)" },
+        { transform: `translateY(calc(-100% + ${macBoxClientHeight}px))` },
+      ],
+      {
+        duration: (macBoxClientHeight / 100) * 10000,
+        iterations: Infinity,
+        direction: "alternate",
+      },
+    );
+  }
+
+  if (iphoneBoxClientHeight && iphoneImageRef.current) {
+    iphoneImageRef.current.animate(
+      [
+        { transform: "translateY(0)" },
+        {
+          transform: `translateY(calc(-100% + ${iphoneBoxClientHeight}px))`,
+        },
+      ],
+      {
+        duration: (iphoneBoxClientHeight / 100) * 10000,
+        iterations: Infinity,
+        direction: "alternate",
+      },
+    );
+  }
 
   return (
     <div className={styles.mockupContent}>
-      <div className={styles.macBox} ref={macRef}>
+      <div className={styles.macBox}>
         <Image
           width={400}
           height={400}
           src={macMockup}
           alt="맥북 목업"
           priority
-          onLoad={handleMacImageLoad}
+          className="h-auto w-full"
         />
-        <div className={styles.macImageBox}>
+        <div className={styles.macImageBox} ref={macBoxRef}>
           <Image
             ref={macImageRef}
             width={400}
@@ -91,19 +86,20 @@ const Mockup = ({
             alt={title}
             priority
             className={styles.macImage}
+            onLoad={macOnloadHandler}
           />
         </div>
       </div>
-      <div className={styles.iphoneBox} ref={iphoneRef}>
+      <div className={styles.iphoneBox}>
         <Image
           width={400}
           height={400}
           src={iphoneMockup}
           alt="아이폰 목업"
           priority
-          onLoad={handleIphoneImageLoad}
+          className="h-auto w-full"
         />
-        <div className={styles.iphoneImageBox}>
+        <div className={styles.iphoneImageBox} ref={iphoneBoxRef}>
           <div className={styles.topBox}>
             <Image
               width={240}
@@ -122,6 +118,7 @@ const Mockup = ({
             alt={title}
             className={styles.iphoneImage}
             priority
+            onLoad={iphoneOnloadHandler}
           />
         </div>
       </div>
