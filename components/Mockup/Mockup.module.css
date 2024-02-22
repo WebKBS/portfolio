@@ -5,7 +5,7 @@
 
 .macBox {
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 .macMockup,
 .iphoneMockup {
@@ -72,6 +72,10 @@
     display: flex;
     align-items: center;
     max-width: 600px;
+  }
+
+  .macBox {
+    margin-bottom: 0;
   }
 
   .iphoneBox {

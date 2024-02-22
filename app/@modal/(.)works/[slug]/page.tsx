@@ -45,7 +45,7 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
     };
   }, []);
 
-  const opacityStyle = isOpacity ? "opacity-10" : "opacity-100";
+  const opacityStyle = isOpacity ? "opacity-5" : "opacity-100";
 
   const data = works.find((work) => work.slug === slug);
 
@@ -57,7 +57,7 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
   return (
     <Modal>
       <div
-        className={`absolute left-1/2 top-1/2 z-50 flex h-2/3 w-[90%] flex-col overflow-hidden rounded-xl border-2 bg-background lg:max-w-7xl ${modalOpen ? styles.active : ""}`}
+        className={`absolute left-1/2 top-1/2 z-50 flex h-2/3 w-[90%] flex-col overflow-hidden rounded-xl border-2 bg-background lg:h-3/4 lg:max-w-7xl ${modalOpen ? styles.active : ""}`}
       >
         <div
           className={`h-full w-full overflow-y-auto ${lightTheme}`}
