@@ -26,8 +26,8 @@ const Mockup = ({
   useEffect(() => {
     const macBoxHeight = macRef.current?.clientHeight;
     const iphoneBoxHeight = iphoneRef.current?.clientHeight;
-    console.log(macBoxHeight, "macBoxHeight");
-    console.log(iphoneBoxHeight, "iphoneBoxHeight");
+    // console.log(macBoxHeight, "macBoxHeight");
+    // console.log(iphoneBoxHeight, "iphoneBoxHeight");
 
     macImageRef.current?.animate(
       [
@@ -72,6 +72,7 @@ const Mockup = ({
             src={image}
             alt={title}
             priority
+            className={styles.macImage}
           />
         </div>
       </div>

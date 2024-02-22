@@ -24,7 +24,7 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
 
   return (
     <Modal>
-      <div className="absolute left-1/2 top-1/2 z-50 flex h-4/5 w-[90%] -translate-x-1/2  -translate-y-1/2 flex-col rounded-xl border-2 bg-background">
+      <div className="absolute left-1/2 top-1/2 z-50 flex h-2/3 w-[90%] -translate-x-1/2  -translate-y-1/2 flex-col rounded-xl border-2 bg-background">
         <div className={"h-full w-full overflow-y-auto " + lightTheme}>
           <div className="p-6">
             <h2 className="mb-2 text-xl font-semibold">{data?.title}</h2>

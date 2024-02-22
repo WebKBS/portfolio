@@ -19,6 +19,12 @@
   background: #000;
 }
 
+.macImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .iphoneBox {
   position: relative;
   margin-bottom: 1rem;
@@ -34,6 +40,12 @@
   overflow: hidden;
   border-radius: 22px;
   background: #000;
+}
+
+.iphoneImage {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .topBox {
