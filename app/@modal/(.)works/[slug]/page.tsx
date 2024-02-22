@@ -1,6 +1,7 @@
 "use client";
 import { works } from "@/data/worksData";
 import Mockup from "@/components/Mockup/Mockup";
+import { Badge } from "@/components/ui/badge";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { useRouterModalToggle } from "@/store/modal-store";
 import { useTheme } from "next-themes";
@@ -37,9 +38,18 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
           <div className="p-6">
             <h2 className="mb-2 text-xl font-semibold">{data?.title}</h2>
             <h3 className="mb-2">{data?.description}</h3>
-            <div className="flex gap-2 text-sm">
+            <div className="mb-2 flex gap-2 text-sm">
               <p>제작기간:</p>
               <p>{data?.date}</p>
+            </div>
+            <div className="mb-2">
+              <ul className="flex flex-wrap gap-2">
+                {data?.tags.map((tech, index) => (
+                  <li key={index}>
+                    <Badge>{tech}</Badge>
+                  </li>
+                ))}
+              </ul>
             </div>
             <div className="py-6">
               <Mockup

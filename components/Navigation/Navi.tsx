@@ -5,10 +5,10 @@ import Link from "next/link";
 import { navigationData } from "./Navi-data";
 
 const Navi = ({ className }: { className: string }) => {
-  const { menuOpen, setToggleMenu } = useMenuToggle();
+  const { setToggleMenu } = useMenuToggle();
 
   const clickHandler = () => {
-    setToggleMenu(!menuOpen);
+    setToggleMenu(false);
   };
 
   return (

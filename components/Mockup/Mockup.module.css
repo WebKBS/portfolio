@@ -62,3 +62,15 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+@media screen and (min-width: 768px) {
+  .mockupContent {
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+  }
+
+  .iphoneBox {
+    flex: 1;
+  }
+}
