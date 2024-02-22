@@ -58,7 +58,13 @@ const Mockup = ({
   return (
     <div className={styles.mockupContent}>
       <div className={styles.macBox} ref={macRef}>
-        <Image width={400} height={400} src={macMockup} alt="맥북 목업" />
+        <Image
+          width={400}
+          height={400}
+          src={macMockup}
+          alt="맥북 목업"
+          priority
+        />
         <div className={styles.macImageBox}>
           <Image
             ref={macImageRef}
@@ -66,6 +72,7 @@ const Mockup = ({
             height={400}
             src={image}
             alt={title}
+            priority
           />
         </div>
       </div>
@@ -79,6 +86,7 @@ const Mockup = ({
               src={topMockup}
               alt={title}
               className={styles.topImage}
+              priority
             />
           </div>
           <Image
@@ -87,6 +95,7 @@ const Mockup = ({
             height={400}
             src={mobileImage}
             alt={title}
+            priority
           />
         </div>
       </div>

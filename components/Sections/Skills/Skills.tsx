@@ -14,6 +14,7 @@ const Skills = () => {
               height={50}
               alt={skill.alt}
               className="h-9 w-auto md:h-14"
+              priority
             />
           </li>
         ))}
@@ -27,6 +28,7 @@ const Skills = () => {
               height={50}
               alt={skill.alt}
               className="h-9 w-auto md:h-14"
+              priority
             />
           </li>
         ))}
