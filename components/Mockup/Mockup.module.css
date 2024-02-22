@@ -10,7 +10,7 @@
 
 .macImageBox {
   width: 78%;
-  height: 85%;
+  height: 86%;
   position: absolute;
   top: 5%;
   left: 50%;
@@ -34,7 +34,7 @@
   width: 63%;
   height: 88.9%;
   position: absolute;
-  top: 5.5%;
+  top: 5%;
   left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
