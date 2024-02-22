@@ -1,6 +1,7 @@
 "use client";
 import Mockup from "@/components/Mockup/Mockup";
 import { Button, buttonVariants } from "@/components/ui/button";
+import { useRouterModalToggle } from "@/store/modal-store";
 import { works } from "@/works/worksData";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
@@ -10,6 +11,7 @@ import styles from "./page.module.css";
 
 const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
   const [lightTheme, setLightTheme] = useState(styles.afterShadow);
+  const { modalOpen, setRouterModalState } = useRouterModalToggle();
   const router = useRouter();
   const { theme } = useTheme();
 
@@ -20,11 +22,17 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
   }, [theme]);
 
   const data = works.find((work) => work.slug === slug);
-  // console.log(data);
+
+  const closeHandler = () => {
+    setRouterModalState(false);
+    router.back();
+  };
 
   return (
     <Modal>
-      <div className="absolute left-1/2 top-1/2 z-50 flex h-2/3 w-[90%] -translate-x-1/2  -translate-y-1/2 flex-col rounded-xl border-2 bg-background">
+      <div
+        className={`absolute left-1/2 top-1/2 z-50 flex h-2/3 w-[90%] flex-col rounded-xl border-2 bg-background opacity-0 ${modalOpen ? styles.active : ""}`}
+      >
         <div className={"h-full w-full overflow-y-auto " + lightTheme}>
           <div className="p-6">
             <h2 className="mb-2 text-xl font-semibold">{data?.title}</h2>
@@ -43,11 +51,7 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
           </div>
         </div>
         <div className="mx-auto flex w-full max-w-xs gap-2 bg-background p-3 md:ml-auto md:mr-0">
-          <Button
-            className="flex-1"
-            variant="outline"
-            onClick={() => router.back()}
-          >
+          <Button className="flex-1" variant="outline" onClick={closeHandler}>
             닫기
           </Button>
           <a

@@ -17,7 +17,7 @@ export function Modal({ children }: { children: React.ReactNode }) {
     <>
       {modalOpen ? (
         <aside
-          className="backdrop-blur-xs fixed left-0 top-0 z-50 h-screen w-screen"
+          className="fixed left-0 top-0 z-50 h-screen w-screen overflow-hidden backdrop-blur-xs"
           onClick={onDismiss}
         >
           {children}

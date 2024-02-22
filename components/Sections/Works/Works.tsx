@@ -8,6 +8,11 @@ import { Badge } from "../../ui/badge";
 
 const Works = ({ filterData }: { filterData: IWorks[] }) => {
   const { setRouterModalState } = useRouterModalToggle();
+
+  const clickHandler = () => {
+    setRouterModalState(true);
+  };
+
   return (
     <>
       {filterData.map((work: IWorks) => (
@@ -18,7 +23,7 @@ const Works = ({ filterData }: { filterData: IWorks[] }) => {
           <Link
             href={`/works/${work.slug}`}
             scroll={false}
-            onClick={() => setRouterModalState(true)}
+            onClick={clickHandler}
           >
             <div className="relative mb-2 h-40 w-full overflow-hidden ">
               <Image

@@ -21,3 +21,18 @@
   z-index: 1;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
 }
+
+.active {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
