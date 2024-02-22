@@ -1,4 +1,4 @@
-import { works } from "@/works/worksData";
+import { works } from "@/data/worksData";
 
 import Link from "next/link";
 import Works from "./Works";

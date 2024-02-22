@@ -1,8 +1,8 @@
 "use client";
+import { works } from "@/data/worksData";
 import Mockup from "@/components/Mockup/Mockup";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { useRouterModalToggle } from "@/store/modal-store";
-import { works } from "@/works/worksData";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";

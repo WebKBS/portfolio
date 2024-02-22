@@ -1,7 +1,7 @@
 "use client";
 
+import { IWorks } from "@/data/worksData";
 import { useRouterModalToggle } from "@/store/modal-store";
-import { IWorks } from "@/works/worksData";
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "../../ui/badge";

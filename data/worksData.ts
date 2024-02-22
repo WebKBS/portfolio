@@ -16,7 +16,7 @@ export interface IWorks {
 export const works = [
   {
     id: 1,
-    title: "임대료 보증금 상호전환 계산기",
+    title: "임대료 보증금 자동 상호전환 계산기",
     description: "개인 프로젝트로 제작한 임대료 보증금 상호전환 계산기입니다.",
     thumbnail: "/works/depos/thumbnails.png",
     image: "/works/depos/main.png",

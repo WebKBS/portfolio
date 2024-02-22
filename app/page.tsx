@@ -21,7 +21,7 @@ export default async function Home() {
         >
           PORTFOLIO
         </p>
-        <section className="mx-auto max-w-screen-md gap-6 px-5 py-24 sm:flex sm:py-60 lg:max-w-screen-lg lg:px-8">
+        <section className="mx-auto max-w-screen-md gap-6 px-5 py-24 sm:flex sm:max-w-xl sm:justify-center sm:py-60 lg:max-w-screen-lg lg:px-8">
           <div className="flex flex-col justify-between gap-12">
             <div>
               <h2 className="mb-4 text-center text-3xl font-bold leading-normal sm:text-left md:text-5xl md:leading-snug">
