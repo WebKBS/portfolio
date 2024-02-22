@@ -7,6 +7,10 @@
   position: relative;
   margin-bottom: 1rem;
 }
+.macMockup,
+.iphoneMockup {
+  filter: drop-shadow(2px 2px 8px #000);
+}
 
 .macImageBox {
   width: 78%;
@@ -71,6 +75,24 @@
   }
 
   .iphoneBox {
+    min-width: 240px;
     flex: 1;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mockupContent {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .macBox {
+    flex: 1;
+  }
+
+  .iphoneBox {
+    min-width: 360px;
+    max-width: 360px;
   }
 }
