@@ -4,7 +4,7 @@ import topMockup from "@/public/mockup/iphone-top.png";
 import iphoneMockup from "@/public/mockup/iphone.png";
 import macMockup from "@/public/mockup/mac.png";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./Mockup.module.css";
 
 const Mockup = ({
@@ -21,20 +21,22 @@ const Mockup = ({
   const macImageRef = useRef<HTMLImageElement | null>(null);
   const iphoneImageRef = useRef<HTMLImageElement | null>(null);
 
-  console.log("1");
-  const macBoxHeight = macRef.current?.clientHeight;
-  const iphoneBoxHeight = iphoneRef.current?.clientHeight;
+  const [macClientHeight, setMacClientHeight] = useState<number>(0);
+  const [iphoneClientHeight, setIphoneClientHeight] = useState<number>(0);
 
   useEffect(() => {
-    console.log("2");
+    const macBoxHeight = macRef.current?.clientHeight;
+    const iphoneBoxHeight = iphoneRef.current?.clientHeight;
+    setMacClientHeight(macBoxHeight!);
+    setIphoneClientHeight(iphoneBoxHeight!);
 
     macImageRef.current?.animate(
       [
         { transform: "translateY(0)" },
-        { transform: `translateY(calc(-100% + ${macBoxHeight}px))` },
+        { transform: `translateY(calc(-100% + ${macClientHeight}px))` },
       ],
       {
-        duration: (macBoxHeight! / 100) * 10000,
+        duration: (macClientHeight! / 100) * 10000,
         iterations: Infinity,
         direction: "alternate",
       },
@@ -43,15 +45,15 @@ const Mockup = ({
     iphoneImageRef.current?.animate(
       [
         { transform: "translateY(0)" },
-        { transform: `translateY(calc(-100% + ${iphoneBoxHeight}px))` },
+        { transform: `translateY(calc(-100% + ${iphoneClientHeight}px))` },
       ],
       {
-        duration: (iphoneBoxHeight! / 100) * 10000,
+        duration: (iphoneClientHeight! / 100) * 10000,
         iterations: Infinity,
         direction: "alternate",
       },
     );
-  }, [macBoxHeight, iphoneBoxHeight]);
+  }, [macClientHeight, iphoneClientHeight]);
 
   return (
     <div className={styles.mockupContent}>
