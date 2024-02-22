@@ -26,6 +26,8 @@ const Mockup = ({
 
   // 이미지의 clientHeight를 먼저 가져와서 적용
   useEffect(() => {
+    console.log("1", macRef.current);
+    console.log("1", iphoneRef.current);
     if (macRef.current) {
       setMacClientHeight(macRef.current.clientHeight);
     }
@@ -34,36 +36,37 @@ const Mockup = ({
     }
   }, []);
 
-  useEffect(() => {
-    if (macClientHeight && macImageRef.current) {
-      macImageRef.current.animate(
-        [
-          { transform: "translateY(0)" },
-          { transform: `translateY(calc(-100% + ${macClientHeight}px))` },
-        ],
+  console.log("2", macClientHeight);
+  console.log("2", iphoneClientHeight);
+  if (macClientHeight && macImageRef.current) {
+    macImageRef.current.animate(
+      [
+        { transform: "translateY(0)" },
+        { transform: `translateY(calc(-100% + ${macClientHeight}px))` },
+      ],
+      {
+        duration: (macClientHeight / 100) * 10000,
+        iterations: Infinity,
+        direction: "alternate",
+      },
+    );
+  }
+
+  if (iphoneClientHeight && iphoneImageRef.current) {
+    iphoneImageRef.current.animate(
+      [
+        { transform: "translateY(0)" },
         {
-          duration: (macClientHeight / 100) * 10000,
-          iterations: Infinity,
-          direction: "alternate",
+          transform: `translateY(calc(-100% + ${iphoneClientHeight}px))`,
         },
-      );
-    }
-    if (iphoneClientHeight && iphoneImageRef.current) {
-      iphoneImageRef.current.animate(
-        [
-          { transform: "translateY(0)" },
-          {
-            transform: `translateY(calc(-100% + ${iphoneClientHeight}px))`,
-          },
-        ],
-        {
-          duration: (iphoneClientHeight / 100) * 10000,
-          iterations: Infinity,
-          direction: "alternate",
-        },
-      );
-    }
-  }, [macClientHeight, iphoneClientHeight]);
+      ],
+      {
+        duration: (iphoneClientHeight / 100) * 10000,
+        iterations: Infinity,
+        direction: "alternate",
+      },
+    );
+  }
 
   return (
     <div className={styles.mockupContent}>
