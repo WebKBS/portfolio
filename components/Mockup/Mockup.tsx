@@ -21,13 +21,12 @@ const Mockup = ({
   const macImageRef = useRef<HTMLImageElement | null>(null);
   const iphoneImageRef = useRef<HTMLImageElement | null>(null);
 
-  console.log(macRef, "macRef");
+  console.log("1");
+  const macBoxHeight = macRef.current?.clientHeight;
+  const iphoneBoxHeight = iphoneRef.current?.clientHeight;
 
   useEffect(() => {
-    const macBoxHeight = macRef.current?.clientHeight;
-    const iphoneBoxHeight = iphoneRef.current?.clientHeight;
-    // console.log(macBoxHeight, "macBoxHeight");
-    // console.log(iphoneBoxHeight, "iphoneBoxHeight");
+    console.log("2");
 
     macImageRef.current?.animate(
       [
@@ -52,7 +51,7 @@ const Mockup = ({
         direction: "alternate",
       },
     );
-  }, []);
+  }, [macBoxHeight, iphoneBoxHeight]);
 
   return (
     <div className={styles.mockupContent}>
