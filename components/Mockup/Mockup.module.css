@@ -83,8 +83,6 @@
 @media screen and (min-width: 1024px) {
   .mockupContent {
     max-width: 800px;
-    margin-left: auto;
-    margin-right: 0;
   }
 
   .macBox {
