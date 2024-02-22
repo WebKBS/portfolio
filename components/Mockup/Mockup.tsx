@@ -1,5 +1,4 @@
 "use client";
-
 import topMockup from "@/public/mockup/iphone-top.png";
 import iphoneMockup from "@/public/mockup/iphone.png";
 import macMockup from "@/public/mockup/mac.png";
@@ -16,68 +15,72 @@ const Mockup = ({
   image: string;
   mobileImage: string;
 }) => {
-  const macRef = useRef<HTMLImageElement | null>(null);
-  const iphoneRef = useRef<HTMLImageElement | null>(null);
+  const macRef = useRef<HTMLDivElement | null>(null);
+  const iphoneRef = useRef<HTMLDivElement | null>(null);
   const macImageRef = useRef<HTMLImageElement | null>(null);
   const iphoneImageRef = useRef<HTMLImageElement | null>(null);
 
   const [macClientHeight, setMacClientHeight] = useState<number>(0);
   const [iphoneClientHeight, setIphoneClientHeight] = useState<number>(0);
+  const [macImageLoaded, setMacImageLoaded] = useState<boolean>(false);
+  const [iphoneImageLoaded, setIphoneImageLoaded] = useState<boolean>(false);
 
-  // 이미지의 clientHeight를 먼저 가져와서 적용
   useEffect(() => {
-    console.log("1", macRef.current);
-    console.log("1", iphoneRef.current);
+    if (macClientHeight && macImageRef.current && macImageLoaded) {
+      macImageRef.current.animate(
+        [
+          { transform: "translateY(0)" },
+          { transform: `translateY(calc(-100% + ${macClientHeight}px))` },
+        ],
+        {
+          duration: (macClientHeight / 100) * 10000,
+          iterations: Infinity,
+          direction: "alternate",
+        },
+      );
+    }
+
+    if (iphoneClientHeight && iphoneImageRef.current && iphoneImageLoaded) {
+      iphoneImageRef.current.animate(
+        [
+          { transform: "translateY(0)" },
+          {
+            transform: `translateY(calc(-100% + ${iphoneClientHeight}px))`,
+          },
+        ],
+        {
+          duration: (iphoneClientHeight / 100) * 10000,
+          iterations: Infinity,
+          direction: "alternate",
+        },
+      );
+    }
+  }, [macClientHeight, iphoneClientHeight, macImageLoaded, iphoneImageLoaded]);
+
+  const handleMacImageLoad = () => {
     if (macRef.current) {
       setMacClientHeight(macRef.current.clientHeight);
     }
+    setMacImageLoaded(true);
+  };
+
+  const handleIphoneImageLoad = () => {
     if (iphoneRef.current) {
       setIphoneClientHeight(iphoneRef.current.clientHeight);
     }
-  }, []);
-
-  console.log("2", macClientHeight);
-  console.log("2", iphoneClientHeight);
-  if (macClientHeight && macImageRef.current) {
-    macImageRef.current.animate(
-      [
-        { transform: "translateY(0)" },
-        { transform: `translateY(calc(-100% + ${macClientHeight}px))` },
-      ],
-      {
-        duration: (macClientHeight / 100) * 10000,
-        iterations: Infinity,
-        direction: "alternate",
-      },
-    );
-  }
-
-  if (iphoneClientHeight && iphoneImageRef.current) {
-    iphoneImageRef.current.animate(
-      [
-        { transform: "translateY(0)" },
-        {
-          transform: `translateY(calc(-100% + ${iphoneClientHeight}px))`,
-        },
-      ],
-      {
-        duration: (iphoneClientHeight / 100) * 10000,
-        iterations: Infinity,
-        direction: "alternate",
-      },
-    );
-  }
+    setIphoneImageLoaded(true);
+  };
 
   return (
     <div className={styles.mockupContent}>
-      <div className={styles.macBox}>
+      <div className={styles.macBox} ref={macRef}>
         <Image
-          ref={macRef}
           width={400}
           height={400}
           src={macMockup}
           alt="맥북 목업"
           priority
+          onLoad={handleMacImageLoad}
         />
         <div className={styles.macImageBox}>
           <Image
@@ -91,14 +94,14 @@ const Mockup = ({
           />
         </div>
       </div>
-      <div className={styles.iphoneBox}>
+      <div className={styles.iphoneBox} ref={iphoneRef}>
         <Image
-          ref={iphoneRef}
           width={400}
           height={400}
           src={iphoneMockup}
           alt="아이폰 목업"
           priority
+          onLoad={handleIphoneImageLoad}
         />
         <div className={styles.iphoneImageBox}>
           <div className={styles.topBox}>
