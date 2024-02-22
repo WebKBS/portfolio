@@ -15,8 +15,8 @@ const SideMenu = () => {
       className={`fixed left-0 top-0 z-50 ${sideMenuActive} flex h-full w-full transform transition-transform duration-300 ease-in-out`}
     >
       <div
-        className="absolute left-0 top-0 h-full w-full bg-black bg-opacity-30 transition-opacity duration-300 ease-in-out"
-        onClick={setToggleMenu}
+        className="absolute left-0 top-0 h-full w-full bg-black bg-opacity-30 backdrop-blur-sm transition-opacity duration-300 ease-in-out"
+        onClick={() => setToggleMenu(!menuOpen)}
       />
       <div className="absolute left-0 top-0 h-full w-full max-w-80 overflow-y-auto bg-gray-100 px-8 py-20 dark:bg-gray-800">
         <SideMenuButton className="absolute left-4 top-4" />

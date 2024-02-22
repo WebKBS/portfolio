@@ -12,7 +12,7 @@ const SideMenuButton = ({ className }: { className: string }) => {
       size="sm"
       variant="outline"
       className={className}
-      onClick={setToggleMenu}
+      onClick={() => setToggleMenu(!menuOpen)}
       title="메뉴열기"
       aria-label="메뉴열기"
     >
