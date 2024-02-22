@@ -10,9 +10,14 @@ const LottieComp = () => {
   const styles = "mx-auto w-64 sm:mx-0 sm:ml-auto sm:mr-0 md:w-96";
 
   useEffect(() => {
-    import("../../lottie/animation.json").then((res) => {
-      setAnimationData(res.default);
-    });
+    import("../../lottie/animation.json")
+      .then((res) => {
+        setAnimationData(res.default);
+      })
+      .catch((err) => {
+        console.error(err);
+        console.log("로티 데이터 가져오기 실패");
+      });
   }, []);
 
   if (!animationData)
