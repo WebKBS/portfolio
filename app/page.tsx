@@ -1,7 +1,7 @@
-import MainSection from "@/components/Sections/Main/MainSection";
-import SkillProgressSection from "@/components/Sections/SkillProgress/SkillProgressSection";
-import SkillsSection from "@/components/Sections/Skills/SkillsSection";
-import WorksSection from "@/components/Sections/Works/WorksSection";
+import MainSection from "@/components/Home/Sections/Main/MainSection";
+import SkillProgressSection from "@/components/Home/Sections/SkillProgress/SkillProgressSection";
+import SkillsSection from "@/components/Home/Sections/Skills/SkillsSection";
+import WorksSection from "@/components/Home/Sections/Works/WorksSection";
 import Weather from "@/components/Weather/Weather";
 
 export default async function Home() {
