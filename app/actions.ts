@@ -1,16 +1,6 @@
 "use server";
 import { z } from "zod";
 
-const fileSchema = z.object({
-  filename: z
-    .string()
-    .max(100, { message: "파일 이름은 100자 이하여야 합니다." }),
-  size: z
-    .number()
-    .max(2097152, { message: "파일 크기는 2MB 이하여야 합니다." }),
-  mimeType: z.string(),
-});
-
 // 폼 스키마 정의
 const schema = z.object({
   username: z
@@ -25,26 +15,32 @@ const schema = z.object({
     .string()
     .min(10, { message: "메시지는 10자 이상이어야 합니다." })
     .max(500, { message: "메시지는 500자 이하여야 합니다." }),
-  file: fileSchema.nullable(),
   email: z.string().email({ message: "올바른 이메일 주소를 입력해주세요." }),
 });
 
 export const contactEmail = async (prevState: any, formData: FormData) => {
   try {
-    const { username, email, message, title, file } = schema.parse({
+    const { username, email, message, title } = schema.parse({
       username: formData.get("username"),
       email: formData.get("email"),
       message: formData.get("message"),
       title: formData.get("title"),
-      file: {
-        filename: (formData.get("file") as File)?.name || "", // 파일 이름
-        size: (formData.get("file") as File)?.size || 0, // 파일 크기
-        mimeType: (formData.get("file") as File)?.type || "", // 파일 MIME 타입
-      },
     });
 
-    console.log(username);
-    // const { username } = schema.parse({ username: formData.get("username") });
+    const file = formData.get("file") as File;
+
+    if (file.size !== 0) {
+      if (file.size > 2097152) {
+        return { success: false, message: "파일 크기는 2MB 이하여야 합니다." };
+      } else if (
+        !(file.type.match(/image.*/) || file.type.match(/application\/pdf/))
+      ) {
+        return {
+          success: false,
+          message: "파일 형식은 image, PDF만 가능합니다.",
+        };
+      }
+    }
 
     console.log(username, email, message, title, file);
 
