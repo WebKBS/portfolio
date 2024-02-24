@@ -10,10 +10,10 @@ export async function sendEmail(
   file: string,
 ) {
   try {
-    // console.log(category, title, message, file, email);
-    // console.log(file);
+    console.log(username, title, message, file, email);
+    console.log("node file", file);
     if (!email || !message || !title || !username) {
-      return { message: "Please enter the correct fields.", status: 400 };
+      return { message: "이메일 전송 실패", status: 400 };
     }
 
     const transport = nodemailer.createTransport({
@@ -22,14 +22,14 @@ export async function sendEmail(
       // secure: false,
       service: "gmail",
       auth: {
-        user: process.env.GOGGLE,
-        pass: process.env.GOGGLE_PW,
+        user: process.env.GMAIL,
+        pass: process.env.GMAIL_KEY,
       },
     });
 
     const mailOptions: Mail.Options = {
       from: email,
-      to: process.env.GOGGLE,
+      to: process.env.GMAIL,
       subject: `${username}이 이메일을 보내왔습니다. ${email}`,
       html: `<h2>Category: ${username}</h2>
         <hr />
@@ -44,7 +44,7 @@ export async function sendEmail(
     await transport.sendMail(mailOptions); // 이메일 전송
     return { message: "전송 성공!!", status: 200 };
   } catch (err) {
-    // console.log(err);
+    console.log(err);
     return { message: "데이터 전송 실패!!", status: 500 };
   }
 }

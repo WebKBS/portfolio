@@ -1,14 +1,16 @@
 "use client";
 
 import { contactEmail } from "@/app/actions";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { ChangeEvent, useState } from "react";
 import { useFormState } from "react-dom";
-import { Button } from "../ui/button";
+import SubmitButton from "./SubmitButton";
 
 const ContactForm = () => {
+  const [actionState, formAction] = useFormState(contactEmail, null);
   const [file, setFile] = useState<File | string | null>(null);
   const [mimeType, setMimeType] = useState<File | string | null>(null); // ['image', 'pdf']
-  const [actionState, formAction] = useFormState(contactEmail, null);
+  const router = useRouter();
 
   console.log(actionState);
 
@@ -17,42 +19,36 @@ const ContactForm = () => {
   const labelStyle =
     "mb-2 block text-sm font-medium text-gray-900 dark:text-white";
 
-  // const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
-  //   const { files } = e.target;
-  //   const file = files && files.length ? files[0] : null;
+  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { files } = e.target;
+    const file = files && files.length ? files[0] : null;
 
-  //   if (file) {
-  //     if (
-  //       // 이미지 및 pdf 파일만 허용
-  //       !(file.type.match(/image.*/) || file.type.match(/application\/pdf/))
-  //     ) {
-  //       e.target.value = "";
-  //       setFile(null);
-  //       alert("파일 형식은 image, PDF만 가능합니다.");
-  //       return;
-  //     }
-  //     if (file.size > 2097152) {
-  //       // 2MB 이상 파일은 허용하지 않음
-  //       e.target.value = "";
-  //       setFile(null);
-  //       alert("파일 크기는 2MB 이하여야 합니다.");
-  //       return;
-  //     }
-  //     console.log(file);
-  //     const reader = new FileReader();
-  //     reader.onload = function (event: ProgressEvent<FileReader>) {
-  //       if (event.target) {
-  //         const fileURL = event.target.result as string;
-  //         setFile(fileURL);
-  //         setMimeType(file.type);
-  //       }
-  //     };
-  //     reader.readAsDataURL(file);
-  //   }
-  // };
+    if (file) {
+      if (
+        // 이미지 및 pdf 파일만 허용
+        !(file.type.match(/image.*/) || file.type.match(/application\/pdf/))
+      ) {
+        e.target.value = "";
+        alert("파일 형식은 image, PDF만 가능합니다.");
+        return;
+      }
+      if (file.size > 2097152) {
+        // 2MB 이상 파일은 허용하지 않음
+        e.target.value = "";
+        alert("파일 크기는 2MB 이하여야 합니다.");
+        return;
+      }
+      console.log(file);
+      const reader = new FileReader();
+    }
+  };
+
+  if (actionState?.success) {
+    router.replace("/contact/success");
+  }
 
   return (
-    <form action={formAction}>
+    <form action={formAction} encType="multipart/form-data">
       <div className="mb-6">
         <div>
           <label htmlFor="username" className={labelStyle}>
@@ -105,8 +101,9 @@ const ContactForm = () => {
           id="file"
           type="file"
           name="file"
-          // accept="image/*, .pdf"
-          // onChange={handleFileChange}
+          accept="image/*, .pdf"
+          onChange={handleFileChange}
+          value={file ? (file as string) : ""}
         />
       </div>
       <div className="mb-6">
@@ -127,9 +124,7 @@ const ContactForm = () => {
           {actionState?.message}
         </p>
       )}
-      <Button type="submit" className="ml-auto flex">
-        전송
-      </Button>
+      <SubmitButton actionState={actionState?.success} />
     </form>
   );
 };

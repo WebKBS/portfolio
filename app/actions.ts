@@ -1,4 +1,5 @@
 "use server";
+import { sendEmail } from "@/lib/nodemailer";
 import { z } from "zod";
 
 // 폼 스키마 정의
@@ -19,6 +20,8 @@ const schema = z.object({
 });
 
 export const contactEmail = async (prevState: any, formData: FormData) => {
+  await new Promise((resolve) => setTimeout(resolve, 1000)); // 1초 지연 체크
+
   try {
     const { username, email, message, title } = schema.parse({
       username: formData.get("username"),
@@ -41,12 +44,19 @@ export const contactEmail = async (prevState: any, formData: FormData) => {
         };
       }
     }
+    // 파일을 Base64 문자열로 변환
+    const buffer = Buffer.from(await file.arrayBuffer());
+    const base64String = buffer.toString("base64");
 
-    console.log(username, email, message, title, file);
+    // Data URI로 포맷팅
+    const dataURI = `data:${file.type};base64,${base64String}`;
 
+    console.log(base64String);
+    console.log(dataURI);
+
+    await sendEmail(username, email, message, title, dataURI);
     return { success: true, message: "문의하기를 성공적으로 전송하였습니다." };
   } catch (error) {
-    // 만약 유효성 검사 오류가 발생하면 여기서 잡힐 것입니다.
     if (error instanceof z.ZodError) {
       console.error("유효성 검사 오류:", error.errors);
       return {
