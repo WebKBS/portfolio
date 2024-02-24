@@ -34,12 +34,15 @@ export const contactEmail = async (prevState: any, formData: FormData) => {
 
     if (file.size !== 0) {
       if (file.size > 2097152) {
-        return { success: false, message: "파일 크기는 2MB 이하여야 합니다." };
+        return {
+          isFileSize: false,
+          message: "파일 크기는 2MB 이하여야 합니다.",
+        };
       } else if (
         !(file.type.match(/image.*/) || file.type.match(/application\/pdf/))
       ) {
         return {
-          success: false,
+          isFileType: false,
           message: "파일 형식은 image, PDF만 가능합니다.",
         };
       }
@@ -54,11 +57,13 @@ export const contactEmail = async (prevState: any, formData: FormData) => {
     console.log(base64String);
     console.log(dataURI);
 
+    console.log(username, email, message, title);
+
     await sendEmail(username, email, message, title, dataURI);
     return { success: true, message: "문의하기를 성공적으로 전송하였습니다." };
   } catch (error) {
     if (error instanceof z.ZodError) {
-      console.error("유효성 검사 오류:", error.errors);
+      // console.error("유효성 검사 오류:", error.errors);
       return {
         success: false,
         message: "전송에 실패하였습니다.",
