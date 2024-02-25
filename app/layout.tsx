@@ -10,7 +10,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "강범수 포트폴리오",
+  title: {
+    default: "강범수 포트폴리오",
+    template: "%s - 강범수 포트폴리오",
+  },
   description: "프론트엔드 강범수의 포트폴리오입니다.",
 };
 

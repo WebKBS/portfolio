@@ -1,0 +1,46 @@
+.titleIn {
+  opacity: 0;
+  animation: titleIn 1s ease-in forwards;
+  animation-delay: 1s;
+}
+
+.titleIn2 {
+  opacity: 0;
+  animation: titleIn2 1s ease-in forwards;
+  animation-delay: 2s;
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes titleIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes titleIn2 {
+  from {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
