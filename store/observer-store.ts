@@ -1,11 +1,31 @@
 import { create } from "zustand";
 
 interface ObserverState {
-  skills: boolean;
-  setSkills: (skills: boolean) => void;
+  html: boolean;
+  css: boolean;
+  javascript: boolean;
+  typescript: boolean;
+  react: boolean;
+  next: boolean;
+  setHtml: (html: boolean) => void;
+  setCss: (css: boolean) => void;
+  setJavascript: (javascript: boolean) => void;
+  setTypescript: (typescript: boolean) => void;
+  setReact: (react: boolean) => void;
+  setNext: (next: boolean) => void;
 }
 
 export const useObserver = create<ObserverState>((set) => ({
-  skills: false,
-  setSkills: (skills: boolean) => set({ skills: skills }),
+  html: false,
+  css: false,
+  javascript: false,
+  typescript: false,
+  react: false,
+  next: false,
+  setHtml: (html: boolean) => set({ html: html }),
+  setCss: (css: boolean) => set({ css: css }),
+  setJavascript: (javascript: boolean) => set({ javascript: javascript }),
+  setTypescript: (typescript: boolean) => set({ typescript: typescript }),
+  setReact: (react: boolean) => set({ react: react }),
+  setNext: (next: boolean) => set({ next: next }),
 }));

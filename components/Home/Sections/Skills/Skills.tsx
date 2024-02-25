@@ -1,6 +1,6 @@
+import { skillImages } from "@/data/SkillsData";
 import Image from "next/image";
 import styles from "./Skills.module.css";
-import { skillImages } from "./SkillsData";
 
 const Skills = () => {
   return (

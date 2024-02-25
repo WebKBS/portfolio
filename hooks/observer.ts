@@ -8,7 +8,9 @@ const useObserverAction = (targetName: string) => {
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          useObserver.setState({ [targetName]: true });
+          setTimeout(() => {
+            useObserver.setState({ [targetName]: true });
+          }, 500);
           observer.unobserve(entry.target);
         }
       });

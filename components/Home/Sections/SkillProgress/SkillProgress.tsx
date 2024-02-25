@@ -1,6 +1,8 @@
 "use client";
 
+import useObserverAction from "@/hooks/observer";
 import { useEffect, useState } from "react";
+import SkillSvg from "./SkillSvg";
 
 interface SkillProgressProps {
   percentage: number | null;
@@ -9,6 +11,7 @@ interface SkillProgressProps {
 }
 
 const SkillProgress = ({ percentage, lang, color }: SkillProgressProps) => {
+  const ref = useObserverAction(lang);
   const [count, setCount] = useState(0);
   const radius = 70;
   const dashArray = radius * Math.PI * 2;
@@ -33,34 +36,20 @@ const SkillProgress = ({ percentage, lang, color }: SkillProgressProps) => {
   }, [percentage]);
 
   return (
-    <li className="relative flex h-[160px] w-[160px] items-center justify-center">
+    <li
+      ref={ref}
+      className="relative flex h-[160px] w-[160px] items-center justify-center"
+    >
       <div className="gap- absolute flex flex-col items-center gap-1">
         <p className="text-center text-sm font-semibold uppercase">{lang}</p>
         <span className="text-2xl font-bold">{count}%</span>
       </div>
-      <svg width="160" height="160" viewBox="0 0 160 160">
-        <circle
-          cx="80"
-          cy="80"
-          r={radius}
-          fill="none"
-          stroke="#e6e6e6"
-          strokeWidth="16"
-        />
-        <circle
-          cx="80"
-          cy="80"
-          r={radius}
-          strokeLinecap="round"
-          fill="none"
-          stroke={color}
-          strokeWidth="8"
-          strokeDasharray={dashArray}
-          strokeDashoffset={dashOffset}
-          transform="rotate(-90 80 80)"
-          style={{ transition: "all 4s" }}
-        />
-      </svg>
+      <SkillSvg
+        radius={radius}
+        color={color}
+        dashArray={dashArray}
+        dashOffset={dashOffset}
+      />
     </li>
   );
 };
