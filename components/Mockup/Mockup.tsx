@@ -74,7 +74,7 @@ const Mockup = ({
           height={400}
           src={macMockup}
           alt="맥북 목업"
-          className={"h-auto w-full " + styles.macMockup}
+          className={styles.macMockup}
           priority
         />
         <div className={styles.macImageBox} ref={macBoxRef}>
@@ -96,7 +96,7 @@ const Mockup = ({
           height={400}
           src={iphoneMockup}
           alt="아이폰 목업"
-          className={"h-auto w-full " + styles.iphoneMockup}
+          className={styles.iphoneMockup}
           priority
         />
         <div className={styles.iphoneImageBox} ref={iphoneBoxRef}>

@@ -32,8 +32,8 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
 
     const handleScrollThrottled = throttle(() => {
       // console.log("스크롤 위치:", currentScrollRef.scrollTop);
-      console.log("boxRef:", boxRef.current?.clientHeight);
-      if (currentScrollRef.scrollTop > boxRef.current?.clientHeight! / 2) {
+      // console.log("boxRef:", boxRef.current?.clientHeight);
+      if (currentScrollRef.scrollTop > boxRef.current?.clientHeight! / 10) {
         setIsOpacity(true);
       } else {
         setIsOpacity(false);
@@ -47,7 +47,7 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
     };
   }, []);
 
-  const opacityStyle = isOpacity ? "opacity-5" : "opacity-100";
+  const opacityStyle = isOpacity ? "opacity-0" : "opacity-100";
 
   const data = works.find((work) => work.slug === slug);
 
