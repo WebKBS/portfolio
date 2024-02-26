@@ -3,11 +3,21 @@
 import { useFormStatus } from "react-dom";
 import { Button } from "../ui/button";
 
-const SubmitButton = ({ actionState }: { actionState?: boolean }) => {
+const SubmitButton = ({
+  actionState,
+  disabled,
+}: {
+  actionState?: boolean;
+  disabled: boolean;
+}) => {
   const { pending } = useFormStatus();
 
   return (
-    <Button type="submit" className="ml-auto flex" disabled={pending}>
+    <Button
+      type="submit"
+      className="ml-auto flex"
+      disabled={disabled || pending}
+    >
       {pending ? (
         <p className="flex items-center gap-2">
           <svg

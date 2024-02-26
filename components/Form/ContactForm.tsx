@@ -2,7 +2,7 @@
 
 import { contactEmail } from "@/app/actions";
 import { useRouter } from "next/navigation";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { useFormState } from "react-dom";
 import { z } from "zod";
 import FileField from "./FileField";
@@ -25,6 +25,25 @@ const ContactForm = () => {
     message: "",
     email: "",
   });
+
+  const [disabled, setDisabled] = useState(true);
+
+  useEffect(() => {
+    if (
+      validateState.email &&
+      validateState.message &&
+      validateState.title &&
+      validateState.username
+    ) {
+      setDisabled(false);
+    } else {
+      setDisabled(true);
+    }
+
+    if (actionState?.success) {
+      router.replace("/contact/success");
+    }
+  }, [validateState, actionState?.success, router]);
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { files } = e.target;
@@ -84,10 +103,6 @@ const ContactForm = () => {
     }));
   };
 
-  if (actionState?.success) {
-    router.replace("/contact/success");
-  }
-
   return (
     <form action={formAction}>
       <InputField
@@ -142,7 +157,7 @@ const ContactForm = () => {
           {actionState?.message}
         </p>
       )}
-      <SubmitButton actionState={actionState?.success} />
+      <SubmitButton actionState={actionState?.success} disabled={disabled} />
     </form>
   );
 };
