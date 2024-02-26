@@ -14,6 +14,7 @@ import styles from "./page.module.css";
 
 const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
   const scrollRef = useRef<HTMLDivElement | null>(null);
+  const boxRef = useRef<HTMLDivElement | null>(null);
   const [lightTheme, setLightTheme] = useState(styles.afterShadow);
   const [isOpacity, setIsOpacity] = useState(false);
   const { modalOpen, setRouterModalState } = useRouterModalToggle();
@@ -31,7 +32,8 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
 
     const handleScrollThrottled = throttle(() => {
       // console.log("스크롤 위치:", currentScrollRef.scrollTop);
-      if (currentScrollRef.scrollTop > 120) {
+      console.log("boxRef:", boxRef.current?.clientHeight);
+      if (currentScrollRef.scrollTop > boxRef.current?.clientHeight! / 2) {
         setIsOpacity(true);
       } else {
         setIsOpacity(false);
@@ -63,9 +65,10 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
           className={`h-full w-full overflow-y-auto ${lightTheme}`}
           ref={scrollRef}
         >
-          <div className="p-6">
+          <div className="py-6">
             <div
-              className={`sticky left-6 top-6 transition-opacity duration-500 ${opacityStyle}`}
+              ref={boxRef}
+              className={`sticky left-6 top-6 px-6 transition-opacity duration-500 ${opacityStyle}`}
             >
               <h2 className="mb-2 text-xl font-semibold">{data?.title}</h2>
               <h3 className="mb-2">{data?.description}</h3>
@@ -82,14 +85,15 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
                   ))}
                 </ul>
               </div>
-              <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-                mollitia laudantium est. Sint ipsum eum accusantium, sit illo
-                earum. Tenetur quas molestiae fuga architecto sint molestias
-                quia quidem ipsa non?
-              </div>
             </div>
-            <div className="py-6">
+            <div className="relative z-10 w-full bg-background px-6 pt-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+              mollitia laudantium est. Sint ipsum eum accusantium, sit illo
+              earum. Tenetur quas molestiae fuga architecto sint molestias quia
+              quidem ipsa non? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Rem mollitia laudantium est. Sint ipsum eum
+            </div>
+            <div className="relative z-10 bg-background px-6 py-6">
               <Mockup
                 title={data!.title}
                 image={data!.image}
