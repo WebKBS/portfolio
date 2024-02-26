@@ -31,11 +31,11 @@ export async function sendEmail(
       from: email,
       to: process.env.GMAIL,
       subject: `${username}이 이메일을 보내왔습니다. ${email}`,
-      html: `<h2>Category: ${username}</h2>
+      html: `<h2>회사 및 이름: ${username}</h2>
         <hr />
-        <h3>Title: ${title}</h3>
+        <h3>제목: ${title}</h3>
         <hr />
-        <p>${message}</p>
+        <p>내용: ${message}</p>
         <p>From: ${email}</p>
       `,
       attachments: [{ path: file }],
