@@ -30,7 +30,7 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
     const currentScrollRef = scrollRef.current!;
 
     const handleScrollThrottled = throttle(() => {
-      console.log("스크롤 위치:", currentScrollRef.scrollTop);
+      // console.log("스크롤 위치:", currentScrollRef.scrollTop);
       if (currentScrollRef.scrollTop > 120) {
         setIsOpacity(true);
       } else {

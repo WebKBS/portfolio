@@ -1,18 +1,13 @@
 .titleIn {
   opacity: 0;
   animation: titleIn 1s ease-in forwards;
-  animation-delay: 1s;
+  animation-delay: 0.8s;
 }
 
 .titleIn2 {
   opacity: 0;
   animation: titleIn2 1s ease-in forwards;
-  animation-delay: 2s;
-}
-
-.positon {
-  animation: posiotion 0 forwards;
-  animation-delay: 3s;
+  animation-delay: 1.6s;
 }
 
 .fadeIn {
@@ -47,14 +42,5 @@
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes posiotion {
-  from {
-    position: absolute;
-  }
-  to {
-    position: sticky;
   }
 }

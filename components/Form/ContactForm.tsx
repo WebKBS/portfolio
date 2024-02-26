@@ -41,7 +41,7 @@ const ContactForm = () => {
     }
 
     if (actionState?.success) {
-      router.replace("/contact/success");
+      router.push("/contact/success");
     }
   }, [validateState, actionState?.success, router]);
 
