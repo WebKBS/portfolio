@@ -74,8 +74,8 @@ const Mockup = ({
           height={400}
           src={macMockup}
           alt="맥북 목업"
-          priority
           className={"h-auto w-full " + styles.macMockup}
+          loading="lazy"
         />
         <div className={styles.macImageBox} ref={macBoxRef}>
           <Image
@@ -84,9 +84,9 @@ const Mockup = ({
             height={400}
             src={image}
             alt={title}
-            priority
             className={styles.macImage}
             onLoad={macOnloadHandler}
+            loading="lazy"
           />
         </div>
       </div>
@@ -96,8 +96,8 @@ const Mockup = ({
           height={400}
           src={iphoneMockup}
           alt="아이폰 목업"
-          priority
           className={"h-auto w-full " + styles.iphoneMockup}
+          loading="lazy"
         />
         <div className={styles.iphoneImageBox} ref={iphoneBoxRef}>
           <div className={styles.topBox}>
@@ -107,7 +107,6 @@ const Mockup = ({
               src={topMockup}
               alt={title}
               className={styles.topImage}
-              priority
             />
           </div>
           <Image
@@ -117,8 +116,8 @@ const Mockup = ({
             src={mobileImage}
             alt={title}
             className={styles.iphoneImage}
-            priority
             onLoad={iphoneOnloadHandler}
+            loading="lazy"
           />
         </div>
       </div>
