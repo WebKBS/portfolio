@@ -87,7 +87,6 @@ const Mockup = ({
             className={styles.macImage}
             onLoad={macOnloadHandler}
             loading="lazy"
-            placeholder="blur"
           />
         </div>
       </div>
@@ -119,7 +118,6 @@ const Mockup = ({
             className={styles.iphoneImage}
             onLoad={iphoneOnloadHandler}
             loading="lazy"
-            placeholder="blur"
           />
         </div>
       </div>
