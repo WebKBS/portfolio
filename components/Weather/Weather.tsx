@@ -7,7 +7,7 @@ const weatherdata = async () => {
     const res = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?lat=37.5642135&lon=127.0016985&lang=kr&appid=${process.env.WEATHER_API_KEY}`,
 
-      { next: { revalidate: 60 * 15 } }, // 15분마다 캐시 갱신
+      { next: { revalidate: 60 } }, // 1분마다 새로고침
     );
 
     if (!res.ok) {

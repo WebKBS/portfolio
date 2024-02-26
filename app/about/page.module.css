@@ -10,6 +10,11 @@
   animation-delay: 2s;
 }
 
+.positon {
+  animation: posiotion 0 forwards;
+  animation-delay: 3s;
+}
+
 .fadeIn {
   animation: fadeIn 1s ease-in forwards;
 }
@@ -42,5 +47,14 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes posiotion {
+  from {
+    position: absolute;
+  }
+  to {
+    position: sticky;
   }
 }
