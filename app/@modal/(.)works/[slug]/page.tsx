@@ -16,7 +16,6 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const boxRef = useRef<HTMLDivElement | null>(null);
   const [lightTheme, setLightTheme] = useState(styles.afterShadow);
-  const [isOpacity, setIsOpacity] = useState(false);
   const { modalOpen, setRouterModalState } = useRouterModalToggle();
   const router = useRouter();
   const { theme } = useTheme();
@@ -34,9 +33,9 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
       // console.log("스크롤 위치:", currentScrollRef.scrollTop);
       // console.log("boxRef:", boxRef.current?.clientHeight);
       if (currentScrollRef.scrollTop > boxRef.current?.clientHeight! / 10) {
-        setIsOpacity(true);
+        boxRef.current?.classList.add("opacity-0");
       } else {
-        setIsOpacity(false);
+        boxRef.current?.classList.remove("opacity-0");
       }
     }, 120); // 쓰로틀링 간격 설정
 
@@ -47,7 +46,7 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
     };
   }, []);
 
-  const opacityStyle = isOpacity ? "opacity-0" : "opacity-100";
+  // const opacityStyle = isOpacity ? "opacity-0" : "opacity-100";
 
   const data = works.find((work) => work.slug === slug);
 
@@ -68,7 +67,7 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
           <div className="py-6">
             <div
               ref={boxRef}
-              className={`sticky left-6 top-6 px-6 transition-opacity duration-500 ${opacityStyle}`}
+              className={`sticky left-6 top-6 px-6 transition-opacity duration-500`}
             >
               <h2 className="mb-2 text-xl font-semibold">{data?.title}</h2>
               <h3 className="mb-2">{data?.description}</h3>
