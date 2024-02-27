@@ -18,7 +18,7 @@ const Works = ({ filterData }: { filterData: IWorks[] }) => {
       {filterData.map((work: IWorks) => (
         <li
           key={work.id}
-          className="w-full max-w-80 flex-1 rounded-xl border bg-white px-3 py-4 shadow-md transition-all duration-300 ease-in-out hover:shadow-lg dark:border-gray-700 dark:bg-gray-800 sm:min-w-80"
+          className="w-full rounded-xl border bg-white px-3 py-4 shadow-md transition-all duration-300 ease-in-out hover:shadow-lg dark:border-gray-700 dark:bg-gray-800 sm:w-full"
         >
           <Link
             href={`/works/${work.slug}`}
