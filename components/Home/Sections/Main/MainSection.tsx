@@ -25,6 +25,10 @@ const MainSection = () => {
               </Button>
             </Link>
           </div>
+          <div className="mb-6 break-keep text-center text-xs dark:text-yellow-300 sm:mt-4 sm:text-left">
+            본 사이트는 포트폴리오 용도로 제작되었으며, 어떠한 상업적 목적으로
+            사용되지 않습니다.
+          </div>
         </div>
         <QrCode url="/" />
       </div>

@@ -77,7 +77,9 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
               </div>
               <div className="mb-2 text-sm text-green-500">
                 {data?.url === "empty" ? (
-                  <span className="text-red-400">비공개</span>
+                  <span className="text-red-400">
+                    아쉽게도 URL이 없습니다. 🥲
+                  </span>
                 ) : (
                   <a href={data?.url} target="_blank">
                     {data?.url}
