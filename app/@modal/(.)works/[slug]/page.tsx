@@ -76,9 +76,13 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
                 <p>{data?.date}</p>
               </div>
               <div className="mb-2 text-sm text-green-500">
-                <a href={data?.url} target="_blank">
-                  {data?.url}
-                </a>
+                {data?.url === "empty" ? (
+                  <span className="text-red-400">비공개</span>
+                ) : (
+                  <a href={data?.url} target="_blank">
+                    {data?.url}
+                  </a>
+                )}
               </div>
               <div className="mb-2">
                 <ul className="flex flex-wrap gap-2">
