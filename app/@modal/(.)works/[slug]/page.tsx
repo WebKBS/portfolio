@@ -75,6 +75,11 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
                 <p>제작기간:</p>
                 <p>{data?.date}</p>
               </div>
+              <div className="mb-2 text-sm text-green-500">
+                <a href={data?.url} target="_blank">
+                  {data?.url}
+                </a>
+              </div>
               <div className="mb-2">
                 <ul className="flex flex-wrap gap-2">
                   {data?.tags.map((tech, index) => (
@@ -86,11 +91,7 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
               </div>
             </div>
             <div className="relative z-10 w-full bg-background px-6 pt-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-              mollitia laudantium est. Sint ipsum eum accusantium, sit illo
-              earum. Tenetur quas molestiae fuga architecto sint molestias quia
-              quidem ipsa non? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Rem mollitia laudantium est. Sint ipsum eum
+              {data?.body}
             </div>
             <div className="relative z-10 bg-background px-6 py-6">
               <Mockup

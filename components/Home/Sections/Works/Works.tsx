@@ -24,8 +24,9 @@ const Works = ({ filterData }: { filterData: IWorks[] }) => {
             href={`/works/${work.slug}`}
             scroll={false}
             onClick={clickHandler}
+            className="flex h-full flex-col gap-2"
           >
-            <div className="relative mb-2 h-40 w-full overflow-hidden ">
+            <div className="relative mb-2 h-40 w-full overflow-hidden">
               <Image
                 src={work.image}
                 alt={work.thumbnail}
@@ -34,7 +35,7 @@ const Works = ({ filterData }: { filterData: IWorks[] }) => {
                 className="absolute left-0 top-0 h-auto w-full object-cover"
               />
             </div>
-            <div className="mx-2 mt-4 flex flex-col">
+            <div className="flex flex-col">
               <div className="flex flex-col gap-2">
                 <h3 className="line-clamp-1 font-semibold">{work.title}</h3>
                 <p className="mb-4 line-clamp-2 break-keep text-sm">
@@ -52,12 +53,12 @@ const Works = ({ filterData }: { filterData: IWorks[] }) => {
                   </Badge>
                 ))}
               </div>
-              <div className="flex justify-between">
-                <time className="text-sm" dateTime={work.date}>
-                  {work.date}
-                </time>
-                <Badge variant={"default"}>Preview</Badge>
-              </div>
+            </div>
+            <div className="mt-auto flex justify-between">
+              <time className="text-sm" dateTime={work.date}>
+                {work.date}
+              </time>
+              <Badge variant={"default"}>Preview</Badge>
             </div>
           </Link>
         </li>
