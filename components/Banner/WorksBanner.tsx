@@ -2,7 +2,6 @@ import Image from "next/image";
 import styles from "./WorksBanner.module.css";
 
 const WorksBanner = ({ image, title }: { image: string; title: string }) => {
-  console.log(image);
   return (
     <div className="sticky left-0 top-14 -z-10 h-[400px] w-screen overflow-hidden">
       <Image
@@ -12,7 +11,7 @@ const WorksBanner = ({ image, title }: { image: string; title: string }) => {
         width={1920}
         height={400}
         sizes="100vw"
-        className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 object-cover"
+        className="absolute left-1/2 top-1/2 h-full -translate-x-1/2 -translate-y-1/2 object-cover"
       />
       <div
         className={`absolute left-0 top-0 h-full w-full ${styles.linearGradient}`}

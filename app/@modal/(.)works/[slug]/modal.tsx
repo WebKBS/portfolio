@@ -26,5 +26,3 @@ export function Modal({ children }: { children: React.ReactNode }) {
     </>
   );
 }
-
-// 모달을 따로 커스텀으로 만들고 난후 zutand store에 상태를 저장하고 페이지 바로보기 클릭시 해당 모달을 삭제하는 방식으로 교체해야함

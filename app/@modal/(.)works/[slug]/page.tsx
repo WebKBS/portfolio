@@ -46,8 +46,6 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
     };
   }, []);
 
-  // const opacityStyle = isOpacity ? "opacity-0" : "opacity-100";
-
   const data = works.find((work) => work.slug === slug);
 
   const closeHandler = () => {

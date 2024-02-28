@@ -1,3 +1,12 @@
+export const SkillList = [
+  { percentage: 92, color: "#E34F26", lang: "html" },
+  { percentage: 89, color: "#1572B6", lang: "css" },
+  { percentage: 82, color: "#F7DF1E", lang: "javascript" },
+  { percentage: 76, color: "#3178C6", lang: "typescript" },
+  { percentage: 84, color: "#61DAFB", lang: "react" },
+  { percentage: 77, color: "#000000", lang: "next" },
+];
+
 export const skillImages = [
   {
     src: "/skills/js.png",
