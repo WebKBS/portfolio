@@ -1,7 +1,7 @@
-import MainSection from "@/components/Home/Sections/Main/MainSection";
-import SkillProgressSection from "@/components/Home/Sections/SkillProgress/SkillProgressSection";
-import SkillsSection from "@/components/Home/Sections/Skills/SkillsSection";
-import WorksSection from "@/components/Home/Sections/Works/WorksSection";
+import MainSection from "@/app/_components/Sections/Main/MainSection";
+import SkillProgressSection from "@/app/_components/Sections/SkillProgress/SkillProgressSection";
+import SkillsSection from "@/app/_components/Sections/Skills/SkillsSection";
+import WorksSection from "@/app/_components/Sections/Works/WorksSection";
 import Weather from "@/components/Weather/Weather";
 import { buttonVariants } from "@/components/ui/button";
 import { Cute_Font } from "next/font/google";

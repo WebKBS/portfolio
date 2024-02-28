@@ -4,7 +4,7 @@ import { IWorks } from "@/data/worksData";
 import { useRouterModalToggle } from "@/store/modal-store";
 import Image from "next/image";
 import Link from "next/link";
-import { Badge } from "../../../ui/badge";
+import { Badge } from "../../../../components/ui/badge";
 
 const Works = ({ filterData }: { filterData: IWorks[] }) => {
   const { setRouterModalState } = useRouterModalToggle();

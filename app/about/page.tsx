@@ -1,4 +1,4 @@
-import TopTitle from "@/components/About/TopTitle";
+import TopTitle from "./_components/TopTitle";
 
 export const metadata = {
   title: "About",

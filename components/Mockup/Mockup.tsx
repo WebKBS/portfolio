@@ -110,6 +110,13 @@ const Mockup = ({
             />
           </div>
           <Image
+            src="/loading/loading.svg"
+            width={50}
+            height={50}
+            alt="loading"
+            className={styles.loading}
+          />
+          <Image
             ref={iphoneImageRef}
             width={400}
             height={400}

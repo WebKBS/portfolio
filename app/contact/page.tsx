@@ -1,4 +1,4 @@
-import ContactSection from "@/components/Contact/ContactSection";
+import ContactSection from "./_components/ContactSection";
 
 export const metadata = {
   title: "문의하기",
