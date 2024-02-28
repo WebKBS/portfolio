@@ -22,9 +22,10 @@ const TopTitle = () => {
         width={1920}
         height={1920}
         alt="강범수"
-        className="h-full w-auto object-cover brightness-50 sm:w-full"
+        className="h-full w-auto object-cover sm:w-full"
         sizes="100vw"
       />
+      <div className={styles.coverShadow}></div>
       <div className="absolute left-0 top-0 mx-auto flex h-[400px] w-full max-w-screen-sm items-center px-6 md:left-1/2 md:h-[740px] md:max-w-screen-lg md:-translate-x-1/2">
         <div>
           <h2 className={`text-4xl text-gray-50 md:text-6xl ${font.className}`}>

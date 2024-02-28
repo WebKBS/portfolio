@@ -67,7 +67,7 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
           <div className="py-6">
             <div
               ref={boxRef}
-              className={`sticky left-6 top-6 px-6 transition-opacity duration-500`}
+              className={`sticky left-6 top-6 px-6 pb-6 transition-opacity duration-500`}
             >
               <h2 className="mb-2 text-xl font-semibold">{data?.title}</h2>
               <h3 className="mb-2">{data?.description}</h3>
