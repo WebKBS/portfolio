@@ -95,9 +95,9 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
                   ))}
                 </ul>
               </div>
-            </div>
-            <div className="relative z-10 w-full bg-background px-6 pt-4">
-              {data?.body}
+              <div className="relative z-10 w-full bg-background pt-4">
+                {data?.body}
+              </div>
             </div>
             <div className="relative z-10 bg-background px-6 py-6">
               <Mockup
