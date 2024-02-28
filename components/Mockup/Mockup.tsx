@@ -5,6 +5,7 @@ import iphoneMockup from "@/public/mockup/iphone.png";
 import macMockup from "@/public/mockup/mac.png";
 import Image from "next/image";
 import { useRef, useState } from "react";
+import Loading from "../Loading/LoadingSpinner";
 import styles from "./Mockup.module.css";
 
 const Mockup = ({
@@ -78,13 +79,7 @@ const Mockup = ({
           priority
         />
         <div className={styles.macImageBox} ref={macBoxRef}>
-          <Image
-            src="/loading/loading.svg"
-            width={50}
-            height={50}
-            alt="loading"
-            className={styles.loading}
-          />
+          <Loading />
           <Image
             ref={macImageRef}
             width={400}
@@ -116,13 +111,7 @@ const Mockup = ({
               className={styles.topImage}
             />
           </div>
-          <Image
-            src="/loading/loading.svg"
-            width={50}
-            height={50}
-            alt="loading"
-            className={styles.loading}
-          />
+          <Loading />
           <Image
             ref={iphoneImageRef}
             width={400}

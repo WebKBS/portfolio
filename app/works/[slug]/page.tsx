@@ -17,7 +17,7 @@ const WorksDetailPage = ({
 
   return (
     <main className="flex-1">
-      <WorksBanner image={data.image} />
+      <WorksBanner image={data.image} title={data.title} />
       <div className="h-[3000px] bg-background"></div>
     </main>
   );

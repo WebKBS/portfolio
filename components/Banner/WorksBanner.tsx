@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const WorksBanner = ({ image }: { image: string }) => {
+const WorksBanner = ({ image, title }: { image: string; title: string }) => {
   console.log(image);
   return (
     <div className="sticky left-0 top-14 -z-10 h-[400px] w-screen overflow-hidden">
@@ -10,8 +10,17 @@ const WorksBanner = ({ image }: { image: string }) => {
         alt="Works Banner"
         width={1920}
         height={400}
-        className="absolute -top-1/2 left-0 object-cover"
+        sizes="100vw"
+        className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 object-cover"
       />
+      <div className="absolute left-0 top-0 h-full w-full bg-black opacity-50"></div>
+      <div className="relative z-[1] mx-auto h-full max-w-screen-lg px-5 py-6 lg:max-w-screen-2xl lg:px-4 xl:px-6">
+        <div className="flex h-full w-full items-end">
+          <h2 className="text-5xl font-bold text-white drop-shadow-lg">
+            {title}
+          </h2>
+        </div>
+      </div>
     </div>
   );
 };

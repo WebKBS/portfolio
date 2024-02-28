@@ -84,4 +84,17 @@ export const works = [
     slug: "depos2",
     body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem mollitia laudantium est. Sint ipsum eum accusantium, sit illoearum. Tenetur quas molestiae fuga architecto sint molestias quiaquidem ipsa non? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem mollitia laudantium est. Sint ipsum eum",
   },
+  {
+    id: 5,
+    title: "임대료 보증금 상호전환 계산기",
+    description: "개인 프로젝트로 제작한 임대료 보증금 상호전환 계산기입니다.",
+    thumbnail: "/works/depos/thumbnail.png",
+    image: "/works/depos/main.png",
+    mobileImage: "/works/depos/mobile.png",
+    url: "https://depos.kr",
+    date: "2024-02",
+    tags: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    slug: "depos2",
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem mollitia laudantium est. Sint ipsum eum accusantium, sit illoearum. Tenetur quas molestiae fuga architecto sint molestias quiaquidem ipsa non? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem mollitia laudantium est. Sint ipsum eum",
+  },
 ];

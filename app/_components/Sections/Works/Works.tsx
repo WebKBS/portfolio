@@ -1,5 +1,6 @@
 "use client";
 
+import LoadingSpinner from "@/components/Loading/LoadingSpinner";
 import { IWorks } from "@/data/worksData";
 import { useRouterModalToggle } from "@/store/modal-store";
 import Image from "next/image";
@@ -27,6 +28,7 @@ const Works = ({ filterData }: { filterData: IWorks[] }) => {
             className="flex h-full flex-col gap-2"
           >
             <div className="relative mb-2 h-40 w-full overflow-hidden">
+              <LoadingSpinner />
               <Image
                 src={work.image}
                 alt={work.thumbnail}
