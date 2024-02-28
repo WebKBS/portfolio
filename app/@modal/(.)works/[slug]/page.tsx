@@ -32,7 +32,7 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
     const handleScrollThrottled = throttle(() => {
       // console.log("스크롤 위치:", currentScrollRef.scrollTop);
       // console.log("boxRef:", boxRef.current?.clientHeight);
-      if (currentScrollRef.scrollTop > boxRef.current?.clientHeight! / 10) {
+      if (currentScrollRef.scrollTop > boxRef.current?.clientHeight! / 4) {
         boxRef.current?.classList.add("opacity-0");
       } else {
         boxRef.current?.classList.remove("opacity-0");
@@ -58,7 +58,7 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
   return (
     <Modal>
       <div
-        className={`absolute left-1/2 top-1/2 z-50 flex h-2/3 w-[90%] flex-col overflow-hidden rounded-xl border-2 bg-background lg:h-3/4 lg:max-w-7xl ${modalOpen ? styles.active : ""}`}
+        className={`absolute left-1/2 top-1/2 z-50 flex h-2/3 w-[90%] flex-col overflow-hidden rounded-xl border-2 bg-background shadow-md lg:h-3/4 lg:max-w-7xl ${modalOpen ? styles.active : ""}`}
       >
         <div
           className={`h-full w-full overflow-y-auto ${lightTheme}`}

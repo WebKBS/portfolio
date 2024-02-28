@@ -79,6 +79,13 @@ const Mockup = ({
         />
         <div className={styles.macImageBox} ref={macBoxRef}>
           <Image
+            src="/loading/loading.svg"
+            width={50}
+            height={50}
+            alt="loading"
+            className={styles.loading}
+          />
+          <Image
             ref={macImageRef}
             width={400}
             height={400}

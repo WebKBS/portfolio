@@ -1,9 +1,9 @@
 import Works from "@/app/_components/Sections/Works/Works";
 import { works } from "@/data/worksData";
 
-// export const metadata = {
-//   title: "Works",
-// };
+export const metadata = {
+  title: "Works",
+};
 
 const WroksPage = () => {
   return (
