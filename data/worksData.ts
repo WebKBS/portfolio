@@ -35,6 +35,12 @@ export const works = [
     ],
     slug: "depos",
     body: "개인 프로젝트로 SH 주택임대공사의 임대료 보증금 상호전환 계산기를 만들었습니다. 사용자가 기본 보증금과 월 임대료를 입력하면 계약금과 보증금 및 월 임대료의 퍼센테이지를 자동으로 계산해줍니다. Zustand를 사용하여 상태를 관리하고, SEO를 최적화하고 PWA를 적용하여 웹앱 형식으로 개발하였습니다.",
+    detailContent: {
+      previewImages: ["", "", ""],
+      description: "",
+      stacks: ["", "", ""],
+      functions: ["", "", ""],
+    },
   },
   {
     id: 2,

@@ -6,9 +6,9 @@ import macMockup from "@/public/mockup/mac.png";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import Loading from "../Loading/LoadingSpinner";
-import styles from "./Mockup.module.css";
+import styles from "./MockupAnimation.module.css";
 
-const Mockup = ({
+const MockupAnimation = ({
   title,
   image,
   mobileImage,
@@ -128,4 +128,4 @@ const Mockup = ({
   );
 };
 
-export default Mockup;
+export default MockupAnimation;

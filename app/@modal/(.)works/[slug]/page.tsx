@@ -1,5 +1,5 @@
 "use client";
-import Mockup from "@/components/Mockup/Mockup";
+import Mockup from "@/components/Mockup/MockupAnimation";
 import { Badge } from "@/components/ui/badge";
 import { Button, buttonVariants } from "@/components/ui/button";
 
@@ -76,7 +76,7 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
                 {data?.body}
               </div>
             </div>
-            <div className="relative z-10 bg-background px-6 py-6">
+            <div className="relative z-10 px-6 py-6">
               <Mockup
                 title={data!.title}
                 image={data!.image}

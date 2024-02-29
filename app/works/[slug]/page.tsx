@@ -14,13 +14,20 @@ const WorksDetailPage = ({
     return notFound();
   }
 
-  console.log(data);
+  // console.log(data.detailContent);
 
   return (
     <main className="flex-1">
       <WorksBanner image={data.image} title={data.title} />
-      <section className="h-[3000px] bg-background">
-        <PageTitle title={data.title} />
+      <section className="mx-auto h-full max-w-screen-lg px-5 lg:max-w-screen-2xl lg:px-4 xl:px-6">
+        <PageTitle title={data.title} isPreview={true} />
+        <div className="h-[3000px]">
+          {/* <Mockup
+            image={data.image}
+            mobileImage={data.mobileImage}
+            title={data.title}
+          /> */}
+        </div>
       </section>
     </main>
   );

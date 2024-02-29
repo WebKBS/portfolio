@@ -54,7 +54,7 @@ const WorksBanner = ({ image, title }: { image: string; title: string }) => {
       ></div>
       <div className="relative z-[1] mx-auto h-full max-w-screen-lg px-5 py-6 lg:max-w-screen-2xl lg:px-4 xl:px-6">
         <div className="flex h-full w-full items-end">
-          <h2 className="text-3xl font-bold text-white drop-shadow-lg">
+          <h2 className="text-xl font-bold text-white drop-shadow-lg sm:text-2xl">
             {title}
           </h2>
         </div>
