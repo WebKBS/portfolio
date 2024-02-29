@@ -1,16 +1,13 @@
 "use client";
 import { useTitle } from "@/store/banner-store";
-import { useModalToggle } from "@/store/modal-store";
 import { throttle } from "lodash";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import { Button } from "../ui/button";
 import styles from "./WorksBanner.module.css";
 
 const WorksBanner = ({
   image,
   title,
-  isPreview,
 }: {
   image: string;
   title: string;
@@ -19,9 +16,6 @@ const WorksBanner = ({
   const bannerRef = useRef<HTMLDivElement | null>(null);
   const setTitle = useTitle((state) => state.setIsTitle);
   const isTitle = useTitle((state) => state.isTitle);
-  const setIsPreviewModalOpen = useModalToggle(
-    (state) => state.setIsPreviewModalOpen,
-  );
 
   useEffect(() => {
     setTitle(false);
@@ -51,7 +45,7 @@ const WorksBanner = ({
   return (
     <div
       ref={bannerRef}
-      className="sticky left-0 top-14 h-[400px] w-screen overflow-hidden transition-opacity duration-300"
+      className="sticky left-0 top-14 z-0 h-[400px] w-screen overflow-hidden transition-opacity duration-300"
     >
       <Image
         priority
@@ -63,22 +57,12 @@ const WorksBanner = ({
         className="absolute left-1/2 top-1/2 h-full -translate-x-1/2 -translate-y-1/2 object-cover"
       />
       <div
-        className={`absolute left-0 top-0 h-full w-full ${styles.linearGradient}`}
+        className={`absolute left-0 top-0 z-0 h-full w-full ${styles.linearGradient}`}
       ></div>
-      <div className="relative z-[1] mx-auto h-full max-w-screen-lg px-5 py-6 lg:max-w-screen-2xl lg:px-4 xl:px-6">
+      <div className="mx-auto h-full max-w-screen-lg px-5 py-6 lg:max-w-screen-2xl lg:px-4 xl:px-6">
         <div className="flex h-full w-full items-end">
           <h2 className="flex w-full flex-wrap items-center justify-between gap-2 text-xl font-bold text-white drop-shadow-lg sm:text-2xl">
             {title}
-            {isPreview && (
-              <Button
-                size="sm"
-                className="relative z-50"
-                variant={"secondary"}
-                onClick={() => setIsPreviewModalOpen(true)}
-              >
-                미리보기
-              </Button>
-            )}
           </h2>
         </div>
       </div>
