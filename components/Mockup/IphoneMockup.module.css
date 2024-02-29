@@ -1,0 +1,44 @@
+.iphoneMockup {
+  filter: drop-shadow(2px 2px 8px #000);
+  width: 100%;
+  height: auto;
+}
+
+.iphoneBox {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.iphoneImageBox {
+  width: 63%;
+  height: 90%;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow-y: auto;
+  border-radius: 22px;
+  background: #000;
+}
+
+.iphoneImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.topBox {
+  position: relative;
+  padding-top: 7%;
+  z-index: 2;
+}
+
+.topImage {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}

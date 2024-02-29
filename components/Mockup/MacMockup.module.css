@@ -1,0 +1,27 @@
+.macBox {
+  position: relative;
+}
+
+.macMockup {
+  filter: drop-shadow(2px 2px 8px #000);
+  width: 100%;
+  height: auto;
+}
+
+.macImageBox {
+  width: 78%;
+  height: 86%;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow-y: auto;
+  background: #000;
+}
+
+.macImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
