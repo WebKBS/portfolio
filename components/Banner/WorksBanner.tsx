@@ -45,7 +45,7 @@ const WorksBanner = ({ image, title }: { image: string; title: string }) => {
         src={image}
         alt="Works Banner"
         width={1920}
-        height={400}
+        height={1920}
         sizes="100vw"
         className="absolute left-1/2 top-1/2 h-full -translate-x-1/2 -translate-y-1/2 object-cover"
       />
@@ -54,7 +54,7 @@ const WorksBanner = ({ image, title }: { image: string; title: string }) => {
       ></div>
       <div className="relative z-[1] mx-auto h-full max-w-screen-lg px-5 py-6 lg:max-w-screen-2xl lg:px-4 xl:px-6">
         <div className="flex h-full w-full items-end">
-          <h2 className="text-4xl font-bold text-white drop-shadow-lg">
+          <h2 className="text-3xl font-bold text-white drop-shadow-lg">
             {title}
           </h2>
         </div>
