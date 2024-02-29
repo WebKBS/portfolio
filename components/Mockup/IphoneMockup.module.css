@@ -42,3 +42,9 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+@media screen and (min-width: 640px) {
+  .iphoneBox {
+    display: none;
+  }
+}
