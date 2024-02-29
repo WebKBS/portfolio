@@ -1,4 +1,5 @@
 "use client";
+import { useTitle } from "@/store/banner-store";
 import { throttle } from "lodash";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
@@ -6,14 +7,17 @@ import styles from "./WorksBanner.module.css";
 
 const WorksBanner = ({ image, title }: { image: string; title: string }) => {
   const bannerRef = useRef<HTMLDivElement | null>(null);
+  const setTitle = useTitle((state) => state.setIsTitle);
 
   useEffect(() => {
     const handleScroll = throttle(() => {
       if (bannerRef.current) {
         if (window.scrollY > bannerRef.current.clientHeight / 4) {
           bannerRef.current.classList.add("opacity-0");
+          setTitle(true);
         } else {
           bannerRef.current.classList.remove("opacity-0");
+          setTitle(false);
         }
       }
     }, 120);
@@ -23,7 +27,7 @@ const WorksBanner = ({ image, title }: { image: string; title: string }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [setTitle]);
 
   return (
     <div
