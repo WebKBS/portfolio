@@ -7,7 +7,7 @@ const useScrollHandler = () => {
 
   useEffect(() => {
     const handleScrollThrottled = throttle(() => {
-      console.log("scrollRef:", scrollRef.current?.clientHeight);
+      // console.log("scrollRef:", scrollRef.current?.clientHeight);
       if (scrollRef.current && topBoxRef.current) {
         if (scrollRef.current.scrollTop > topBoxRef.current.clientHeight / 4) {
           topBoxRef.current.classList.add("opacity-0");

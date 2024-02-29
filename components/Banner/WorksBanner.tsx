@@ -8,14 +8,21 @@ import styles from "./WorksBanner.module.css";
 const WorksBanner = ({ image, title }: { image: string; title: string }) => {
   const bannerRef = useRef<HTMLDivElement | null>(null);
   const setTitle = useTitle((state) => state.setIsTitle);
+  const isTitle = useTitle((state) => state.isTitle);
+
+  useEffect(() => {
+    setTitle(false);
+  }, [setTitle]);
 
   useEffect(() => {
     const handleScroll = throttle(() => {
       if (bannerRef.current) {
         if (window.scrollY > bannerRef.current.clientHeight / 4) {
+          if (isTitle) return;
           bannerRef.current.classList.add("opacity-0");
           setTitle(true);
         } else {
+          if (!isTitle) return;
           bannerRef.current.classList.remove("opacity-0");
           setTitle(false);
         }
@@ -23,11 +30,10 @@ const WorksBanner = ({ image, title }: { image: string; title: string }) => {
     }, 120);
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [setTitle]);
+  }, [setTitle, isTitle]);
 
   return (
     <div

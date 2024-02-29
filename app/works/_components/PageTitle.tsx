@@ -8,7 +8,7 @@ const PageTitle = ({ title }: { title: string }) => {
   return (
     <>
       {isTitle && (
-        <h2 className="sticky left-0 top-14 z-[1] mb-4 py-2 text-4xl font-bold backdrop-blur-md">
+        <h2 className="sticky left-0 top-14 z-[1] py-3 text-4xl font-bold backdrop-blur-md">
           {title}
         </h2>
       )}
