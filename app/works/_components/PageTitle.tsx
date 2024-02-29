@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useTitle } from "@/store/banner-store";
+import { useModalToggle } from "@/store/modal-store";
 
 const PageTitle = ({
   title,
@@ -11,6 +12,10 @@ const PageTitle = ({
   isPreview?: boolean;
 }) => {
   const { isTitle } = useTitle();
+  const setIsPreviewModalOpen = useModalToggle(
+    (state) => state.setIsPreviewModalOpen,
+  );
+
   const opacity = isTitle ? "opacity-100" : "opacity-0";
 
   return (
@@ -20,7 +25,11 @@ const PageTitle = ({
       >
         {title}
         {isPreview && (
-          <Button size="sm" variant={"secondary"}>
+          <Button
+            size="sm"
+            variant={"secondary"}
+            onClick={() => setIsPreviewModalOpen(true)}
+          >
             미리보기
           </Button>
         )}

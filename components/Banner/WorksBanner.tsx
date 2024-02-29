@@ -1,14 +1,27 @@
 "use client";
 import { useTitle } from "@/store/banner-store";
+import { useModalToggle } from "@/store/modal-store";
 import { throttle } from "lodash";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { Button } from "../ui/button";
 import styles from "./WorksBanner.module.css";
 
-const WorksBanner = ({ image, title }: { image: string; title: string }) => {
+const WorksBanner = ({
+  image,
+  title,
+  isPreview,
+}: {
+  image: string;
+  title: string;
+  isPreview?: boolean;
+}) => {
   const bannerRef = useRef<HTMLDivElement | null>(null);
   const setTitle = useTitle((state) => state.setIsTitle);
   const isTitle = useTitle((state) => state.isTitle);
+  const setIsPreviewModalOpen = useModalToggle(
+    (state) => state.setIsPreviewModalOpen,
+  );
 
   useEffect(() => {
     setTitle(false);
@@ -38,7 +51,7 @@ const WorksBanner = ({ image, title }: { image: string; title: string }) => {
   return (
     <div
       ref={bannerRef}
-      className="sticky left-0 top-14 -z-10 h-[400px] w-screen overflow-hidden transition-opacity duration-500"
+      className="sticky left-0 top-14 h-[400px] w-screen overflow-hidden transition-opacity duration-500"
     >
       <Image
         priority
@@ -54,8 +67,18 @@ const WorksBanner = ({ image, title }: { image: string; title: string }) => {
       ></div>
       <div className="relative z-[1] mx-auto h-full max-w-screen-lg px-5 py-6 lg:max-w-screen-2xl lg:px-4 xl:px-6">
         <div className="flex h-full w-full items-end">
-          <h2 className="text-xl font-bold text-white drop-shadow-lg sm:text-2xl">
+          <h2 className="flex w-full flex-wrap items-center justify-between gap-2 text-xl font-bold text-white drop-shadow-lg sm:text-2xl">
             {title}
+            {isPreview && (
+              <Button
+                size="sm"
+                className="relative z-50"
+                variant={"secondary"}
+                onClick={() => setIsPreviewModalOpen(true)}
+              >
+                미리보기
+              </Button>
+            )}
           </h2>
         </div>
       </div>
