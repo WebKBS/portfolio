@@ -4,47 +4,26 @@ import { Badge } from "@/components/ui/badge";
 import { Button, buttonVariants } from "@/components/ui/button";
 
 import { works } from "@/data/worksData";
+import useScrollHandler from "@/hooks/scrollEvent";
 import { useRouterModalToggle } from "@/store/modal-store";
-import { throttle } from "lodash";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Modal } from "./modal";
 import styles from "./page.module.css";
 
 const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
-  const scrollRef = useRef<HTMLDivElement | null>(null);
-  const boxRef = useRef<HTMLDivElement | null>(null);
   const [lightTheme, setLightTheme] = useState(styles.afterShadow);
   const { modalOpen, setRouterModalState } = useRouterModalToggle();
   const router = useRouter();
   const { theme } = useTheme();
+  const { scrollRef, topBoxRef } = useScrollHandler();
 
   useEffect(() => {
     if (theme === "light") {
       setLightTheme(styles.afterWhiteShadow);
     }
   }, [theme]);
-
-  useEffect(() => {
-    const currentScrollRef = scrollRef.current!;
-
-    const handleScrollThrottled = throttle(() => {
-      // console.log("스크롤 위치:", currentScrollRef.scrollTop);
-      // console.log("boxRef:", boxRef.current?.clientHeight);
-      if (currentScrollRef.scrollTop > boxRef.current?.clientHeight! / 4) {
-        boxRef.current?.classList.add("opacity-0");
-      } else {
-        boxRef.current?.classList.remove("opacity-0");
-      }
-    }, 120); // 쓰로틀링 간격 설정
-
-    currentScrollRef.addEventListener("scroll", handleScrollThrottled);
-
-    return () => {
-      currentScrollRef.removeEventListener("scroll", handleScrollThrottled);
-    };
-  }, []);
 
   const data = works.find((work) => work.slug === slug);
 
@@ -56,7 +35,7 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
   return (
     <Modal>
       <div
-        className={`absolute left-1/2 top-1/2 z-50 flex h-[82%] w-[90%] flex-col overflow-hidden rounded-xl border-2 bg-background shadow-md lg:h-3/4 lg:max-w-7xl ${modalOpen ? styles.active : ""}`}
+        className={`absolute left-1/2 top-1/2 z-50 flex h-[80%] w-[90%] flex-col overflow-hidden rounded-xl border-2 bg-background shadow-md lg:h-3/4 lg:max-w-7xl ${modalOpen ? styles.active : ""}`}
       >
         <div
           className={`h-full w-full overflow-y-auto ${lightTheme}`}
@@ -64,7 +43,7 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
         >
           <div className="py-6">
             <div
-              ref={boxRef}
+              ref={topBoxRef}
               className={`sticky left-6 top-6 px-6 pb-6 transition-opacity duration-500`}
             >
               <h2 className="mb-2 text-xl font-semibold">{data?.title}</h2>

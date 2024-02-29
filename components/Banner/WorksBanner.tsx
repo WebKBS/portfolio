@@ -1,9 +1,35 @@
+"use client";
+import { throttle } from "lodash";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 import styles from "./WorksBanner.module.css";
 
 const WorksBanner = ({ image, title }: { image: string; title: string }) => {
+  const bannerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const handleScroll = throttle(() => {
+      if (bannerRef.current) {
+        if (window.scrollY > bannerRef.current.clientHeight / 4) {
+          bannerRef.current.classList.add("opacity-0");
+        } else {
+          bannerRef.current.classList.remove("opacity-0");
+        }
+      }
+    }, 120);
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="sticky left-0 top-14 -z-10 h-[400px] w-screen overflow-hidden">
+    <div
+      ref={bannerRef}
+      className="sticky left-0 top-14 -z-10 h-[400px] w-screen overflow-hidden transition-opacity duration-500"
+    >
       <Image
         priority
         src={image}
