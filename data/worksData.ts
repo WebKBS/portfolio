@@ -19,7 +19,10 @@ export interface IWorks {
     }[];
     description: string;
     stacks: string[];
-    functions: string[];
+    functions: {
+      function: string;
+      description: string;
+    }[];
   };
 }
 
@@ -59,7 +62,8 @@ export const works = [
           image: "/works/k2gbs/main.png",
         },
       ],
-      description: "",
+      description:
+        "개인 프로젝트로 개발한 보증금 및 임대료 상호전환 계산기입니다. 사용자가 기본 보증금과 월 임대료를 입력하면 계약금과 보증금 및 월 임대료의 퍼센테이지를 자동으로 계산해줍니다. Zustand를 사용하여 상태를 관리하고, SEO를 최적화하고 PWA를 적용하여 웹앱 형식으로 개발하였습니다.",
       stacks: [
         "Next.js",
         "React",
@@ -67,16 +71,47 @@ export const works = [
         "Tailwind CSS",
         "Zustand",
         "Shadcn Ui",
+        "PWA",
       ],
       functions: [
-        "SEO",
-        "Robots",
-        "PWA",
-        "Google Search Console",
-        "Google Analytics",
-        "DNS 설정",
-        "Vercel 배포",
-        "다크모드 라이트모드",
+        {
+          function: "SEO",
+          description: "검색엔진 최적화를 위한 meta 태그를 적용하였습니다.",
+        },
+        {
+          function: "PWA",
+          description:
+            "웹앱 형식으로 개발하여 오프라인에서도 사용할 수 있도록 하였습니다.",
+        },
+        {
+          function: "Google Search Console",
+          description: "구글 검색 콘솔을 사용하여 SEO를 최적화하였습니다.",
+        },
+        {
+          function: "Google Analytics",
+          description:
+            "구글 애널리틱스를 사용하여 사용자 행동을 분석하였습니다.",
+        },
+        {
+          function: "DNS",
+          description: "도메인을 구매하고 연결하였습니다.",
+        },
+        {
+          function: "Vercel 배포",
+          description: "Vercel을 사용하여 배포하였습니다.",
+        },
+        {
+          function: "다크모드 라이트모드",
+          description: "다크모드와 라이트모드를 적용하였습니다.",
+        },
+        {
+          function: "Zustand",
+          description: "상태관리를 위해 Zustand를 사용하였습니다.",
+        },
+        {
+          function: "Shadcn Ui",
+          description: "디자인을 위해 Shadcn Ui를 사용하였습니다.",
+        },
       ],
     },
   },
@@ -102,7 +137,46 @@ export const works = [
       ],
       description: "",
       stacks: ["", "", ""],
-      functions: ["", "", ""],
+      functions: [
+        {
+          function: "SEO",
+          description: "검색엔진 최적화를 위한 meta 태그를 적용하였습니다.",
+        },
+        {
+          function: "PWA",
+          description:
+            "웹앱 형식으로 개발하여 오프라인에서도 사용할 수 있도록 하였습니다.",
+        },
+        {
+          function: "Google Search Console",
+          description: "구글 검색 콘솔을 사용하여 SEO를 최적화하였습니다.",
+        },
+        {
+          function: "Google Analytics",
+          description:
+            "구글 애널리틱스를 사용하여 사용자 행동을 분석하였습니다.",
+        },
+        {
+          function: "DNS",
+          description: "도메인을 구매하고 연결하였습니다.",
+        },
+        {
+          function: "Vercel 배포",
+          description: "Vercel을 사용하여 배포하였습니다.",
+        },
+        {
+          function: "다크모드 라이트모드",
+          description: "다크모드와 라이트모드를 적용하였습니다.",
+        },
+        {
+          function: "Zustand",
+          description: "상태관리를 위해 Zustand를 사용하였습니다.",
+        },
+        {
+          function: "Shadcn Ui",
+          description: "디자인을 위해 Shadcn Ui를 사용하였습니다.",
+        },
+      ],
     },
   },
   {
@@ -134,7 +208,46 @@ export const works = [
       ],
       description: "",
       stacks: ["", "", ""],
-      functions: ["", "", ""],
+      functions: [
+        {
+          function: "SEO",
+          description: "검색엔진 최적화를 위한 meta 태그를 적용하였습니다.",
+        },
+        {
+          function: "PWA",
+          description:
+            "웹앱 형식으로 개발하여 오프라인에서도 사용할 수 있도록 하였습니다.",
+        },
+        {
+          function: "Google Search Console",
+          description: "구글 검색 콘솔을 사용하여 SEO를 최적화하였습니다.",
+        },
+        {
+          function: "Google Analytics",
+          description:
+            "구글 애널리틱스를 사용하여 사용자 행동을 분석하였습니다.",
+        },
+        {
+          function: "DNS",
+          description: "도메인을 구매하고 연결하였습니다.",
+        },
+        {
+          function: "Vercel 배포",
+          description: "Vercel을 사용하여 배포하였습니다.",
+        },
+        {
+          function: "다크모드 라이트모드",
+          description: "다크모드와 라이트모드를 적용하였습니다.",
+        },
+        {
+          function: "Zustand",
+          description: "상태관리를 위해 Zustand를 사용하였습니다.",
+        },
+        {
+          function: "Shadcn Ui",
+          description: "디자인을 위해 Shadcn Ui를 사용하였습니다.",
+        },
+      ],
     },
   },
   {
@@ -158,7 +271,46 @@ export const works = [
       ],
       description: "",
       stacks: ["", "", ""],
-      functions: ["", "", ""],
+      functions: [
+        {
+          function: "SEO",
+          description: "검색엔진 최적화를 위한 meta 태그를 적용하였습니다.",
+        },
+        {
+          function: "PWA",
+          description:
+            "웹앱 형식으로 개발하여 오프라인에서도 사용할 수 있도록 하였습니다.",
+        },
+        {
+          function: "Google Search Console",
+          description: "구글 검색 콘솔을 사용하여 SEO를 최적화하였습니다.",
+        },
+        {
+          function: "Google Analytics",
+          description:
+            "구글 애널리틱스를 사용하여 사용자 행동을 분석하였습니다.",
+        },
+        {
+          function: "DNS",
+          description: "도메인을 구매하고 연결하였습니다.",
+        },
+        {
+          function: "Vercel 배포",
+          description: "Vercel을 사용하여 배포하였습니다.",
+        },
+        {
+          function: "다크모드 라이트모드",
+          description: "다크모드와 라이트모드를 적용하였습니다.",
+        },
+        {
+          function: "Zustand",
+          description: "상태관리를 위해 Zustand를 사용하였습니다.",
+        },
+        {
+          function: "Shadcn Ui",
+          description: "디자인을 위해 Shadcn Ui를 사용하였습니다.",
+        },
+      ],
     },
   },
   {
@@ -182,7 +334,46 @@ export const works = [
       ],
       description: "",
       stacks: ["", "", ""],
-      functions: ["", "", ""],
+      functions: [
+        {
+          function: "SEO",
+          description: "검색엔진 최적화를 위한 meta 태그를 적용하였습니다.",
+        },
+        {
+          function: "PWA",
+          description:
+            "웹앱 형식으로 개발하여 오프라인에서도 사용할 수 있도록 하였습니다.",
+        },
+        {
+          function: "Google Search Console",
+          description: "구글 검색 콘솔을 사용하여 SEO를 최적화하였습니다.",
+        },
+        {
+          function: "Google Analytics",
+          description:
+            "구글 애널리틱스를 사용하여 사용자 행동을 분석하였습니다.",
+        },
+        {
+          function: "DNS",
+          description: "도메인을 구매하고 연결하였습니다.",
+        },
+        {
+          function: "Vercel 배포",
+          description: "Vercel을 사용하여 배포하였습니다.",
+        },
+        {
+          function: "다크모드 라이트모드",
+          description: "다크모드와 라이트모드를 적용하였습니다.",
+        },
+        {
+          function: "Zustand",
+          description: "상태관리를 위해 Zustand를 사용하였습니다.",
+        },
+        {
+          function: "Shadcn Ui",
+          description: "디자인을 위해 Shadcn Ui를 사용하였습니다.",
+        },
+      ],
     },
   },
 ];

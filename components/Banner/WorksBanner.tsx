@@ -59,7 +59,7 @@ const WorksBanner = ({
       <div
         className={`absolute left-0 top-0 z-0 h-full w-full ${styles.linearGradient}`}
       ></div>
-      <div className="mx-auto h-full max-w-screen-lg px-5 py-6 lg:max-w-screen-2xl lg:px-4 xl:px-6">
+      <div className="mx-auto h-full max-w-screen-lg px-5 py-6 lg:max-w-screen-2xl lg:px-4 lg:px-6">
         <div className="flex h-full w-full items-end">
           <h2 className="flex w-full flex-wrap items-center justify-between gap-2 text-xl font-bold text-white drop-shadow-lg sm:text-2xl">
             {title}

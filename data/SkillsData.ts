@@ -31,7 +31,7 @@ export const SkillsBackground = (skills: string) => {
     case "Shadcn Ui":
       return ["#000000", "#FFFFFF"];
     default:
-      return ["#FFFFFF", "#000000"];
+      return ["#eeeeee", "#000000"];
   }
 };
 

@@ -27,7 +27,7 @@ const WorksDetailPage = ({
         <PageTitle title={data.title} isPreview={true} />
         <div className="mx-auto h-[3000px] max-w-screen-md px-5 py-4 lg:py-20">
           <ContentTitle title="프로젝트 소개">
-            <div>{data.body}</div>
+            <div>{data.detailContent.description}</div>
           </ContentTitle>
           <ContentTitle title="사용 기술">
             <ul className="flex flex-wrap items-center gap-2">
@@ -47,9 +47,17 @@ const WorksDetailPage = ({
             </ul>
           </ContentTitle>
           <ContentTitle title="사용 기능">
-            <ul className="flex flex-wrap items-center gap-2">
+            <ul>
               {data.detailContent.functions.map((func, index) => (
-                <li key={index}>{func}</li>
+                <li key={index} className="mb-3">
+                  <h4 className="mb-1 pl-3 text-lg font-semibold text-blue-500">
+                    {func.function}
+                  </h4>
+                  <p className="relative pl-6">
+                    <span className="absolute left-2 top-0">-</span>
+                    {func.description}
+                  </p>
+                </li>
               ))}
             </ul>
           </ContentTitle>
@@ -58,7 +66,7 @@ const WorksDetailPage = ({
               href={data.url}
               target="_blank"
               rel="noreferrer"
-              className="text-blue-600"
+              className="text-green-500"
             >
               {data.url}
             </a>

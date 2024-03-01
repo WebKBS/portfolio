@@ -7,7 +7,7 @@ const ContentTitle = ({
 }) => {
   return (
     <div className="mb-12">
-      <h3 className="mb-4 text-xl font-semibold">{title}</h3>
+      <h3 className="mb-3 text-2xl font-semibold">{title}</h3>
       {children}
     </div>
   );
