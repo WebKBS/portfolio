@@ -24,7 +24,7 @@ const WorksBanner = ({
   useEffect(() => {
     const handleScroll = throttle(() => {
       if (bannerRef.current) {
-        if (window.scrollY > bannerRef.current.clientHeight / 2) {
+        if (window.scrollY > bannerRef.current.clientHeight / 6) {
           if (isTitle) return;
           bannerRef.current.classList.add("opacity-0");
           setTitle(true);

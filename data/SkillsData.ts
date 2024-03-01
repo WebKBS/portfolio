@@ -1,11 +1,39 @@
+export const SkillColor = {
+  html: "#E34F26",
+  css: "#1572B6",
+  javascript: "#F7DF1E",
+  typescript: "#3178C6",
+  react: "#61DAFB",
+  next: "#000000",
+  tailwind: "#38B2AC",
+};
 export const SkillList = [
-  { percentage: 92, color: "#E34F26", lang: "html" },
-  { percentage: 89, color: "#1572B6", lang: "css" },
-  { percentage: 82, color: "#F7DF1E", lang: "javascript" },
-  { percentage: 76, color: "#3178C6", lang: "typescript" },
-  { percentage: 84, color: "#61DAFB", lang: "react" },
-  { percentage: 77, color: "#000000", lang: "next" },
+  { percentage: 92, color: SkillColor.html, lang: "html" },
+  { percentage: 89, color: SkillColor.css, lang: "css" },
+  { percentage: 82, color: SkillColor.javascript, lang: "javascript" },
+  { percentage: 76, color: SkillColor.typescript, lang: "typescript" },
+  { percentage: 84, color: SkillColor.react, lang: "react" },
+  { percentage: 77, color: SkillColor.next, lang: "next" },
 ];
+
+export const SkillsBackground = (skills: string) => {
+  switch (skills) {
+    case "Next.js":
+      return [SkillColor.next, "#FFFFFF"];
+    case "React":
+      return [SkillColor.react, "#000000"];
+    case "TypeScript":
+      return [SkillColor.typescript, "#FFFFFF"];
+    case "Tailwind CSS":
+      return [SkillColor.tailwind, "#FFFFFF"];
+    case "Zustand":
+      return ["#000000", "#FFFFFF"];
+    case "Shadcn Ui":
+      return ["#000000", "#FFFFFF"];
+    default:
+      return ["#FFFFFF", "#000000"];
+  }
+};
 
 export const skillImages = [
   {
