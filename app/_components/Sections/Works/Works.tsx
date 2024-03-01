@@ -30,8 +30,8 @@ const Works = ({ filterData }: { filterData: IWorks[] }) => {
             <div className="relative mb-2 h-40 w-full overflow-hidden">
               <LoadingSpinner />
               <Image
-                src={work.image}
-                alt={work.thumbnail}
+                src={work.thumbnail}
+                alt={work.title}
                 width={300}
                 height={300}
                 className="absolute left-0 top-0 h-auto w-full object-cover"

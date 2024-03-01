@@ -20,9 +20,12 @@ const Preview = ({ previewImageData }: { previewImageData: IPreview[] }) => {
   return (
     <PreviewModal>
       <ModalInner>
-        <div className="mb-6 p-5 sm:p-6">
-          <div className="mb-2 flex items-center justify-between gap-2">
-            <h2 className="text-lg font-bold">미리보기</h2>
+        <div className="p-5 sm:p-6">
+          <div className="mb-2 flex justify-between gap-2">
+            <div>
+              <h2 className="text-lg font-bold">미리보기</h2>
+              <p className="text-xs">해상도에 따라 다른 디바이스입니다.</p>
+            </div>
             <Button
               size="sm"
               variant="outline"
