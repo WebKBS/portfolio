@@ -17,18 +17,18 @@ export const SkillList = [
 ];
 
 export const SkillsBackground = (skills: string) => {
-  switch (skills) {
-    case "Next.js":
+  switch (skills.toLocaleLowerCase()) {
+    case "next.js":
       return [SkillColor.next, "#FFFFFF"];
-    case "React":
+    case "react":
       return [SkillColor.react, "#000000"];
-    case "TypeScript":
+    case "typescript":
       return [SkillColor.typescript, "#FFFFFF"];
-    case "Tailwind CSS":
+    case "tailwind css":
       return [SkillColor.tailwind, "#FFFFFF"];
-    case "Zustand":
+    case "zustand":
       return ["#000000", "#FFFFFF"];
-    case "Shadcn Ui":
+    case "shadcn ui":
       return ["#000000", "#FFFFFF"];
     default:
       return ["#eeeeee", "#000000"];

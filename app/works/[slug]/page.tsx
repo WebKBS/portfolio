@@ -25,7 +25,7 @@ const WorksDetailPage = ({
       <WorksBanner image={data.image} title={data.title} />
       <section className="z-[1] mx-auto h-full max-w-screen-lg lg:max-w-screen-2xl lg:px-6">
         <PageTitle title={data.title} isPreview={true} />
-        <div className="mx-auto h-[3000px] max-w-screen-md px-5 py-4 lg:py-20">
+        <div className="mx-auto max-w-screen-md px-5 py-4 lg:py-20">
           <ContentTitle title="프로젝트 소개">
             <div>{data.detailContent.description}</div>
           </ContentTitle>
@@ -61,15 +61,23 @@ const WorksDetailPage = ({
               ))}
             </ul>
           </ContentTitle>
+          <ContentTitle title="프로젝트 후기">
+            <div>{data.detailContent.insight}</div>
+          </ContentTitle>
+
           <ContentTitle title="배포">
-            <a
-              href={data.url}
-              target="_blank"
-              rel="noreferrer"
-              className="text-green-500"
-            >
-              {data.url}
-            </a>
+            {data.url === "empty" ? (
+              <span className="text-red-300">배포된 사이트가 없습니다.</span>
+            ) : (
+              <a
+                href={data.url}
+                target="_blank"
+                rel="noreferrer"
+                className="text-green-500"
+              >
+                {data.url}
+              </a>
+            )}
           </ContentTitle>
         </div>
       </section>
