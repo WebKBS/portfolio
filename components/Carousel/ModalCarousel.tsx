@@ -8,9 +8,11 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import IphoneMockup from "../Mockup/IphoneMockup";
 import MacMockup from "../Mockup/MacMockup";
+import styles from "./ModalCarousel.module.css";
 
 const ModalCarousel = ({
   previewImageData,
@@ -46,6 +48,14 @@ const ModalCarousel = ({
             </CarouselItem>
           ))}
         </CarouselContent>
+        <Image
+          width={60}
+          height={60}
+          src="/icons/finger.svg"
+          alt="finger"
+          priority
+          className={styles.finger}
+        />
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>

@@ -1,0 +1,19 @@
+.finger {
+  position: absolute;
+  z-index: 3;
+  top: 200px;
+  right: 10%;
+  filter: drop-shadow(2px 4px 6px black);
+  animation: fingerAnimation 2s forwards;
+}
+
+@keyframes fingerAnimation {
+  0% {
+    top: 120px;
+  }
+
+  100% {
+    top: 60px;
+    display: none;
+  }
+}

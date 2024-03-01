@@ -7,6 +7,7 @@ export interface IWorks {
   thumbnail: string;
   image: StaticImageData | string;
   mobileImage: StaticImageData | string;
+  bannerImage: StaticImageData | string;
   url: string;
   date: string;
   tags: string[];
@@ -35,6 +36,7 @@ export const works = [
     thumbnail: "/works/depos/thumbnail.png",
     image: "/works/depos/main.png",
     mobileImage: "/works/depos/mobile.png",
+    bannerImage: "/works/depos/banner.png",
     url: "https://depos.kr",
     date: "2024-02 ~ 진행중",
     tags: [
@@ -51,8 +53,8 @@ export const works = [
     detailContent: {
       previewImages: [
         {
-          mobileImage: "/works/depos/mobile.png",
           image: "/works/depos/main.png",
+          mobileImage: "/works/depos/mobile.png",
         },
       ],
       description:
@@ -119,6 +121,7 @@ export const works = [
     thumbnail: "/works/eurasia/thumbnail.png",
     image: "/works/eurasia/main.png",
     mobileImage: "/works/eurasia/mobile.png",
+    bannerImage: "/works/eurasia/banner.png",
     url: "https://eurasia-consulting.vercel.app/",
     date: "2023.10 ~ 2023.11",
     tags: ["반응형", "Next.js", "React", "TypeScript", "Tailwind CSS", "RSS"],
@@ -127,8 +130,24 @@ export const works = [
     detailContent: {
       previewImages: [
         {
-          mobileImage: "/works/depos/mobile.png",
-          image: "/works/depos/main.png",
+          image: "/works/eurasia/main.png",
+          mobileImage: "/works/eurasia/mobile.png",
+        },
+        {
+          image: "/works/eurasia/slide/mainSlide1.png",
+          mobileImage: "/works/eurasia/slide/mobileSlide1.png",
+        },
+        {
+          image: "/works/eurasia/slide/mainSlide2.png",
+          mobileImage: "/works/eurasia/slide/mobileSlide2.png",
+        },
+        {
+          image: "/works/eurasia/slide/mainSlide3.png",
+          mobileImage: "/works/eurasia/slide/mobileSlide3.png",
+        },
+        {
+          image: "/works/eurasia/slide/mainSlide4.png",
+          mobileImage: "/works/eurasia/slide/mobileSlide4.png",
         },
       ],
       description:
@@ -175,6 +194,7 @@ export const works = [
     thumbnail: "/works/k2gbs/thumbnail.png",
     image: "/works/k2gbs/main.png",
     mobileImage: "/works/k2gbs/mobile.png",
+    bannerImage: "/works/k2gbs/banner.png",
     url: "empty",
     date: "2023.09 ~ 2023.10",
     tags: [
@@ -190,8 +210,28 @@ export const works = [
     detailContent: {
       previewImages: [
         {
-          mobileImage: "/works/k2gbs/mobile.png",
           image: "/works/k2gbs/main.png",
+          mobileImage: "/works/k2gbs/mobile.png",
+        },
+        {
+          image: "/works/k2gbs/slide/mainSlide1.png",
+          mobileImage: "/works/k2gbs/slide/mobileSlide1.png",
+        },
+        {
+          image: "/works/k2gbs/slide/mainSlide2.png",
+          mobileImage: "/works/k2gbs/slide/mobileSlide2.png",
+        },
+        {
+          image: "/works/k2gbs/slide/mainSlide3.png",
+          mobileImage: "/works/k2gbs/slide/mobileSlide3.png",
+        },
+        {
+          image: "/works/k2gbs/slide/mainSlide4.png",
+          mobileImage: "/works/k2gbs/slide/mobileSlide4.png",
+        },
+        {
+          image: "/works/k2gbs/slide/mainSlide5.png",
+          mobileImage: "/works/k2gbs/slide/mobileSlide5.png",
         },
       ],
       description:
