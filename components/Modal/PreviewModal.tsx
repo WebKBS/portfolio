@@ -16,7 +16,7 @@ const PreviewModal = ({ children }: { children: React.ReactNode }) => {
     <>
       {isPreviewModalOpen ? (
         <aside
-          className="fixed left-0 top-0 z-50 h-screen w-screen overflow-hidden backdrop-blur-xs"
+          className="fixed left-0 top-0 z-50 h-full w-full overflow-hidden backdrop-blur-xs"
           onClick={onDismiss}
         >
           {children}

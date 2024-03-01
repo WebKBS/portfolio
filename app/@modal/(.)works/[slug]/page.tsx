@@ -35,7 +35,7 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
   return (
     <Modal>
       <div
-        className={`absolute left-1/2 top-1/2 z-50 flex h-[80%] w-[90%] flex-col overflow-hidden rounded-xl border-2 bg-background shadow-md lg:h-3/4 lg:max-w-7xl ${modalOpen ? styles.active : ""}`}
+        className={`absolute left-1/2 top-1/2 z-50 flex h-[90%] w-[90%] flex-col overflow-hidden rounded-xl border-2 bg-background shadow-md lg:h-3/4 lg:max-w-7xl ${modalOpen ? styles.active : ""}`}
       >
         <div
           className={`h-full w-full overflow-y-auto ${lightTheme}`}
