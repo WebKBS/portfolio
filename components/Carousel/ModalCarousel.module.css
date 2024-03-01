@@ -3,17 +3,21 @@
   z-index: 3;
   top: 200px;
   right: 10%;
+  pointer-events: none;
+  user-select: none;
   filter: drop-shadow(2px 4px 6px black);
-  animation: fingerAnimation 2s forwards;
+  animation: fingerAnimation 5s forwards;
 }
 
 @keyframes fingerAnimation {
   0% {
-    top: 120px;
+    top: 200px;
   }
 
-  100% {
+  80% {
     top: 60px;
-    display: none;
+  }
+  100% {
+    opacity: 0;
   }
 }
