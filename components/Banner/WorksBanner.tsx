@@ -56,6 +56,7 @@ const WorksBanner = ({
         height={1920}
         sizes="100vw"
         className={`absolute left-1/2 top-0 -translate-x-1/2 object-cover ${height}`}
+        placeholder="blur"
       />
       <div
         className={`absolute left-0 top-0 z-0 h-full w-full ${styles.linearGradient}`}

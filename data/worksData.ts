@@ -53,6 +53,7 @@ export const works = [
     ],
     slug: "portfolio",
     body: "취업을 위해 개인 포트폴리오를 제작하였습니다. Next.js를 사용하여 제작하였고, Tailwind CSS를 사용하여 디자인을 하였습니다. Zustand를 사용하여 상태를 관리하였고, Shadcn Ui를 사용하여 디자인을 하였습니다.",
+    contribution: "",
     detailContent: {
       previewImages: [
         {
@@ -152,6 +153,7 @@ export const works = [
     ],
     slug: "depos",
     body: "개인 프로젝트로 SH 주택임대공사의 임대료 보증금 상호전환 계산기를 만들었습니다. 사용자가 기본 보증금과 월 임대료를 입력하면 계약금과 보증금 및 월 임대료의 퍼센테이지를 자동으로 계산해줍니다. Zustand를 사용하여 상태를 관리하고, SEO를 최적화하고 PWA를 적용하여 웹앱 형식으로 개발하였습니다.",
+    contribution: "",
     detailContent: {
       previewImages: [
         {
@@ -229,6 +231,7 @@ export const works = [
     tags: ["반응형", "Next.js", "React", "TypeScript", "Tailwind CSS", "RSS"],
     slug: "eurasia",
     body: "워드프레스 기반 제작된 웹을 Next.js를 사용하여 전체 리뉴얼을 하였습니다. 헤럴드코리아 뉴스 RSS를 사용하여 최신 뉴스를 보여주는 기능을 추가하였습니다. 또한 nodemailer 라이브러리를 사용하여 beget 서버에서 메일을 보낼 수 있도록 문의하기 기능을 구현하였습니다.",
+    contribution: "",
     detailContent: {
       previewImages: [
         {
@@ -309,6 +312,7 @@ export const works = [
     ],
     slug: "k2gbs",
     body: "기존에 제작된 홈페이지를 Next.js로 리뉴얼하였습니다. next-intl 라이브러리를 사용하여 다국어 지원을 하였습니다.",
+    contribution: "",
     detailContent: {
       previewImages: [
         {
@@ -375,6 +379,7 @@ export const works = [
     tags: ["반응형", "HTML5게임", "asp.net core", "TypeScript"],
     slug: "dpangz",
     body: "asp.net core (MVC)로 HTML5 웹 기반 게임으로 제작한 리그 오브 클로노이드 입니다. 주요 업무로 dpangz 전체 홈페이지 ui를 제작하였고, canvas 내부 게임 ui를 제작하였습니다. 게임 내 상점, 채팅, 채팅 이모티콘, 거래 시스템 등 ui를 제작하였습니다.",
+    contribution: "",
     detailContent: {
       previewImages: [
         {

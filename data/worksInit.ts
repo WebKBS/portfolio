@@ -13,6 +13,7 @@ const worksInit = [
     tags: ["", "", ""],
     slug: "",
     body: "",
+    contribution: "",
     detailContent: {
       previewImages: [
         {
