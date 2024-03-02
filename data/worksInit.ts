@@ -1,11 +1,13 @@
+let index = 0;
 const worksInit = [
   {
-    id: 1,
+    id: index++,
     title: "",
     description: "",
     thumbnail: "",
     image: "",
     mobileImage: "",
+    bannerImage: "",
     url: "",
     date: "",
     tags: ["", "", ""],
@@ -14,45 +16,14 @@ const worksInit = [
     detailContent: {
       previewImages: [
         {
-          mobileImage: "",
           image: "",
+          mobileImage: "",
         },
       ],
       description: "",
+      insight: "",
       stacks: ["", "", ""],
       functions: [
-        {
-          function: "",
-          description: "",
-        },
-        {
-          function: "",
-          description: "",
-        },
-        {
-          function: "",
-          description: "",
-        },
-        {
-          function: "",
-          description: "",
-        },
-        {
-          function: "",
-          description: "",
-        },
-        {
-          function: "",
-          description: "",
-        },
-        {
-          function: "",
-          description: "",
-        },
-        {
-          function: "",
-          description: "",
-        },
         {
           function: "",
           description: "",

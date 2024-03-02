@@ -1,5 +1,7 @@
 import { StaticImageData } from "next/image";
 
+let index = 0;
+
 export interface IWorks {
   id: number;
   title: string;
@@ -30,7 +32,7 @@ export interface IWorks {
 
 export const works = [
   {
-    id: 1,
+    id: index++,
     title: "임대료 보증금 자동 상호전환 계산기",
     description: "개인 프로젝트로 제작한 임대료 보증금 상호전환 계산기입니다.",
     thumbnail: "/works/depos/thumbnail.png",
@@ -114,7 +116,7 @@ export const works = [
     },
   },
   {
-    id: 2,
+    id: index++,
     title: "Eurasia-Consulting 홈페이지",
     description:
       "워드프레스를 사용하여 제작된 홈페이지를 Next.js로 리뉴얼하였습니다.",
@@ -187,7 +189,7 @@ export const works = [
     },
   },
   {
-    id: 3,
+    id: index++,
     title: "k2gbs 홈페이지",
     description:
       "Next.js 리뉴얼 및 next-intl을 사용한 다국어 지원 홈페이지입니다.",
@@ -205,7 +207,7 @@ export const works = [
       "TypeScript",
       "Tailwind CSS",
     ],
-    slug: "depos2",
+    slug: "k2gbs",
     body: "기존에 제작된 홈페이지를 Next.js로 리뉴얼하였습니다. next-intl 라이브러리를 사용하여 다국어 지원을 하였습니다.",
     detailContent: {
       previewImages: [
@@ -256,6 +258,59 @@ export const works = [
         {
           function: "Daisy Ui",
           description: "디자인을 위해 Daisy Ui를 사용하였습니다.",
+        },
+      ],
+    },
+  },
+  {
+    id: index++,
+    title: "Dpangz - Leagure of Clonoid",
+    description: "웹 HTML5 게임 프로젝트로 제작한 리그 오브 클로노이드 입니다.",
+    thumbnail: "/works/dpangz/thumbnail.png",
+    image: "/works/dpangz/main.png",
+    mobileImage: "/works/dpangz/mobile.png",
+    bannerImage: "/works/dpangz/banner.png",
+    url: "https://dpangz.com/",
+    date: "2023.06 ~ 2023.08",
+    tags: ["반응형", "HTML5게임", "asp.net core", "TypeScript"],
+    slug: "dpangz",
+    body: "asp.net core (MVC)로 HTML5 웹 기반 게임으로 제작한 리그 오브 클로노이드 입니다. 주요 업무로 dpangz 전체 홈페이지 ui를 제작하였고, canvas 내부 게임 ui를 제작하였습니다. 게임 내 상점, 채팅, 채팅 이모티콘, 거래 시스템 등 ui를 제작하였습니다.",
+    detailContent: {
+      previewImages: [
+        {
+          image: "/works/dpangz/main.png",
+          mobileImage: "/works/dpangz/mobile.png",
+        },
+        {
+          image: "/works/dpangz/slide/mainSlide1.png",
+          mobileImage: "/works/dpangz/slide/mobileSlide1.png",
+        },
+        {
+          image: "/works/dpangz/slide/mainSlide2.png",
+          mobileImage: "/works/dpangz/slide/mobileSlide2.png",
+        },
+        {
+          image: "/works/dpangz/slide/mainSlide3.png",
+          mobileImage: "/works/dpangz/slide/mobileSlide3.png",
+        },
+      ],
+      description: "",
+      insight: "",
+      stacks: [
+        "Asp.net core",
+        "html",
+        "css",
+        "JavaScript",
+        "TypeScript",
+        "반응형",
+        "chart.js",
+        "Lottie",
+        "PWA",
+      ],
+      functions: [
+        {
+          function: "",
+          description: "",
         },
       ],
     },
