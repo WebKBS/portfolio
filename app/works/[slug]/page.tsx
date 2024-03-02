@@ -22,7 +22,11 @@ const WorksDetailPage = ({
 
   return (
     <main className="flex-1">
-      <WorksBanner image={data.image} title={data.title} height="h-auto" />
+      <WorksBanner
+        image={data.bannerImage}
+        title={data.title}
+        // height="h-auto"
+      />
       <section className="z-[1] mx-auto h-full max-w-screen-lg lg:max-w-screen-2xl lg:px-6">
         <PageTitle title={data.title} isPreview={true} />
         <div className="mx-auto max-w-screen-md px-5 py-4 lg:py-20">
