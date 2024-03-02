@@ -6,6 +6,8 @@ export const SkillColor = {
   react: "#61DAFB",
   next: "#000000",
   tailwind: "#38B2AC",
+  sass: "#CC6699",
+  "asp.net core": "#512BD4",
 };
 export const SkillList = [
   { percentage: 92, color: SkillColor.html, lang: "html" },
@@ -18,12 +20,22 @@ export const SkillList = [
 
 export const SkillsBackground = (skills: string) => {
   switch (skills.toLocaleLowerCase()) {
+    case "html":
+      return [SkillColor.html, "#FFFFFF"];
+    case "css":
+      return [SkillColor.css, "#FFFFFF"];
+    case "sass":
+      return [SkillColor.sass, "#FFFFFF"];
     case "next.js":
       return [SkillColor.next, "#FFFFFF"];
     case "react":
       return [SkillColor.react, "#000000"];
+    case "javascript":
+      return [SkillColor.javascript, "#000000"];
     case "typescript":
       return [SkillColor.typescript, "#FFFFFF"];
+    case "asp.net core":
+      return [SkillColor["asp.net core"], "#FFFFFF"];
     case "tailwind css":
       return [SkillColor.tailwind, "#FFFFFF"];
     case "zustand":
