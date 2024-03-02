@@ -7,6 +7,7 @@ export const SkillColor = {
   next: "#000000",
   tailwind: "#38B2AC",
   sass: "#CC6699",
+  docker: "#2496ED",
   "asp.net core": "#512BD4",
 };
 export const SkillList = [
@@ -34,6 +35,8 @@ export const SkillsBackground = (skills: string) => {
       return [SkillColor.javascript, "#000000"];
     case "typescript":
       return [SkillColor.typescript, "#FFFFFF"];
+    case "docker":
+      return [SkillColor.docker, "#FFFFFF"];
     case "asp.net core":
       return [SkillColor["asp.net core"], "#FFFFFF"];
     case "tailwind css":
