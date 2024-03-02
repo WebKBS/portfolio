@@ -33,6 +33,99 @@ export interface IWorks {
 export const works = [
   {
     id: index++,
+    title: "Portfolio",
+    description: "개인 포트폴리오 웹사이트입니다.",
+    thumbnail: "/works/portfolio/thumbnail.png",
+    image: "/works/portfolio/main.png",
+    mobileImage: "/works/portfolio/mobile.png",
+    bannerImage: "/works/portfolio/banner.png",
+    url: "https://portfolio-webkbs.vercel.app",
+    date: "2024.02",
+    tags: [
+      "반응형",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Zustand",
+      "Zod",
+      "Shadcn Ui",
+    ],
+    slug: "portfolio",
+    body: "취업을 위해 개인 포트폴리오를 제작하였습니다. Next.js를 사용하여 제작하였고, Tailwind CSS를 사용하여 디자인을 하였습니다. Zustand를 사용하여 상태를 관리하였고, Shadcn Ui를 사용하여 디자인을 하였습니다.",
+    detailContent: {
+      previewImages: [
+        {
+          image: "/works/portfolio/main.png",
+          mobileImage: "/works/portfolio/mobile.png",
+        },
+        {
+          image: "/works/portfolio/slide/mainSlide1.png",
+          mobileImage: "/works/portfolio/slide/mobileSlide1.png",
+        },
+        {
+          image: "/works/portfolio/slide/mainSlide2.png",
+          mobileImage: "/works/portfolio/slide/mobileSlide2.png",
+        },
+        {
+          image: "/works/portfolio/slide/mainSlide3.png",
+          mobileImage: "/works/portfolio/slide/mobileSlide3.png",
+        },
+        {
+          image: "/works/portfolio/slide/mainSlide4.png",
+          mobileImage: "/works/portfolio/slide/mobileSlide4.png",
+        },
+      ],
+      description:
+        "개인용 포트폴리오 사이트를 개발하였습니다. Next.js를 사용하여 제작하였고, Tailwind CSS를 사용하여 디자인을 하였습니다. Zustand를 사용하여 상태를 관리하였고, Shadcn Ui를 사용하여 디자인을 하였습니다. weather API를 사용하여 날씨 정보를 가져와서 보여주는 기능을 추가하였습니다. Lottie를 사용하여 애니메이션을 추가하였습니다. web api intersection observer를 사용하여 스크롤 이벤트를 추가하였습니다. 문의하기 기능을 만들었고 nodemailer를 사용하여 메일을 보낼 수 있도록 하였고, Zod 라이브러리를 사용하여 프론트엔드 및 백엔드에서 유효성 검사를 하였습니다.",
+      insight:
+        "이전 프로젝트에서 Nodemailer를 사용하여 프로젝트를 진행한 경험이 있습니다만, 전 프로젝트에서 유효성 검사를 정규식 및 데이터 검증을 직접하였습니다. 이번에는 Zod 라이브러리를 사용하는 방법을 공부할겸 적용해 보았습니다. 이를 통해 프론트엔드 및 백엔드에서 유효성 검사를 진행하였고 직접 하드코딩하는 것보다 코드양을 줄이고 가독성을 높일 수 있었습니다. 메인 페이지 SKILLS에서는 Intersection Observer를 사용하여 스크롤 이벤트를 소소하게 추가해보았습니다.",
+      stacks: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Zustand",
+        "Zod",
+        "CSS Module",
+        "Shadcn Ui",
+        "반응형",
+        "Weather API",
+        "Lottie",
+        "Intersection Observer",
+        "Web API",
+        "Nodemailer",
+      ],
+      functions: [
+        {
+          function: "Weather API",
+          description:
+            "weather API를 사용하여 날씨 정보를 가져와서 보여주는 기능을 추가하였습니다.",
+        },
+        {
+          function: "Lottie",
+          description: "Lottie를 사용하여 애니메이션을 추가하였습니다.",
+        },
+        {
+          function: "Intersection Observer",
+          description:
+            "web api intersection observer를 사용하여 스크롤 이벤트를 추가하였습니다.",
+        },
+        {
+          function: "Nodemailer",
+          description:
+            "nodemailer를 사용하여 메일을 보낼 수 있도록 하였습니다.",
+        },
+        {
+          function: "Zod",
+          description:
+            "Zod 라이브러리를 사용하여 프론트엔드 및 백엔드에서 유효성 검사를 하였습니다.",
+        },
+      ],
+    },
+  },
+  {
+    id: index++,
     title: "임대료 보증금 자동 상호전환 계산기",
     description: "개인 프로젝트로 제작한 임대료 보증금 상호전환 계산기입니다.",
     thumbnail: "/works/depos/thumbnail.png",
