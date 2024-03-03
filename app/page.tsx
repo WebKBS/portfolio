@@ -3,6 +3,7 @@ import SkillProgressSection from "@/app/_components/Sections/SkillProgress/Skill
 import SkillsSection from "@/app/_components/Sections/Skills/SkillsSection";
 import WorksSection from "@/app/_components/Sections/Works/WorksSection";
 import Weather from "@/components/Weather/Weather";
+import Contact from "./_components/Sections/Contact/Contact";
 import VerticalTitle from "./_components/Text/VerticalTitle";
 
 export default async function Home() {
@@ -15,6 +16,7 @@ export default async function Home() {
         <SkillsSection />
         <SkillProgressSection />
         <WorksSection />
+        <Contact />
       </main>
     </>
   );

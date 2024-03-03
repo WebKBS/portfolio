@@ -1,21 +1,19 @@
 "use client";
 import Mockup from "@/components/Mockup/MockupAnimation";
 import { Badge } from "@/components/ui/badge";
-import { Button, buttonVariants } from "@/components/ui/button";
 
 import { works } from "@/data/worksData";
 import useScrollHandler from "@/hooks/scrollEvent";
 import { useRouterModalToggle } from "@/store/modal-store";
 import { useTheme } from "next-themes";
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import ButtonAction from "./_components/ButtonAction";
 import { Modal } from "./modal";
 import styles from "./page.module.css";
 
 const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
   const [lightTheme, setLightTheme] = useState(styles.afterShadow);
-  const { modalOpen, setRouterModalState } = useRouterModalToggle();
-  const router = useRouter();
+  const { modalOpen } = useRouterModalToggle();
   const { theme } = useTheme();
   const { scrollRef, topBoxRef } = useScrollHandler();
 
@@ -26,11 +24,6 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
   }, [theme]);
 
   const data = works.find((work) => work.slug === slug);
-
-  const closeHandler = () => {
-    setRouterModalState(false);
-    router.back();
-  };
 
   return (
     <Modal>
@@ -85,20 +78,7 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
             </div>
           </div>
         </div>
-        <div className="mx-auto flex w-full max-w-xs gap-2 bg-background p-3 md:ml-auto md:mr-0">
-          <Button className="flex-1" variant="outline" onClick={closeHandler}>
-            닫기
-          </Button>
-          <a
-            className={buttonVariants({
-              variant: "secondary",
-              className: "flex-1",
-            })}
-            href={`/works/${slug}`}
-          >
-            자세히 보기
-          </a>
-        </div>
+        <ButtonAction slug={slug} />
       </div>
     </Modal>
   );
