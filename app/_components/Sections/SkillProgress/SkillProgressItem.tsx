@@ -4,13 +4,17 @@ import useObserverAction from "@/hooks/observer";
 import { useEffect, useState } from "react";
 import SkillSvg from "./SkillSvg";
 
-interface SkillProgressProps {
+interface SkillProgressItemProps {
   percentage: number | null;
   lang: string;
   color: string;
 }
 
-const SkillProgress = ({ percentage, lang, color }: SkillProgressProps) => {
+const SkillProgressItem = ({
+  percentage,
+  lang,
+  color,
+}: SkillProgressItemProps) => {
   const ref = useObserverAction(lang);
   const [count, setCount] = useState(0);
   const radius = 70;
@@ -54,4 +58,4 @@ const SkillProgress = ({ percentage, lang, color }: SkillProgressProps) => {
   );
 };
 
-export default SkillProgress;
+export default SkillProgressItem;

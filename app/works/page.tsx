@@ -1,4 +1,4 @@
-import Works from "@/app/_components/Sections/Works/Works";
+import Works from "@/app/_components/Sections/Works/WorkItem";
 import WorksBanner from "@/components/Banner/WorksBanner";
 import { works } from "@/data/worksData";
 import PageTitle from "./_components/PageTitle";

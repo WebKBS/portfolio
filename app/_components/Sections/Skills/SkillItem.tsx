@@ -1,14 +1,8 @@
 import Image from "next/image";
 
-const SkillItem = ({
-  skill,
-  key,
-}: {
-  skill: { src: string; alt: string };
-  key: number;
-}) => {
+const SkillItem = ({ skill }: { skill: { src: string; alt: string } }) => {
   return (
-    <li key={key} className="px-8 md:px-12">
+    <li className="px-8 md:px-12">
       <Image
         src={skill.src}
         width={200}

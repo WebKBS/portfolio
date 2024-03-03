@@ -1,7 +1,7 @@
 import { works } from "@/data/worksData";
 
 import Link from "next/link";
-import Works from "./Works";
+import WorkItem from "./WorkItem";
 
 const WorksList = () => {
   const filterData = works.slice(0, 4);
@@ -20,7 +20,9 @@ const WorksList = () => {
           </Link>
         </div>
         <ul className="flex flex-col  gap-5 pb-4 sm:grid sm:grid-cols-2 sm:grid-rows-[repeat(auto-fill,minmax(0,1fr))] lg:grid-cols-3 xl:grid-cols-4">
-          <Works filterData={filterData} />
+          {filterData.map((work) => (
+            <WorkItem key={work.id} work={work} />
+          ))}
         </ul>
       </div>
     </>

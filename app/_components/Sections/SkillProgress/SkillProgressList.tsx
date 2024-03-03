@@ -2,7 +2,7 @@
 
 import { SkillList } from "@/data/SkillsData";
 import { useObserver } from "@/store/observer-store";
-import SkillProgress from "./SkillProgressItem";
+import SkillProgressItem from "./SkillProgressItem";
 
 const SkillProgressList = () => {
   const { html, css, javascript, typescript, react, next } = useObserver();
@@ -31,7 +31,7 @@ const SkillProgressList = () => {
       className={`mx-auto flex max-w-[1200px] flex-wrap items-center justify-center gap-8`}
     >
       {SkillList.map((skill) => (
-        <SkillProgress
+        <SkillProgressItem
           key={skill.lang}
           color={skill.color}
           lang={skill.lang}
