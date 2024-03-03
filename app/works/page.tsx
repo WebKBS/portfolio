@@ -14,8 +14,8 @@ const WroksPage = () => {
       <section className="relative z-[1] mx-auto max-w-screen-lg  pb-20 pt-8 lg:max-w-screen-2xl lg:px-6">
         <PageTitle title="WORKS" />
         <ul className="flex flex-wrap gap-4 px-5 sm:grid sm:grid-cols-2 sm:grid-rows-[repeat(auto-fill,minmax(0,1fr))] lg:grid-cols-3 lg:px-0 xl:grid-cols-4">
-          {works.map((work, index) => (
-            <WorkItem key={index} work={work} />
+          {works.map((work) => (
+            <WorkItem key={work.id} work={work} />
           ))}
         </ul>
       </section>
