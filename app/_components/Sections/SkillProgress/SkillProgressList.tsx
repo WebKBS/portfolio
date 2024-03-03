@@ -2,7 +2,7 @@
 
 import { SkillList } from "@/data/SkillsData";
 import { useObserver } from "@/store/observer-store";
-import SkillProgress from "./SkillProgress";
+import SkillProgress from "./SkillProgressItem";
 
 const SkillProgressList = () => {
   const { html, css, javascript, typescript, react, next } = useObserver();
