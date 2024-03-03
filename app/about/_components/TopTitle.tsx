@@ -1,5 +1,3 @@
-"use client";
-
 import myImage from "@/public/images/me.jpg";
 import { East_Sea_Dokdo } from "next/font/google";
 import Image from "next/image";
