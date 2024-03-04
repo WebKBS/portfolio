@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     template: "%s - 강범수 포트폴리오",
   },
   description: "프론트엔드 강범수의 포트폴리오입니다.",
+  metadataBase: new URL("https://portfolio-webkbs.vercel.app/"),
 };
 
 export default function RootLayout({
