@@ -34,6 +34,10 @@ const WorksDetailPage = ({
             <div>{data.detailContent.description}</div>
           </div>
           <div className="mb-12">
+            <ContentTitle title="프로젝트 기여도" />
+            <div>{data.contribution}</div>
+          </div>
+          <div className="mb-12">
             <ContentTitle title="사용 기술" />
             <ul className="flex flex-wrap items-center gap-2">
               {data.detailContent.stacks.map((stack, index) => (
