@@ -2,6 +2,7 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import SideMenu from "@/components/SideMenu/SideMenu";
 import { ThemeProvider } from "@/provider/theme-provider";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import React from "react";
@@ -39,6 +40,7 @@ export default function RootLayout({
             <SideMenu />
             {children}
             {modal}
+            <SpeedInsights />
             <Footer />
           </div>
         </ThemeProvider>
