@@ -14,7 +14,7 @@ const AboutPage = () => {
         <div className="mx-auto max-w-screen-lg px-6">
           <h2 className="mb-2 text-2xl font-bold">SKILLS</h2>
           <h3 className="mb-2">능숙하게 잘할 수 있어요.</h3>
-          <ul className="flex flex-wrap gap-2">
+          <ul className="flex flex-wrap gap-4">
             {aboutSkills.map((skill, index) => (
               <AboutSkillListItem
                 key={index}
@@ -24,17 +24,6 @@ const AboutPage = () => {
               />
             ))}
           </ul>
-          <ul className="flex flex-wrap gap-2">
-            {aboutSkills.map((skill, index) => (
-              <AboutSkillListItem
-                key={index}
-                image={skill.image}
-                title={skill.title}
-                description={skill.description}
-              />
-            ))}
-          </ul>
-
           {/* <h2 className="flex items-center gap-2">
             <span className="text-3xl">🥲</span>
             현재 사이트 수정중입니다.

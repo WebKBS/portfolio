@@ -105,55 +105,33 @@ export const aboutSkills = [
   {
     image: "/skills/html.png",
     title: "HTML",
-    description: [
-      "웹표준에 맞게 시멘틱 태그를 사용할 수 있어요.",
-      "폼을 잘 만들수 있어요.",
-      "테이블을 잘 만들수 있어요.",
-    ],
+    description:
+      "웹표준에 맞게 시멘틱 태그를 사용할 수 있으며 Form 및 Table도 능숙하게 다룰 수 있습니다.",
   },
   {
     image: "/skills/css.png",
     title: "CSS",
-    description: [
-      "CSS를 이용하여 레이아웃을 잘 만들수 있어요.",
-      "CSS를 이용하여 애니메이션을 만들수 있어요.",
-      "CSS를 이용하여 반응형 웹을 만들수 있어요.",
-    ],
+    description:
+      "CSS 및 CSS module을 사용할 수 있으며, 애니메이션 및 반응형 웹을 만들 수 있습니다.",
   },
   {
     image: "/skills/sass.png",
     title: "Sass",
-    description: [
-      "Sass를 이용하여 더 효율적으로 CSS를 작성할 수 있어요.",
-      "Sass를 이용하여 반응형 웹을 만들수 있어요.",
-      "Sass를 이용하여 레이아웃을 잘 만들수 있어요.",
-    ],
+    description: "css 전처리기인 Sass를 사용할 수 있습니다.",
   },
   {
     image: "/skills/js.png",
     title: "JavaScript",
-    description: [
-      "자바스크립트로 DOM을 다룰 수 있어요.",
-      "자바스크립트로 이벤트를 다룰 수 있어요.",
-      "자바스크립트로 비동기 처리를 다룰 수 있어요.",
-    ],
+    description: "자바스크립트로 프론트엔드를 만들 수 있습니다.",
   },
   {
     image: "/skills/ts.png",
     title: "TypeScript",
-    description: [
-      "타입스크립트로 자바스크립트를 작성할 수 있어요.",
-      "타입스크립트로 인터페이스를 작성할 수 있어요.",
-      "타입스크립트로 제네릭을 작성할 수 있어요.",
-    ],
+    description: "타입스크립트로 프론트엔드를 만들 수 있습니다.",
   },
   {
     image: "/skills/react.png",
     title: "React",
-    description: [
-      "React로 컴포넌트를 만들수 있어요.",
-      "React로 상태를 관리할 수 있어요.",
-      "React로 라우팅을 다룰 수 있어요.",
-    ],
+    description: "React로 프론트엔드를 만들 수 있습니다.",
   },
 ];

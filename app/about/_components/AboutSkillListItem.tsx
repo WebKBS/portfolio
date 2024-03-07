@@ -4,7 +4,7 @@ import Image from "next/image";
 interface AboutSkillListItemProps {
   image: string;
   title: string;
-  description: string[];
+  description: string;
 }
 
 const AboutSkillListItem = ({
@@ -13,29 +13,19 @@ const AboutSkillListItem = ({
   description,
 }: AboutSkillListItemProps) => {
   return (
-    <li className="group relative">
-      <div className="inline-flex cursor-pointer items-center gap-2 rounded-md border-2 bg-background p-2 shadow-md">
-        <div className="relative h-12 w-12 rounded-full bg-gray-200 p-1">
-          <Image
-            src={image}
-            // src={"/skills/html.png"}
-            width={40}
-            height={40}
-            alt={title}
-            className="absolute left-1/2 top-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 transform rounded-full object-cover"
-          />
-        </div>
+    <li className="group relative min-h-40 min-w-40 max-w-sm overflow-hidden rounded-md border-2 bg-secondary shadow-md">
+      <div className="flex h-full w-full flex-col items-center justify-center gap-4">
+        <Image
+          src={image}
+          width={60}
+          height={60}
+          alt={title}
+          className="h-14 w-auto"
+        />
         <div className="text-sm font-semibold dark:text-white">{title}</div>
       </div>
-      <div className="invisible absolute left-0 top-16 z-10 w-full min-w-56 max-w-sm rounded-md border-2 bg-background p-2 opacity-0 transition-opacity duration-300 group-hover:visible group-hover:opacity-100">
-        <ul className="text-sm">
-          {description.map((desc, index) => (
-            <li key={index}>{desc}</li>
-          ))}
-          {/* <li>웹표준에 맞게 시멘틱 태그를 사용할 수 있어요.</li>
-          <li>폼을 잘 만들수 있어요.</li>
-          <li>테이블을 잘 만들수 있어요.</li> */}
-        </ul>
+      <div className="absolute left-0 top-0 z-10 h-full w-full translate-x-full bg-background p-4 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+        <p className="text-sm">{description}</p>
       </div>
     </li>
   );
