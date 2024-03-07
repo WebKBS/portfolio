@@ -1,5 +1,6 @@
-import { aboutSkills } from "@/data/SkillsData";
-import AboutSkillListItem from "./_components/AboutSkillListItem";
+import { aboutGoodSkills, usableButIncomplete } from "@/data/SkillsData";
+import Image from "next/image";
+import AboutSkillList from "./_components/AboutSkillList";
 import TopTitle from "./_components/TopTitle";
 
 export const metadata = {
@@ -12,23 +13,17 @@ const AboutPage = () => {
       <TopTitle />
       <section className="bg-background py-12">
         <div className="mx-auto max-w-screen-lg px-6">
-          <h2 className="mb-2 text-2xl font-bold">SKILLS</h2>
-          <h3 className="mb-2">능숙하게 잘할 수 있어요.</h3>
-          <ul className="flex flex-wrap gap-4">
-            {aboutSkills.map((skill, index) => (
-              <AboutSkillListItem
-                key={index}
-                image={skill.image}
-                title={skill.title}
-                description={skill.description}
-              />
-            ))}
-          </ul>
-          {/* <h2 className="flex items-center gap-2">
-            <span className="text-3xl">🥲</span>
-            현재 사이트 수정중입니다.
+          <AboutSkillList
+            title="능숙하게 잘 다룰 수 있어요."
+            skills={aboutGoodSkills}
+          />
+          <AboutSkillList
+            title="부족하지만 사용할 수 있어요."
+            skills={usableButIncomplete}
+          />
+          <h2 className="flex items-center gap-2">
+            더 자세한 내용은 Notion에서 확인할 수 있습니다.
           </h2>
-          <p className="">자세한 내용은 아래 노션을 참고해주세요.</p>
           <a
             href="https://lilac-hare-5d2.notion.site/194648517b8543ca938e4154faf64318?pvs=4"
             className="mt-4 flex items-center gap-2 font-bold text-blue-600 hover:underline"
@@ -41,7 +36,7 @@ const AboutPage = () => {
               alt="notion 경력기술서"
             />
             경력기술서
-          </a> */}
+          </a>
         </div>
       </section>
     </main>

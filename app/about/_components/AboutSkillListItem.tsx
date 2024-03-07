@@ -13,7 +13,7 @@ const AboutSkillListItem = ({
   description,
 }: AboutSkillListItemProps) => {
   return (
-    <li className="group relative min-h-40 min-w-40 max-w-sm overflow-hidden rounded-md border-2 bg-secondary shadow-md">
+    <li className="group relative min-h-40 max-w-sm overflow-hidden rounded-md border-2 shadow-md  dark:bg-gray-600">
       <div className="flex h-full w-full flex-col items-center justify-center gap-4">
         <Image
           src={image}
