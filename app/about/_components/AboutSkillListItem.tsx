@@ -24,7 +24,7 @@ const AboutSkillListItem = ({
         />
         <div className="text-sm font-semibold dark:text-white">{title}</div>
       </div>
-      <div className="absolute left-0 top-0 z-10 h-full w-full translate-x-full bg-background p-4 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+      <div className="absolute left-0 top-0 z-10 h-full w-full translate-x-full overflow-y-auto bg-background p-4 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
         <p className="text-sm">{description}</p>
       </div>
     </li>
