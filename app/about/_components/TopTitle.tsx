@@ -27,8 +27,12 @@ const TopTitle = () => {
       <div className="absolute left-0 top-0 mx-auto flex h-[400px] w-full max-w-screen-sm items-center px-6 md:left-1/2 md:h-[740px] md:max-w-screen-lg md:-translate-x-1/2">
         <div>
           <h2 className={`text-4xl text-gray-50 md:text-6xl ${font.className}`}>
-            <p className={`md:mb-2 ${styles.titleIn}`}>아무것도 하지 않으면</p>
-            <p className={`${styles.titleIn2}`}>아무것도 일어나지 않는다.</p>
+            <span className={`block md:mb-2 ${styles.titleIn}`}>
+              아무것도 하지 않으면
+            </span>
+            <span className={`block ${styles.titleIn2}`}>
+              아무것도 일어나지 않는다.
+            </span>
           </h2>
         </div>
       </div>
