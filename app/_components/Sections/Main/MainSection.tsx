@@ -1,6 +1,6 @@
 import LottieComp from "@/components/Lottie/Lottie";
 import QrCode from "@/components/QrCode/QrCode";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 
 const MainSection = () => {
@@ -15,15 +15,17 @@ const MainSection = () => {
               <span>PORTFOLIO</span>
             </h2>
             <div className="mb-8 flex justify-center gap-2 sm:mb-0 sm:justify-normal">
-              <Link href="/about">
-                <Button className="text-xs" variant={"secondary"} size="sm">
-                  제가 궁금한가요?
-                </Button>
+              <Link
+                href="/about"
+                className={`${buttonVariants({ variant: "secondary", size: "sm" })}`}
+              >
+                제가 궁금한가요?
               </Link>
-              <Link href="/works">
-                <Button className="text-xs " variant={"secondary"} size="sm">
-                  작업 목록
-                </Button>
+              <Link
+                href="/works"
+                className={`${buttonVariants({ variant: "secondary", size: "sm" })}`}
+              >
+                작업 목록
               </Link>
             </div>
           </div>

@@ -55,9 +55,7 @@ const WorkItem = ({ work }: { work: IWorks }) => {
           </div>
         </div>
         <div className="mt-auto flex justify-between">
-          <time className="text-sm" dateTime={work.date}>
-            {work.date}
-          </time>
+          <p className="text-sm">{work.date}</p>
           <Badge variant={"default"}>Preview</Badge>
         </div>
       </Link>

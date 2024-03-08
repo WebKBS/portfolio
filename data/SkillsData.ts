@@ -170,4 +170,10 @@ export const usableButIncomplete = [
     description:
       "ASP.NET Core를 활용하여 MVC 웹 View 페이지 및 라우팅을 구현할 수 있습니다.",
   },
+  {
+    image: "/skills/aws.png",
+    title: "AWS",
+    description:
+      "AWS의 S3, EC2의 서비스를 활용하여 클라우드 서비스를 구축할 수 있습니다.",
+  },
 ];
