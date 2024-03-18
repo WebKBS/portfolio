@@ -46,7 +46,7 @@ const WorksBanner = ({
   return (
     <div
       ref={bannerRef}
-      className="sticky left-0 top-14 z-[-1] h-[400px] w-screen overflow-hidden transition-opacity duration-300"
+      className="sticky left-0 top-14 z-[-1] h-[400px] w-full overflow-hidden transition-opacity duration-300"
     >
       <Image
         priority
