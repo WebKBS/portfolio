@@ -7,7 +7,7 @@ export const sns = [
   },
   {
     title: "Blog",
-    link: "https://blog-webkbs.vercel.app/",
+    link: "https://recodelog.com/",
     icon: "/icons/blog.svg",
     iconBlack: "/icons/blog-black.svg",
   },
