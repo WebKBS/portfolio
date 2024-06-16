@@ -14,6 +14,7 @@ const weatherdata = async () => {
     if (!res.ok) {
       throw new Error("날씨 데이터 가져오기 실패");
     }
+    revalidatePath("/");
 
     const data = await res.json();
     return data;
