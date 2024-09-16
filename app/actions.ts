@@ -54,10 +54,10 @@ export const contactEmail = async (prevState: any, formData: FormData) => {
     // Data URI로 포맷팅
     const dataURI = `data:${file.type};base64,${base64String}`;
 
-    console.log(base64String);
-    console.log(dataURI);
+    // console.log(base64String);
+    // console.log(dataURI);
 
-    console.log(username, email, message, title);
+    // console.log(username, email, message, title);
 
     await sendEmail(username, email, message, title, dataURI);
     return { success: true, message: "문의하기를 성공적으로 전송하였습니다." };

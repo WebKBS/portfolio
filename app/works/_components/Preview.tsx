@@ -6,13 +6,13 @@ import PreviewModal from "@/components/Modal/PreviewModal";
 import { Button } from "@/components/ui/button";
 import { useModalToggle } from "@/store/modal-store";
 import { MdClose } from "react-icons/md";
+import { PreviewImageType } from "@/types/worksType";
 
-export interface IPreview {
-  mobileImage: string;
-  image: string;
-}
-
-const Preview = ({ previewImageData }: { previewImageData: IPreview[] }) => {
+const Preview = ({
+  previewImageData,
+}: {
+  previewImageData: PreviewImageType[];
+}) => {
   const setIsPreviewModalOpen = useModalToggle(
     (state) => state.setIsPreviewModalOpen,
   );

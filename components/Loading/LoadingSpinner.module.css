@@ -4,4 +4,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 0;
+  width: 50px;
+  height: auto;
 }

@@ -10,7 +10,7 @@ const PreviewModal = ({ children }: { children: React.ReactNode }) => {
     setIsPreviewModalOpen(false);
   }
 
-  console.log(isPreviewModalOpen);
+  // console.log(isPreviewModalOpen);
 
   return (
     <>

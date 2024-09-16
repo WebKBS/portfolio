@@ -16,13 +16,13 @@ const MainSection = () => {
             </h2>
             <div className="mb-8 flex justify-center gap-2 sm:mb-0 sm:justify-normal">
               <Link
-                href="/about"
+                href={"/about"}
                 className={`${buttonVariants({ variant: "secondary", size: "sm" })}`}
               >
                 제가 궁금한가요?
               </Link>
               <Link
-                href="/works"
+                href="/images/works"
                 className={`${buttonVariants({ variant: "secondary", size: "sm" })}`}
               >
                 작업 목록

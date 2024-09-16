@@ -7,6 +7,8 @@
   user-select: none;
   filter: drop-shadow(2px 4px 6px black);
   animation: fingerAnimation 5s forwards;
+  width: 50px;
+  height: auto;
 }
 
 @keyframes fingerAnimation {

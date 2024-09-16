@@ -1,23 +1,21 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
-
 const weatherdata = async () => {
   try {
     const res = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?lat=37.5642135&lon=127.0016985&lang=kr&appid=${process.env.WEATHER_API_KEY}`,
       {
-        cache: "no-cache",
+        next: {
+          revalidate: 60,
+        },
       },
     );
 
     if (!res.ok) {
       throw new Error("날씨 데이터 가져오기 실패");
     }
-    revalidatePath("/");
 
-    const data = await res.json();
-    return data;
+    return await res.json();
   } catch (error) {
     console.error("날씨 fetch error: ", error);
     throw error;
@@ -27,7 +25,7 @@ const weatherdata = async () => {
 const Weather = async () => {
   const data = await weatherdata();
 
-  let weatherIcon = "";
+  let weatherIcon: string;
   if (data.weather[0].id >= 200 && data.weather[0].id < 300) {
     weatherIcon = "⛈️";
   } else if (data.weather[0].id >= 300 && data.weather[0].id < 600) {
@@ -43,8 +41,6 @@ const Weather = async () => {
   } else {
     weatherIcon = "❓";
   }
-
-  revalidatePath("/");
 
   return (
     <aside className="fixed right-2  top-16 z-10 text-right text-xs">

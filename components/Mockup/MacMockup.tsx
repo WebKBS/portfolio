@@ -1,4 +1,4 @@
-import macMockup from "@/public/mockup/mac.png";
+import macMockup from "@/public/images/mockup/mac.png";
 import Image, { StaticImageData } from "next/image";
 import Loading from "../Loading/LoadingSpinner";
 import styles from "./MacMockup.module.css";

@@ -1,4 +1,21 @@
 import { StaticImageData } from "next/image";
+import {
+  portfolioImages,
+  portfolioPreviewImages,
+} from "@/data/works/imageData/portfolioImages";
+import { deposImages } from "@/data/works/imageData/deposImages";
+import {
+  eurasiaImages,
+  eurasiaPreviewImages,
+} from "@/data/works/imageData/eurasiaImages";
+import {
+  k2gbsImages,
+  k2gbsPreviewImages,
+} from "@/data/works/imageData/k2gbsImages";
+import {
+  dpangzImages,
+  dpangzPreviewImages,
+} from "@/data/works/imageData/dpangzImages";
 
 let index = 0;
 
@@ -6,7 +23,7 @@ export interface IWorks {
   id: number;
   title: string;
   description: string;
-  thumbnail: string;
+  thumbnail: StaticImageData | string;
   image: StaticImageData | string;
   mobileImage: StaticImageData | string;
   bannerImage: StaticImageData | string;
@@ -17,8 +34,8 @@ export interface IWorks {
   body: string;
   detailContent: {
     previewImages: {
+      desktopImage: StaticImageData | string;
       mobileImage: StaticImageData | string;
-      image: StaticImageData | string;
     }[];
     description: string;
     insight: string;
@@ -35,10 +52,10 @@ export const works = [
     id: index++,
     title: "Portfolio",
     description: "개인 포트폴리오 웹사이트입니다.",
-    thumbnail: "/works/portfolio/thumbnail.png",
-    image: "/works/portfolio/main.png",
-    mobileImage: "/works/portfolio/mobile.png",
-    bannerImage: "/works/portfolio/banner.png",
+    thumbnail: portfolioImages.thumbnail,
+    image: portfolioImages.desktopImage,
+    mobileImage: portfolioImages.mobileImage,
+    bannerImage: portfolioImages.bannerImage,
     url: "https://portfolio-webkbs.vercel.app",
     date: "2024.02",
     tags: [
@@ -55,28 +72,7 @@ export const works = [
     body: "취업을 위해 개인 포트폴리오를 제작하였습니다. Next.js를 사용하여 제작하였고, Tailwind CSS를 사용하여 디자인을 하였습니다. Zustand를 사용하여 상태를 관리하였고, Shadcn Ui를 사용하여 디자인을 하였습니다.",
     contribution: "100% 개인 프로젝트",
     detailContent: {
-      previewImages: [
-        {
-          image: "/works/portfolio/main.png",
-          mobileImage: "/works/portfolio/mobile.png",
-        },
-        {
-          image: "/works/portfolio/slide/mainSlide1.png",
-          mobileImage: "/works/portfolio/slide/mobileSlide1.png",
-        },
-        {
-          image: "/works/portfolio/slide/mainSlide2.png",
-          mobileImage: "/works/portfolio/slide/mobileSlide2.png",
-        },
-        {
-          image: "/works/portfolio/slide/mainSlide3.png",
-          mobileImage: "/works/portfolio/slide/mobileSlide3.png",
-        },
-        {
-          image: "/works/portfolio/slide/mainSlide4.png",
-          mobileImage: "/works/portfolio/slide/mobileSlide4.png",
-        },
-      ],
+      previewImages: portfolioPreviewImages,
       description:
         "개인용 포트폴리오 사이트를 개발하였습니다. Next.js를 사용하여 제작하였고, Tailwind CSS를 사용하여 디자인을 하였습니다. Zustand를 사용하여 상태를 관리하였고, Shadcn Ui를 사용하여 디자인을 하였습니다. weather API를 사용하여 날씨 정보를 가져와서 보여주는 기능을 추가하였습니다. Lottie를 사용하여 애니메이션을 추가하였습니다. web api intersection observer를 사용하여 스크롤 이벤트를 추가하였습니다. 문의하기 기능을 만들었고 nodemailer를 사용하여 메일을 보낼 수 있도록 하였고, Zod 라이브러리를 사용하여 프론트엔드 및 백엔드에서 유효성 검사를 하였습니다. 그리고 Docker를 사용하여 개발 환경과 배포 환경을 따로 구축해보았습니다.",
       insight:
@@ -136,10 +132,10 @@ export const works = [
     id: index++,
     title: "임대료 보증금 자동 상호전환 계산기",
     description: "개인 프로젝트로 제작한 임대료 보증금 상호전환 계산기입니다.",
-    thumbnail: "/works/depos/thumbnail.png",
-    image: "/works/depos/main.png",
-    mobileImage: "/works/depos/mobile.png",
-    bannerImage: "/works/depos/banner.png",
+    thumbnail: deposImages.thumbnail,
+    image: deposImages.desktopImage,
+    mobileImage: deposImages.mobileImage,
+    bannerImage: deposImages.bannerImage,
     url: "https://depos.kr",
     date: "2024-02 ~ 진행중",
     tags: [
@@ -157,8 +153,8 @@ export const works = [
     detailContent: {
       previewImages: [
         {
-          image: "/works/depos/main.png",
-          mobileImage: "/works/depos/mobile.png",
+          desktopImage: deposImages.desktopImage,
+          mobileImage: deposImages.mobileImage,
         },
       ],
       description:
@@ -222,10 +218,10 @@ export const works = [
     title: "Eurasia-Consulting 홈페이지",
     description:
       "워드프레스를 사용하여 제작된 홈페이지를 Next.js로 리뉴얼하였습니다.",
-    thumbnail: "/works/eurasia/thumbnail.png",
-    image: "/works/eurasia/main.png",
-    mobileImage: "/works/eurasia/mobile.png",
-    bannerImage: "/works/eurasia/banner.png",
+    thumbnail: eurasiaImages.thumbnail,
+    image: eurasiaImages.desktopImage,
+    mobileImage: eurasiaImages.mobileImage,
+    bannerImage: eurasiaImages.bannerImage,
     url: "https://eurasia-consulting.vercel.app/",
     date: "2023.10 ~ 2023.11",
     tags: ["반응형", "Next.js", "React", "TypeScript", "Tailwind CSS", "RSS"],
@@ -233,28 +229,7 @@ export const works = [
     body: "워드프레스 기반 제작된 웹을 Next.js를 사용하여 전체 리뉴얼을 하였습니다. 헤럴드코리아 뉴스 RSS를 사용하여 최신 뉴스를 보여주는 기능을 추가하였습니다. 또한 nodemailer 라이브러리를 사용하여 beget 서버에서 메일을 보낼 수 있도록 문의하기 기능을 구현하였습니다.",
     contribution: "100% 회사내 단독 진행",
     detailContent: {
-      previewImages: [
-        {
-          image: "/works/eurasia/main.png",
-          mobileImage: "/works/eurasia/mobile.png",
-        },
-        {
-          image: "/works/eurasia/slide/mainSlide1.png",
-          mobileImage: "/works/eurasia/slide/mobileSlide1.png",
-        },
-        {
-          image: "/works/eurasia/slide/mainSlide2.png",
-          mobileImage: "/works/eurasia/slide/mobileSlide2.png",
-        },
-        {
-          image: "/works/eurasia/slide/mainSlide3.png",
-          mobileImage: "/works/eurasia/slide/mobileSlide3.png",
-        },
-        {
-          image: "/works/eurasia/slide/mainSlide4.png",
-          mobileImage: "/works/eurasia/slide/mobileSlide4.png",
-        },
-      ],
+      previewImages: eurasiaPreviewImages,
       description:
         "워드프레스로 제작된 기존 웹사이트를 Next.js 프레임워크로 전체 리뉴얼하여 웹사이트를 제작하였습니다. 헤럴드 코리아 뉴스 RSS를 사용하여 최신 뉴스를 보여주는 기능을 추가하였습니다. 또한 nodemailer 라이브러리를 사용하여 beget 서버에서 메일 보내기, 또는 파일을 첨부하여 보낼 수 있도록 문의하기 기능을 구현하였습니다. 파일을 보낼시 next.js 서버에서 파일 사이즈 및 타입 등 유효성을 검증하는 기능등을 구현하였습니다.",
       insight:
@@ -296,10 +271,10 @@ export const works = [
     title: "k2gbs 홈페이지",
     description:
       "Next.js 리뉴얼 및 next-intl을 사용한 다국어 지원 홈페이지입니다.",
-    thumbnail: "/works/k2gbs/thumbnail.png",
-    image: "/works/k2gbs/main.png",
-    mobileImage: "/works/k2gbs/mobile.png",
-    bannerImage: "/works/k2gbs/banner.png",
+    thumbnail: k2gbsImages.thumbnail,
+    image: k2gbsImages.desktopImage,
+    mobileImage: k2gbsImages.mobileImage,
+    bannerImage: k2gbsImages.bannerImage,
     url: "empty",
     date: "2023.09 ~ 2023.10",
     tags: [
@@ -314,32 +289,7 @@ export const works = [
     body: "기존에 제작된 홈페이지를 Next.js로 리뉴얼하였습니다. next-intl 라이브러리를 사용하여 다국어 지원을 하였습니다.",
     contribution: "100% 회사내 단독 진행",
     detailContent: {
-      previewImages: [
-        {
-          image: "/works/k2gbs/main.png",
-          mobileImage: "/works/k2gbs/mobile.png",
-        },
-        {
-          image: "/works/k2gbs/slide/mainSlide1.png",
-          mobileImage: "/works/k2gbs/slide/mobileSlide1.png",
-        },
-        {
-          image: "/works/k2gbs/slide/mainSlide2.png",
-          mobileImage: "/works/k2gbs/slide/mobileSlide2.png",
-        },
-        {
-          image: "/works/k2gbs/slide/mainSlide3.png",
-          mobileImage: "/works/k2gbs/slide/mobileSlide3.png",
-        },
-        {
-          image: "/works/k2gbs/slide/mainSlide4.png",
-          mobileImage: "/works/k2gbs/slide/mobileSlide4.png",
-        },
-        {
-          image: "/works/k2gbs/slide/mainSlide5.png",
-          mobileImage: "/works/k2gbs/slide/mobileSlide5.png",
-        },
-      ],
+      previewImages: k2gbsPreviewImages,
       description:
         "워드프레스 기반으로 제작된 웹사이트를 next js로 전체 리뉴얼하여 웹사이트를 제작하였습니다. 다국어 지원을 위해 next-intl 라이브러리를 사용하였습니다. 처음으로 다국어 지원 개발을 해 보았습니다. 이를 배우기위해 공식문서와 해외 유튜브 강의를 참고하고 단 기간 내 적용하여 개발을 하였습니다.",
       insight:
@@ -370,10 +320,10 @@ export const works = [
     id: index++,
     title: "Dpangz - Leagure of Clonoid",
     description: "웹 HTML5 게임 프로젝트로 제작한 리그 오브 클로노이드 입니다.",
-    thumbnail: "/works/dpangz/thumbnail.png",
-    image: "/works/dpangz/main.png",
-    mobileImage: "/works/dpangz/mobile.png",
-    bannerImage: "/works/dpangz/banner.png",
+    thumbnail: dpangzImages.thumbnail,
+    image: dpangzImages.desktopImage,
+    mobileImage: dpangzImages.mobileImage,
+    bannerImage: dpangzImages.bannerImage,
     url: "https://dpangz.com/",
     date: "2023.06 ~ 2023.08",
     tags: ["반응형", "HTML5게임", "asp.net core", "TypeScript"],
@@ -381,24 +331,7 @@ export const works = [
     body: "asp.net core (MVC)로 HTML5 웹 기반 게임으로 제작한 리그 오브 클로노이드 입니다. 주요 업무로 dpangz 전체 홈페이지 ui를 제작하였고, canvas 내부 게임 ui를 제작하였습니다. 게임 내 상점, 채팅, 채팅 이모티콘, 거래 시스템 등 ui를 제작하였습니다.",
     contribution: "전체 30% (UI 100%) - 디자이너(2), 백엔드(2), 프론트엔드(1)",
     detailContent: {
-      previewImages: [
-        {
-          image: "/works/dpangz/main.png",
-          mobileImage: "/works/dpangz/mobile.png",
-        },
-        {
-          image: "/works/dpangz/slide/mainSlide1.png",
-          mobileImage: "/works/dpangz/slide/mobileSlide1.png",
-        },
-        {
-          image: "/works/dpangz/slide/mainSlide2.png",
-          mobileImage: "/works/dpangz/slide/mobileSlide2.png",
-        },
-        {
-          image: "/works/dpangz/slide/mainSlide3.png",
-          mobileImage: "/works/dpangz/slide/mobileSlide3.png",
-        },
-      ],
+      previewImages: dpangzPreviewImages,
       description:
         "웹에서 Play할 수 있는 HTML5 기반 게임을 제작하였습니다. 전체 웹사이트 ui를 제작하고, Game페이지에서는 Canvas로 게임을 제작하였습니다. Canvas 내부의 인게임은 게임 개발자가 개발 하였으며, 게임 내 상점, 채팅, 거래 시스템 등 버튼을 클릭하여 제어 할수 있는 부분은 제가 담당하여 개발하였습니다. 메인 홈페이지에 Chart.js를 사용하여 데이터를 시각화 하였고, sheets.js를 사용하여 엑셀 파일을 읽어와서 데이터를 시각화 하였습니다.",
       insight:
