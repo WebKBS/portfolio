@@ -1,9 +1,9 @@
 "use client";
 
-import topMockup from "@/public/mockup/iphone-top.png";
-import iphoneMockup from "@/public/mockup/iphone.png";
-import macMockup from "@/public/mockup/mac.png";
-import Image from "next/image";
+import topMockup from "@/public/images/mockup/iphone-top.png";
+import iphoneMockup from "@/public/images/mockup/iphone.png";
+import macMockup from "@/public/images/mockup/mac.png";
+import Image, { StaticImageData } from "next/image";
 import { useRef, useState } from "react";
 import Loading from "../Loading/LoadingSpinner";
 import styles from "./MockupAnimation.module.css";
@@ -14,8 +14,8 @@ const MockupAnimation = ({
   mobileImage,
 }: {
   title: string;
-  image: string;
-  mobileImage: string;
+  image: StaticImageData | string;
+  mobileImage: StaticImageData | string;
 }) => {
   const macBoxRef = useRef<HTMLDivElement | null>(null);
   const iphoneBoxRef = useRef<HTMLDivElement | null>(null);
@@ -71,8 +71,6 @@ const MockupAnimation = ({
     <div className={styles.mockupContent}>
       <div className={styles.macBox}>
         <Image
-          width={400}
-          height={400}
           src={macMockup}
           alt="맥북 목업"
           className={styles.macMockup}
@@ -82,8 +80,6 @@ const MockupAnimation = ({
           <Loading />
           <Image
             ref={macImageRef}
-            width={400}
-            height={400}
             src={image}
             alt={title}
             className={styles.macImage}

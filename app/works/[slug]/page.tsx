@@ -1,5 +1,5 @@
 import WorksBanner from "@/components/Banner/WorksBanner";
-import { works } from "@/data/worksData";
+import { works } from "@/data/works/worksData";
 import { notFound } from "next/navigation";
 import ContentTitle from "../_components/ContentTitle";
 import FunctionItem from "../_components/FunctionItem";

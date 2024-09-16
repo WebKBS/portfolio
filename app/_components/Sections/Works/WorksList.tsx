@@ -1,4 +1,4 @@
-import { works } from "@/data/worksData";
+import { works } from "@/data/works/worksData";
 
 import Link from "next/link";
 import WorkItem from "./WorkItem";
@@ -11,7 +11,7 @@ const WorksList = () => {
       <h2 className="mb-6 text-center text-3xl font-bold">WORKS</h2>
       <div className="overflow-x-auto">
         <div className="mx-auto mb-3 flex justify-end text-sm lg:max-w-full">
-          <Link href="/works" className="flex items-center gap-1">
+          <Link href="/images/works" className="flex items-center gap-1">
             More{" "}
             <span className="flex h-5 w-5 items-center justify-center rounded-full bg-blue-500 text-white">
               {works.length}

@@ -1,5 +1,4 @@
 "use client";
-import { IPreview } from "@/app/works/_components/Preview";
 import {
   Carousel,
   CarouselContent,
@@ -13,11 +12,13 @@ import { useEffect, useState } from "react";
 import IphoneMockup from "../Mockup/IphoneMockup";
 import MacMockup from "../Mockup/MacMockup";
 import styles from "./ModalCarousel.module.css";
+import { PreviewImageType } from "@/types/worksType";
+import IconFinger from "@/public/icons/finger.svg";
 
 const ModalCarousel = ({
   previewImageData,
 }: {
-  previewImageData: IPreview[];
+  previewImageData: PreviewImageType[];
 }) => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
@@ -43,16 +44,14 @@ const ModalCarousel = ({
         <CarouselContent>
           {previewImageData.map((image, index) => (
             <CarouselItem key={index}>
-              <MacMockup src={image.image} title="" />
+              <MacMockup src={image.desktopImage} title="" />
               <IphoneMockup src={image.mobileImage} title="" />
             </CarouselItem>
           ))}
         </CarouselContent>
         <Image
-          width={60}
-          height={60}
-          src="/icons/finger.svg"
-          alt="finger"
+          src={IconFinger}
+          alt="finger icon"
           priority
           className={styles.finger}
         />

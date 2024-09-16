@@ -1,7 +1,7 @@
 "use client";
 import { useTitle } from "@/store/banner-store";
 import { throttle } from "lodash";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useEffect, useRef } from "react";
 import styles from "./WorksBanner.module.css";
 
@@ -10,7 +10,7 @@ const WorksBanner = ({
   title,
   height = "h-full",
 }: {
-  image: string;
+  image: StaticImageData | string;
   title: string;
   height?: string;
 }) => {
@@ -52,8 +52,6 @@ const WorksBanner = ({
         priority
         src={image}
         alt="Works Banner"
-        width={1920}
-        height={1920}
         sizes="100vw"
         className={`absolute left-1/2 top-0 -translate-x-1/2 object-cover ${height}`}
       />

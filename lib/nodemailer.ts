@@ -10,8 +10,8 @@ export async function sendEmail(
   file: string,
 ) {
   try {
-    console.log(username, title, message, file, email);
-    console.log("node file", file);
+    // console.log(username, title, message, file, email);
+    // console.log("node file", file);
     if (!email || !message || !title || !username) {
       return { message: "이메일 전송 실패", status: 400 };
     }
@@ -44,7 +44,7 @@ export async function sendEmail(
     await transport.sendMail(mailOptions); // 이메일 전송
     return { message: "전송 성공!!", status: 200 };
   } catch (err) {
-    console.log(err);
+    console.error(err);
     return { message: "데이터 전송 실패!!", status: 500 };
   }
 }
