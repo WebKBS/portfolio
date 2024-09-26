@@ -25,7 +25,7 @@ const AboutPage = () => {
             더 자세한 내용은 Notion에서 확인할 수 있습니다.
           </h2>
           <a
-            href="https://lilac-hare-5d2.notion.site/194648517b8543ca938e4154faf64318?pvs=4"
+            href="https://lilac-hare-5d2.notion.site/Frontend-Developer-88d852a748b24fb1b838d284adfecfe1"
             className="mt-4 flex items-center gap-2 font-bold text-blue-600 hover:underline"
             target="_blank"
           >

@@ -32,6 +32,7 @@ export interface IWorks {
   tags: string[];
   slug: string;
   body: string;
+  contribution: string;
   detailContent: {
     previewImages: {
       desktopImage: StaticImageData | string;
@@ -47,7 +48,69 @@ export interface IWorks {
   };
 }
 
-export const works = [
+export const works: IWorks[] = [
+  {
+    id: index++,
+    title: "개인 블로그 Recodelog",
+    description: "직접 제작한 개인 블로그 웹사이트 입니다. 경험했던 기술과 트러블 슈팅을 기록하고 있습니다.",
+    thumbnail: "",
+    image: "",
+    mobileImage: "",
+    bannerImage: "",
+    url: "https://recodelog.com",
+    date: "2024.03 ~ 현재",
+    tags: [
+      "반응형",
+      "Next.js",
+      "React",
+      "VeliteJS",
+      "TypeScript",
+      "Tailwind CSS",
+      "Zustand",
+      "Shadcn Ui",
+    ],
+    slug: "recodelog",
+    body: "개인 블로그를 제작하였습니다. Next.js를 사용하여 제작하였고, VeliteJS를 사용하여 MDX를 사용하여 포스트를 작성하였습니다. Tailwind CSS를 사용하여 디자인을 하였습니다. Zustand를 사용하여 상태를 관리하였고, Shadcn Ui를 사용하여 디자인을 하였습니다.",
+    contribution: "100% 개인 프로젝트",
+    detailContent: {
+      previewImages: [],
+      description:
+        "개인 블로그를 제작하였습니다. Next.js를 사용하여 제작하였고, VeliteJS를 사용하여 MDX를 사용하여 포스트를 작성하였습니다. Tailwind CSS를 사용하여 디자인을 하였습니다. Zustand를 사용하여 상태를 관리하였고, Shadcn Ui를 사용하여 디자인을 하였습니다.",
+      insight:
+        "개인 블로그를 제작하면서 VeliteJS를 사용하여 MDX를 사용하여 포스트를 작성하였습니다. 이전에는 MDX를 사용해본적이 없었기 때문에 VeliteJS를 사용하여 MDX를 사용하는 방법을 공부하였습니다. VeliteJS를 사용하면서 MDX를 사용하는 방법을 알게 되었고, 이를 통해 블로그에 포스트를 작성할 수 있게 되었습니다. 이전에는 Tailwind CSS를 사용해본적이 없었기 때문에 Tailwind CSS를 사용하여 디자인을 하였습니다. Tailwind CSS를 사용하면서 디자인을 쉽게 할 수 있었고, 디자인을 위한 시간을 줄일 수 있었습니다. 이전에는 Zustand를 사용해본적이 없었기 때문에 Zustand를 사용하여 상태를 관리하였습니다. Zustand를 사용하면서 상태를 관리하는 방법을 알게 되었고, 이를 통해 상태를 관리할 수 있게 되었습니다. 이전에는 Shadcn Ui를 사용해본적이 없었기 때문에 Shadcn Ui를 사용하여 디자인을 하였습니다. Shadcn Ui를 사용하면서 디자인을 쉽게 할 수 있었고, 디자인을 위한 시간을 줄일 수 있었습니다.",
+      stacks: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Zustand",
+        "Shadcn Ui",
+        "반응형",
+        "VeliteJS",
+      ],
+      functions: [
+        {
+          function: "VeliteJS",
+          description:
+            "VeliteJS를 사용하여 MDX를 사용하여 포스트를 작성하였습니다.",
+        },
+        {
+          function: "Tailwind CSS",
+          description: "Tailwind CSS를 사용하여 디자인을 하였습니다.",
+        },
+        {
+          function: "Zustand",
+          description: "Zustand를 사용하여 상태를 관리하였습니다.",
+        },
+        {
+          function: "Shadcn Ui",
+          description: "Shadcn Ui를 사용하여 디자인을 하였습니다.",
+        },
+      ],
+    }
+
+
+  },
   {
     id: index++,
     title: "Portfolio",
