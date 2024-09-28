@@ -16,6 +16,7 @@ import {
   dpangzImages,
   dpangzPreviewImages,
 } from "@/data/works/imageData/dpangzImages";
+import {recodelogImages} from "@/data/works/imageData/recodelogImages";
 
 let index = 0;
 
@@ -53,10 +54,10 @@ export const works: IWorks[] = [
     id: index++,
     title: "개인 블로그 Recodelog",
     description: "직접 제작한 개인 블로그 웹사이트 입니다. 경험했던 기술과 트러블 슈팅을 기록하고 있습니다.",
-    thumbnail: "",
-    image: "",
-    mobileImage: "",
-    bannerImage: "",
+    thumbnail: recodelogImages.thumbnail,
+    image: recodelogImages.desktopImage,
+    mobileImage: recodelogImages.mobileImage,
+    bannerImage: recodelogImages.bannerImage,
     url: "https://recodelog.com",
     date: "2024.03 ~ 현재",
     tags: [
