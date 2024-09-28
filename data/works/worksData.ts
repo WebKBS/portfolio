@@ -16,7 +16,7 @@ import {
   dpangzImages,
   dpangzPreviewImages,
 } from "@/data/works/imageData/dpangzImages";
-import {recodelogImages} from "@/data/works/imageData/recodelogImages";
+import {recodelogImages, recodelogPreviewImages} from "@/data/works/imageData/recodelogImages";
 
 let index = 0;
 
@@ -74,7 +74,7 @@ export const works: IWorks[] = [
     body: "개인 블로그를 제작하였습니다. Next.js를 사용하여 제작하였고, VeliteJS를 사용하여 MDX를 사용하여 포스트를 작성하였습니다. Tailwind CSS를 사용하여 디자인을 하였습니다. Zustand를 사용하여 상태를 관리하였고, Shadcn Ui를 사용하여 디자인을 하였습니다.",
     contribution: "100% 개인 프로젝트",
     detailContent: {
-      previewImages: [],
+      previewImages: recodelogPreviewImages,
       description:
         "개인 블로그를 제작하였습니다. Next.js를 사용하여 제작하였고, VeliteJS를 사용하여 MDX를 사용하여 포스트를 작성하였습니다. Tailwind CSS를 사용하여 디자인을 하였습니다. Zustand를 사용하여 상태를 관리하였고, Shadcn Ui를 사용하여 디자인을 하였습니다.",
       insight:

@@ -1,4 +1,4 @@
-import {worksImageType} from "@/types/worksType";
+import {PreviewImageType, worksImageType} from "@/types/worksType";
 import thumbnailImage from "@/public/images/works/recodelog/thumbnail.png";
 import desktopImage from "@/public/images/works/recodelog/desktop.png";
 import mobileImage from "@/public/images/works/recodelog/mobile.png";
@@ -10,9 +10,6 @@ import previewDesktopSlide2 from "@/public/images/works/recodelog/slide/desktopS
 import previewMobileSlide2 from "@/public/images/works/recodelog/slide/mobileSlide2.png";
 import previewDesktopSlide3 from "@/public/images/works/recodelog/slide/desktopSlide3.png";
 import previewMobileSlide3 from "@/public/images/works/recodelog/slide/mobileSlide3.png";
-import previewDesktopSlide4 from "@/public/images/works/recodelog/slide/desktopSlide4.png";
-import previewMobileSlide4 from "@/public/images/works/recodelog/slide/mobileSlide4.png";
-import previewDesktopSlide5 from "@/public/images/works/recodelog/slide/desktopSlide5.png";
 
 export const recodelogImages: worksImageType = {
   thumbnail: thumbnailImage,
@@ -20,3 +17,22 @@ export const recodelogImages: worksImageType = {
   mobileImage: mobileImage,
   bannerImage: bannerImage,
 };
+
+export const recodelogPreviewImages: PreviewImageType[] = [
+  {
+    desktopImage: desktopImage,
+    mobileImage: mobileImage,
+  },
+  {
+    desktopImage: previewDesktopSlide1,
+    mobileImage: previewMobileSlide1,
+  },
+  {
+    desktopImage: previewDesktopSlide2,
+    mobileImage: previewMobileSlide2,
+  },
+  {
+    desktopImage: previewDesktopSlide3,
+    mobileImage: previewMobileSlide3,
+  },
+];
