@@ -6,6 +6,7 @@ import FunctionItem from "../_components/FunctionItem";
 import PageTitle from "../_components/PageTitle";
 import Preview from "../_components/Preview";
 import StackItem from "../_components/StackItem";
+import GalleryButton from "@/components/Buttons/GalleryButton";
 
 const WorksDetailPage = ({
   params: { slug },
@@ -27,10 +28,13 @@ const WorksDetailPage = ({
         // height="h-auto"
       />
       <section className="z-[1] mx-auto h-full max-w-screen-lg lg:max-w-screen-2xl lg:px-6">
-        <PageTitle title={data.title} isPreview={true} />
+        <PageTitle title={data.title} />
         <div className="mx-auto max-w-screen-md px-5 py-4 lg:py-20">
           <div className="mb-12">
-            <ContentTitle title="프로젝트 소개" />
+          <div className={"flex justify-between gap-4 items-center mb-4"}>
+            <ContentTitle className="mb-0" title="프로젝트 소개" />
+            <GalleryButton/>
+          </div>
             <div>{data.detailContent.description}</div>
           </div>
           <div className="mb-12">
