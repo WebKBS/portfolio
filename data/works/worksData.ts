@@ -59,7 +59,7 @@ export const works: IWorks[] = [
     mobileImage: recodelogImages.mobileImage,
     bannerImage: recodelogImages.bannerImage,
     url: "https://recodelog.com",
-    date: "2024.03 ~ 현재",
+    date: "2024.03 ~ 운영중",
     tags: [
       "반응형",
       "Next.js",
@@ -78,7 +78,7 @@ export const works: IWorks[] = [
       description:
         "개인 블로그를 제작하였습니다. Next.js를 사용하여 제작하였고, VeliteJS를 사용하여 MDX를 사용하여 포스트를 작성하였습니다. Tailwind CSS를 사용하여 디자인을 하였습니다. Zustand를 사용하여 상태를 관리하였고, Shadcn Ui를 사용하여 디자인을 하였습니다.",
       insight:
-        "개인 블로그를 제작하면서 VeliteJS를 사용하여 MDX를 사용하여 포스트를 작성하였습니다. 이전에는 MDX를 사용해본적이 없었기 때문에 VeliteJS를 사용하여 MDX를 사용하는 방법을 공부하였습니다. VeliteJS를 사용하면서 MDX를 사용하는 방법을 알게 되었고, 이를 통해 블로그에 포스트를 작성할 수 있게 되었습니다. 이전에는 Tailwind CSS를 사용해본적이 없었기 때문에 Tailwind CSS를 사용하여 디자인을 하였습니다. Tailwind CSS를 사용하면서 디자인을 쉽게 할 수 있었고, 디자인을 위한 시간을 줄일 수 있었습니다. 이전에는 Zustand를 사용해본적이 없었기 때문에 Zustand를 사용하여 상태를 관리하였습니다. Zustand를 사용하면서 상태를 관리하는 방법을 알게 되었고, 이를 통해 상태를 관리할 수 있게 되었습니다. 이전에는 Shadcn Ui를 사용해본적이 없었기 때문에 Shadcn Ui를 사용하여 디자인을 하였습니다. Shadcn Ui를 사용하면서 디자인을 쉽게 할 수 있었고, 디자인을 위한 시간을 줄일 수 있었습니다.",
+        "개인 기록을 위해 개인 블로그를 직접 제작하였습니다. 원래 ContentLayer 라이브러리를 사용하여 개발하려했으나, 제가 블로그 개발을 시작할 당시 ContentLayer의 업데이트와 지원이 미흡한것을 발견하여 새로운 라이브러리를 찾게되었고, Velite js라는 라이브를 찾아 이번 블로그에 적용하게 되었습니다. Velite js를 사용하면서 MDX를 사용하여 포스트를 작성하였고, 이를 통해 블로그에 포스트를 작성하는데 있어서 편리함을 느꼈습니다. 이전 프로젝트에서 사용한 Shadcn Ui를 사용하여 빠르고 일관된 디자인을 하였고, Tailwind CSS를 사용하여 디자인을 하였습니다. 이번 프로젝트에서는 상태관리를 위해 Zustand를 사용하였습니다. 현재 운영중이며 차후 데이터 분석을 위해 http header를 사용하여 직접 데이터 수집을 개발하여 추가할 예정입니다.",
       stacks: [
         "Next.js",
         "React",
