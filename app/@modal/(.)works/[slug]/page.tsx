@@ -25,6 +25,10 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
 
   const data = works.find((work) => work.slug === slug);
 
+  if (!data?.published) {
+    return null;
+  }
+
   return (
     <Modal>
       <div

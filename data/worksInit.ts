@@ -1,6 +1,9 @@
+import { IWorks } from "@/data/works/worksData";
+
 let index = 0;
-const worksInit = [
+const worksInit: IWorks[] = [
   {
+    published: false,
     id: index++,
     title: "",
     description: "",
@@ -17,7 +20,7 @@ const worksInit = [
     detailContent: {
       previewImages: [
         {
-          image: "",
+          desktopImage: "",
           mobileImage: "",
         },
       ],

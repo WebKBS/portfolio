@@ -1,7 +1,7 @@
 "use client";
 
 import Lottie from "lottie-react";
-import NotFoundLottieJson from "../../lottie/not-found.json";
+import NotFoundLottieJson from "@/lib/lottie/not-found.json";
 import { buttonVariants } from "../ui/button";
 
 export default function NotFoundLottie() {

@@ -18,7 +18,10 @@ const WorksDetailPage = ({
   if (!data) {
     return notFound();
   }
-  // console.log(data);
+
+  if (!data.published) {
+    return notFound();
+  }
 
   return (
     <main className="flex-1">
@@ -31,10 +34,10 @@ const WorksDetailPage = ({
         <PageTitle title={data.title} />
         <div className="mx-auto max-w-screen-md px-5 py-4 lg:py-20">
           <div className="mb-12">
-          <div className={"flex justify-between gap-4 items-center mb-4"}>
-            <ContentTitle className="mb-0" title="프로젝트 소개" />
-            <GalleryButton/>
-          </div>
+            <div className={"mb-4 flex items-center justify-between gap-4"}>
+              <ContentTitle className="mb-0" title="프로젝트 소개" />
+              <GalleryButton />
+            </div>
             <div>{data.detailContent.description}</div>
           </div>
           <div className="mb-12">

@@ -1,5 +1,5 @@
 "use client";
-import sendLottie from "@/lottie/send.json";
+import sendLottie from "@/lib/lottie/send.json";
 import Lottie from "lottie-react";
 
 const SendLottie = () => {

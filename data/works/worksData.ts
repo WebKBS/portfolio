@@ -16,11 +16,19 @@ import {
   dpangzImages,
   dpangzPreviewImages,
 } from "@/data/works/imageData/dpangzImages";
-import {recodelogImages, recodelogPreviewImages} from "@/data/works/imageData/recodelogImages";
+import {
+  recodelogImages,
+  recodelogPreviewImages,
+} from "@/data/works/imageData/recodelogImages";
+import {
+  roowaImages,
+  roowaPreviewImages,
+} from "@/data/works/imageData/roowaImages";
 
 let index = 0;
 
 export interface IWorks {
+  published: boolean;
   id: number;
   title: string;
   description: string;
@@ -51,9 +59,71 @@ export interface IWorks {
 
 export const works: IWorks[] = [
   {
+    published: true,
+    id: index++,
+    title: "roowa 기업 웹사이트 리뉴얼",
+    description:
+      "기존 웹사이트를 리뉴얼하고 Notion 데이터 베이스를 활용하여 제작한 기업 웹사이트입니다.",
+    thumbnail: roowaImages.thumbnail,
+    image: roowaImages.desktopImage,
+    mobileImage: roowaImages.mobileImage,
+    bannerImage: roowaImages.bannerImage,
+    url: "https://roowa.kr",
+    date: "2024.04 ~ 약 3주",
+    tags: [
+      "반응형",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Notion API",
+      "Zustand",
+      "Nodemailer",
+    ],
+    slug: "roowa",
+    body: "기존 웹사이트를 리뉴얼하고 Notion 데이터 베이스를 활용하여 제작한 기업 웹사이트입니다. Next.js를 사용하여 제작하였고, Tailwind CSS를 사용하여 디자인을 하였습니다. Notion API를 사용하여 데이터를 가져와서 보여주는 기능을 추가하였습니다. Server Action을 사용하여 Nodemailer를 사용하여 메일을 보낼 수 있도록 하였습니다. Zustand를 사용하여 상태를 관리하였습니다.",
+    contribution: "프론트엔드 100%, 디자이너 1명",
+    detailContent: {
+      previewImages: roowaPreviewImages,
+      description:
+        "roowa 기업의 웹사이트를 현대적이고 효율적인 디자인으로 리뉴얼하였습니다. Notion 데이터베이스와 연동하여 콘텐츠 관리를 용이하게 하였습니다.",
+      insight:
+        "Notion API를 활용하여 콘텐츠 관리 시스템을 구축함으로써, 클라이언트가 쉽게 웹사이트 내용을 업데이트할 수 있게 되었습니다. 이는 유지보수 비용 절감과 실시간 정보 업데이트를 가능하게 했습니다.",
+      stacks: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Notion API",
+        "Zustand",
+        "Nodemailer",
+        "반응형",
+      ],
+      functions: [
+        {
+          function: "Notion API 연동",
+          description:
+            "Notion 데이터베이스와 연동하여 웹사이트 콘텐츠를 동적으로 관리하고 표시합니다.",
+        },
+        {
+          function: "반응형 디자인",
+          description:
+            "다양한 디바이스에서 최적화된 사용자 경험을 제공하는 반응형 레이아웃을 구현하였습니다.",
+        },
+        {
+          function: "이메일 문의 기능",
+          description:
+            "Server Action과 Nodemailer를 사용하여 사용자가 웹사이트에서 직접 문의 메일을 보낼 수 있는 기능을 구현하였습니다.",
+        },
+      ],
+    },
+  },
+  {
+    published: true,
     id: index++,
     title: "개인 블로그 Recodelog",
-    description: "직접 제작한 개인 블로그 웹사이트 입니다. 경험했던 기술과 트러블 슈팅을 기록하고 있습니다.",
+    description:
+      "직접 제작한 개인 블로그 웹사이트 입니다. 경험했던 기술과 트러블 슈팅을 기록하고 있습니다.",
     thumbnail: recodelogImages.thumbnail,
     image: recodelogImages.desktopImage,
     mobileImage: recodelogImages.mobileImage,
@@ -108,11 +178,10 @@ export const works: IWorks[] = [
           description: "Shadcn Ui를 사용하여 디자인을 하였습니다.",
         },
       ],
-    }
-
-
+    },
   },
   {
+    published: true,
     id: index++,
     title: "Portfolio",
     description: "개인 포트폴리오 웹사이트입니다.",
@@ -193,6 +262,7 @@ export const works: IWorks[] = [
     },
   },
   {
+    published: true,
     id: index++,
     title: "임대료 보증금 자동 상호전환 계산기",
     description: "개인 프로젝트로 제작한 임대료 보증금 상호전환 계산기입니다.",
@@ -278,6 +348,7 @@ export const works: IWorks[] = [
     },
   },
   {
+    published: true,
     id: index++,
     title: "Eurasia-Consulting 홈페이지",
     description:
@@ -331,6 +402,7 @@ export const works: IWorks[] = [
     },
   },
   {
+    published: true,
     id: index++,
     title: "k2gbs 홈페이지",
     description:
@@ -381,6 +453,7 @@ export const works: IWorks[] = [
     },
   },
   {
+    published: true,
     id: index++,
     title: "Dpangz - Leagure of Clonoid",
     description: "웹 HTML5 게임 프로젝트로 제작한 리그 오브 클로노이드 입니다.",

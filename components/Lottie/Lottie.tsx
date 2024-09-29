@@ -21,7 +21,7 @@ const LottieComp = () => {
           setIsLoading(false);
         } else {
           // 캐시에 없으면 가져와서 캐시에 저장
-          const response = await import("../../lottie/animation.json");
+          const response = await import("@/lib/lottie/animation.json");
           const animationData = response.default;
           setAnimationData(animationData);
           sessionStorage.setItem(

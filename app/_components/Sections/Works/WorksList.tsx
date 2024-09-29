@@ -2,9 +2,12 @@ import { works } from "@/data/works/worksData";
 
 import Link from "next/link";
 import WorkItem from "./WorkItem";
+import { isEmpty } from "lodash";
 
 const WorksList = () => {
-  const filterData = works.slice(0, 4);
+  const filterData = works
+    .filter((work) => isEmpty(work.title) === false && work.published)
+    .slice(0, 4);
 
   return (
     <>
@@ -20,9 +23,9 @@ const WorksList = () => {
           </Link>
         </div>
         <ul className="flex flex-col  gap-5 pb-4 sm:grid sm:grid-cols-2 sm:grid-rows-[repeat(auto-fill,minmax(0,1fr))] lg:grid-cols-3 xl:grid-cols-4">
-          {filterData.map((work) => (
-            <WorkItem key={work.id} work={work} />
-          ))}
+          {filterData.map((work) => {
+            return <WorkItem key={work.id} work={work} />;
+          })}
         </ul>
       </div>
     </>
