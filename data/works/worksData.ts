@@ -63,7 +63,7 @@ export interface IWorks {
 
 export const works: IWorks[] = [
   {
-    published: false,
+    published: true,
     id: index++,
     title: "출퇴근 업무시간 계산기 TimeLog (MVP)",
     description: "원클릭으로 출퇴근 시간을 기록하고 업무시간을 계산해주는 웹앱",
