@@ -1,13 +1,23 @@
-import { works } from "@/data/works/worksData";
+import { IWorks, works } from "@/data/works/worksData";
 
 import Link from "next/link";
 import WorkItem from "./WorkItem";
 import { isEmpty } from "lodash";
 
 const WorksList = () => {
-  const filterData = works
-    .filter((work) => isEmpty(work.title) === false && work.published)
-    .slice(0, 4);
+  let filterData: IWorks[] = [];
+
+  if (process.env.NODE_ENV === "development") {
+    filterData = works
+      .filter((work) => isEmpty(work.title) === false)
+      .slice(0, 4);
+  }
+
+  if (process.env.NODE_ENV === "production") {
+    filterData = works
+      .filter((work) => isEmpty(work.title) === false && work.published)
+      .slice(0, 4);
+  }
 
   return (
     <>

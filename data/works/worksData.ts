@@ -24,6 +24,10 @@ import {
   roowaImages,
   roowaPreviewImages,
 } from "@/data/works/imageData/roowaImages";
+import {
+  timelogImages,
+  timelogPreviewImages,
+} from "@/data/works/imageData/timelogImages";
 
 let index = 0;
 
@@ -58,6 +62,67 @@ export interface IWorks {
 }
 
 export const works: IWorks[] = [
+  {
+    published: false,
+    id: index++,
+    title: "출퇴근 업무시간 계산기 TimeLog (MVP)",
+    description: "원클릭으로 출퇴근 시간을 기록하고 업무시간을 계산해주는 웹앱",
+    thumbnail: timelogImages.thumbnail,
+    image: timelogImages.desktopImage,
+    mobileImage: timelogImages.mobileImage,
+    bannerImage: timelogImages.bannerImage,
+    url: "https://time-log-sooty.vercel.app/",
+    date: "2024.06 ~ 운영중",
+    tags: [
+      "반응형",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Shadcn Ui",
+      "Zustand",
+      "Prisma",
+      "Supabase",
+      "Chart.js",
+    ],
+    slug: "timelog",
+    body: "출퇴근 시간을 기록하고 업무시간을 계산해주는 웹앱입니다. Prisma를 사용하여 데이터베이스를 구축하였고, Supabase를 사용하여 인증 및 데이터베이스를 연동하였습니다. Chart.js를 사용하여 데이터를 시각화하였습니다.",
+    contribution: "개인 프로젝트",
+    detailContent: {
+      previewImages: timelogPreviewImages,
+      description:
+        "출퇴근 시간을 기록하고 일간, 주간, 월간 업무시간을 계산해주는 웹앱입니다.",
+      insight:
+        "프론트엔드 개발자로서 개인용 근태 관리 시스템을 개발하면서 여러 가지 기술적 도전과 통찰을 얻었습니다. 특히 시간 데이터를 다루는 과정에서 UTC(협정 세계시)에 대한 개념을 깊이 이해하게 된 것이 큰 도움이 되었습니다. 이를 통해 서버에서 이루어지는 시간 개념과 클라이어언트에서 이루어지는 시간적 개념을 구분하여 다루는 방법을 배울 수 있었습니다. Next.js를 활용하여 서버 사이드 렌더링과 서버 액션을 구현하면서, 프론트엔드 개발자로서 백엔드 로직을 효과적으로 다루는 방법을 학습했습니다. Prisma와 Supabase의 조합으로 데이터베이스 관리와 인증 시스템을 구축하면서, 프론트엔드 개발자로서 풀스택 개발의 흐름을 이해하고 백엔드 기술에 대한 이해도를 높일 수 있었습니다. 이 프로젝트를 통해 프론트엔드 기술 스택의 심화 학습뿐만 아니라, 시간 데이터 처리와 같은 실제 서비스 개발에서 마주치는 구체적인 문제들을 해결하는 경험을 쌓을 수 있었습니다.",
+      stacks: [
+        "반응형",
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Shadcn Ui",
+        "Zustand",
+        "Prisma",
+        "Supabase",
+        "Chart.js",
+      ],
+      functions: [
+        {
+          function: "Prisma",
+          description: "Prisma를 사용하여 데이터베이스를 구축하였습니다.",
+        },
+        {
+          function: "Supabase",
+          description:
+            "Supabase를 사용하여 인증 및 데이터베이스를 연동하였습니다.",
+        },
+        {
+          function: "Chart.js",
+          description: "Chart.js를 사용하여 데이터를 시각화하였습니다.",
+        },
+      ],
+    },
+  },
   {
     published: true,
     id: index++,

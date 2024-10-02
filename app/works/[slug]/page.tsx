@@ -19,7 +19,7 @@ const WorksDetailPage = ({
     return notFound();
   }
 
-  if (!data.published) {
+  if (process.env.NODE_ENV === "production" && !data.published) {
     return notFound();
   }
 

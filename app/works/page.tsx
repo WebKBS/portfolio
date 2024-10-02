@@ -1,5 +1,5 @@
 import WorksBanner from "@/components/Banner/WorksBanner";
-import { works } from "@/data/works/worksData";
+import { IWorks, works } from "@/data/works/worksData";
 import WorkItem from "../_components/Sections/Works/WorkItem";
 import PageTitle from "./_components/PageTitle";
 import worksBannerImage from "@/public/images/banner/works-banner.png";
@@ -8,8 +8,16 @@ export const metadata = {
   title: "Works",
 };
 
-const WroksPage = () => {
-  const filteredWorks = works.filter((work) => work.published);
+const WorksPage = () => {
+  let filteredWorks: IWorks[] = [];
+
+  if (process.env.NODE_ENV === "production") {
+    filteredWorks = works.filter((work) => work.published);
+  }
+
+  if (process.env.NODE_ENV === "development") {
+    filteredWorks = works;
+  }
 
   return (
     <main className="flex-1">
@@ -26,4 +34,4 @@ const WroksPage = () => {
   );
 };
 
-export default WroksPage;
+export default WorksPage;

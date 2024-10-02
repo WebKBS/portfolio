@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import ButtonAction from "./_components/ButtonAction";
 import { Modal } from "./modal";
 import styles from "./page.module.css";
+import { notFound } from "next/navigation";
 
 const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
   const [lightTheme, setLightTheme] = useState(styles.afterShadow);
@@ -25,8 +26,8 @@ const WorksModal = ({ params: { slug } }: { params: { slug: string } }) => {
 
   const data = works.find((work) => work.slug === slug);
 
-  if (!data?.published) {
-    return null;
+  if (process.env.NODE_ENV === "production" && !data?.published) {
+    return notFound();
   }
 
   return (
