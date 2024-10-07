@@ -28,6 +28,7 @@ import {
   timelogImages,
   timelogPreviewImages,
 } from "@/data/works/imageData/timelogImages";
+import { roowaintImages } from "@/data/works/imageData/roowaintImages";
 
 let index = 0;
 
@@ -62,6 +63,80 @@ export interface IWorks {
 }
 
 export const works: IWorks[] = [
+  {
+    published: true,
+    id: index++,
+    title: "Roowa I&T 웹사이트 리뉴얼",
+    description:
+      "Notion 데이테이스를 만들고 Notion API를 사용하여 데이터를 가져와서 보여주는 기업 웹사이트입니다.",
+    thumbnail: roowaintImages.thumbnail,
+    image: roowaintImages.desktopImage,
+    mobileImage: roowaintImages.mobileImage,
+    bannerImage: roowaintImages.bannerImage,
+    url: "https://roowaint.kr",
+    date: "2024.08 ~ 약 3주",
+    tags: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Zustand",
+      "Notion API",
+      "NodeMailer",
+      "카카오 맵 API",
+    ],
+    slug: "roowaint",
+    body: "기존 웹사이트를 리뉴얼하고 Notion 데이터 베이스를 활용하여 제작한 기업 웹사이트입니다.",
+    contribution: "프론트엔드 100%, 디자이너 1명",
+    detailContent: {
+      previewImages: roowaPreviewImages,
+      description:
+        "기존 웹사이트를 리뉴얼하고 Notion 데이터 베이스를 활용하여 제작한 기업 웹사이트입니다.",
+      insight:
+        "Notion API를 사용하여 콘텐츠 관리 시스템을 구축함으로써, 클라이언트가 쉽게 웹사이트 내용을 업데이트할 수 있게 되었습니다. 이는 유지보수 비용 절감과 실시간 정보 업데이트를 가능하게 했습니다. 또한 기존 roowa.kr에서 재사용 가능한 Notion Api 컴포넌트 및 로직을 분리하여 roowaint.kr에 적용하였습니다. 이를 통해 코드의 재사용성을 높이고 유지보수성을 향상시켰습니다.",
+      stacks: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Zustand",
+        "Notion API",
+        "NodeMailer",
+        "카카오 맵 API",
+      ],
+      functions: [
+        {
+          function: "Next.js",
+          description: "Next.js를 사용하여 제작하였습니다.",
+        },
+        {
+          function: "React",
+          description: "React를 사용하여 제작하였습니다.",
+        },
+        {
+          function: "TypeScript",
+          description: "TypeScript를 사용하여 제작하였습니다.",
+        },
+        {
+          function: "Zustand",
+          description: "Zustand를 사용하여 상태를 관리하였습니다.",
+        },
+        {
+          function: "Notion API",
+          description:
+            "Notion 데이터베이스를 구축하고 Notion API를 사용하여 데이터를 가져와서 보여주는 기능을 추가하였습니다.",
+        },
+        {
+          function: "NodeMailer",
+          description:
+            "NodeMailer와 server action을 사용하여 메일을 보낼 수 있도록 하였습니다.",
+        },
+        {
+          function: "카카오 맵 API",
+          description:
+            "카카오 맵 API를 사용하여 지도를 보여주는 기능을 추가하였습니다.",
+        },
+      ],
+    },
+  },
   {
     published: true,
     id: index++,
@@ -254,7 +329,7 @@ export const works: IWorks[] = [
     image: portfolioImages.desktopImage,
     mobileImage: portfolioImages.mobileImage,
     bannerImage: portfolioImages.bannerImage,
-    url: "https://portfolio-webkbs.vercel.app",
+    url: "https://portfolio-webkbs-projects.vercel.app/",
     date: "2024.02",
     tags: [
       "반응형",

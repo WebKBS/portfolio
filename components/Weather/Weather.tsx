@@ -6,7 +6,7 @@ const weatherdata = async () => {
       `https://api.openweathermap.org/data/2.5/weather?lat=37.5642135&lon=127.0016985&lang=kr&appid=${process.env.WEATHER_API_KEY}`,
       {
         next: {
-          revalidate: 60,
+          revalidate: 0,
         },
       },
     );

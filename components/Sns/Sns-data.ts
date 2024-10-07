@@ -12,9 +12,9 @@ export const sns = [
     iconBlack: "/icons/blog-black.svg",
   },
   {
-    title: "Gitbook",
-    link: "https://dev-k.gitbook.io/main/",
-    icon: "/icons/gitbook.svg",
-    iconBlack: "/icons/gitbook-black.svg",
+    title: "Notion",
+    link: "https://lilac-hare-5d2.notion.site/Frontend-Developer-88d852a748b24fb1b838d284adfecfe1?pvs=4",
+    icon: "/icons/notion.svg",
+    iconBlack: "/icons/notion.svg",
   },
 ];
