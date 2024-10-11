@@ -19,7 +19,7 @@ const MainSection = () => {
                 href={"/about"}
                 className={`${buttonVariants({ variant: "secondary", size: "sm" })}`}
               >
-                제가 궁금한가요?
+                About
               </Link>
               <Link
                 href="/works"
@@ -27,9 +27,17 @@ const MainSection = () => {
               >
                 작업 목록
               </Link>
+              <Link
+                href={
+                  "https://lilac-hare-5d2.notion.site/Frontend-Developer-114e9217c068809795f7ef67f4ce83b9"
+                }
+                className={`${buttonVariants({ variant: "secondary", size: "sm" })}`}
+              >
+                이력서
+              </Link>
             </div>
           </div>
-          <QrCode url="/" />
+          <QrCode url="https://portfolio-webkbs-projects.vercel.app/" />
         </div>
         <LottieComp />
       </div>
