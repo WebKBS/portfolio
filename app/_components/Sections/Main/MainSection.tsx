@@ -22,7 +22,7 @@ const MainSection = () => {
                 제가 궁금한가요?
               </Link>
               <Link
-                href="/images/works"
+                href="/works"
                 className={`${buttonVariants({ variant: "secondary", size: "sm" })}`}
               >
                 작업 목록
