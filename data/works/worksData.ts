@@ -38,7 +38,7 @@ let index = 0;
 
 export const works: IWorks[] = [
   {
-    published: false,
+    published: true,
     id: index++,
     title: "남해독일마을 리뉴얼",
     description: "남해문화관광재단 주최 남해독일마을 홍보 웹사이트 개발",
