@@ -1,4 +1,4 @@
-import { IWorks } from "@/data/works/worksData";
+import { IWorks } from "@/types/worksType";
 
 let index = 0;
 const worksInit: IWorks[] = [

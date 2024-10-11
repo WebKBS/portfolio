@@ -1,8 +1,9 @@
-import { IWorks, works } from "@/data/works/worksData";
+import { works } from "@/data/works/worksData";
 
 import Link from "next/link";
 import WorkItem from "./WorkItem";
 import { isEmpty } from "lodash";
+import { IWorks } from "@/types/worksType";
 
 const WorksList = () => {
   let filterData: IWorks[] = [];

@@ -1,11 +1,11 @@
 "use client";
 
 import LoadingSpinner from "@/components/Loading/LoadingSpinner";
-import { IWorks } from "@/data/works/worksData";
 import { useRouterModalToggle } from "@/store/modal-store";
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import { IWorks } from "@/types/worksType";
 
 const WorkItem = ({ work }: { work: IWorks }) => {
   const { setRouterModalState } = useRouterModalToggle();

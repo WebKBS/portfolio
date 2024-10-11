@@ -1,8 +1,9 @@
 import WorksBanner from "@/components/Banner/WorksBanner";
-import { IWorks, works } from "@/data/works/worksData";
+import { works } from "@/data/works/worksData";
 import WorkItem from "../_components/Sections/Works/WorkItem";
 import PageTitle from "./_components/PageTitle";
 import worksBannerImage from "@/public/images/banner/works-banner.png";
+import { IWorks } from "@/types/worksType";
 
 export const metadata = {
   title: "Works",
