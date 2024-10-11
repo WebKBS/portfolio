@@ -48,7 +48,14 @@ export const works: IWorks[] = [
     bannerImage: namhaeImages.bannerImage,
     url: "https://german-village.kr/",
     date: "2024.05 ~ 2024.08",
-    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Zustand"],
+    tags: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Zustand",
+      "AWS Amplify",
+    ],
     slug: "namhae-german-village",
     body: "기존 카페24 기반 웹사이트를 Next.js로 리뉴얼하고, 사이트 성능 및 SEO 최적화 및 콘텐츠 관리 시스템을 구축하였습니다.",
     contribution: "백엔드(2명) 디자이너(2명) 프론트엔드(1명)",
@@ -66,28 +73,13 @@ export const works: IWorks[] = [
         "Zustand",
         "Google Analytics",
         "Google Search Console",
+        "AWS Amplify",
       ],
       functions: [
         {
           function: "Next.js Server Action",
           description:
             "Next.js Server Action을 사용하여 서버에서 데이터를 가져오는 기능을 추가하였습니다.",
-        },
-        {
-          function: "React",
-          description: "React를 사용하여 제작하였습니다.",
-        },
-        {
-          function: "TypeScript",
-          description: "TypeScript를 사용하여 제작하였습니다.",
-        },
-        {
-          function: "Tailwind CSS",
-          description: "Tailwind CSS를 사용하여 디자인을 하였습니다.",
-        },
-        {
-          function: "Zustand",
-          description: "Zustand를 사용하여 상태를 관리하였습니다.",
         },
         {
           function: "Google Analytics",
@@ -98,6 +90,10 @@ export const works: IWorks[] = [
           function: "Google Search Console",
           description:
             "Google Search Console을 사용하여 SEO 최적화를 하였습니다.",
+        },
+        {
+          function: "AWS Amplify",
+          description: "AWS Amplify를 사용하여 배포하였습니다.",
         },
       ],
     },
@@ -122,6 +118,7 @@ export const works: IWorks[] = [
       "Notion API",
       "NodeMailer",
       "카카오 맵 API",
+      "Vercel",
     ],
     slug: "roowaint",
     body: "기존 웹사이트를 리뉴얼하고 Notion 데이터 베이스를 활용하여 제작한 기업 웹사이트입니다.",
@@ -140,24 +137,9 @@ export const works: IWorks[] = [
         "Notion API",
         "NodeMailer",
         "카카오 맵 API",
+        "Vercel",
       ],
       functions: [
-        {
-          function: "Next.js",
-          description: "Next.js를 사용하여 제작하였습니다.",
-        },
-        {
-          function: "React",
-          description: "React를 사용하여 제작하였습니다.",
-        },
-        {
-          function: "TypeScript",
-          description: "TypeScript를 사용하여 제작하였습니다.",
-        },
-        {
-          function: "Zustand",
-          description: "Zustand를 사용하여 상태를 관리하였습니다.",
-        },
         {
           function: "Notion API",
           description:
@@ -172,6 +154,10 @@ export const works: IWorks[] = [
           function: "카카오 맵 API",
           description:
             "카카오 맵 API를 사용하여 지도를 보여주는 기능을 추가하였습니다.",
+        },
+        {
+          function: "Vercel",
+          description: "Vercel을 사용하여 배포하였습니다.",
         },
       ],
     },
@@ -294,6 +280,10 @@ export const works: IWorks[] = [
           description:
             "Server Action과 Nodemailer를 사용하여 사용자가 웹사이트에서 직접 문의 메일을 보낼 수 있는 기능을 구현하였습니다.",
         },
+        {
+          function: "Vercel",
+          description: "Vercel을 사용하여 배포하였습니다.",
+        },
       ],
     },
   },
@@ -343,14 +333,6 @@ export const works: IWorks[] = [
           function: "VeliteJS",
           description:
             "VeliteJS를 사용하여 MDX를 사용하여 포스트를 작성하였습니다.",
-        },
-        {
-          function: "Tailwind CSS",
-          description: "Tailwind CSS를 사용하여 디자인을 하였습니다.",
-        },
-        {
-          function: "Zustand",
-          description: "Zustand를 사용하여 상태를 관리하였습니다.",
         },
         {
           function: "Shadcn Ui",
