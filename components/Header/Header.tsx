@@ -6,7 +6,7 @@ import ThemeToggle from "../Theme/ThemeToggle";
 
 const Header = () => {
   return (
-    <header className="sticky left-0 top-0 z-[300] flex h-14 items-center border-b px-5 py-2 backdrop-blur-xl">
+    <header className="sticky left-0 top-0 z-[300] flex h-14 items-center border-b bg-white px-5 py-2 backdrop-blur-xs dark:border-gray-700/80 dark:bg-black/80">
       <div className="flex w-full items-center justify-between">
         <SideMenuButton className="md:hidden" />
         <h1 className="text-xl font-bold">

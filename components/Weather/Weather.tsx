@@ -41,7 +41,7 @@ const Weather = async () => {
   }
 
   return (
-    <aside className="fixed right-2  top-16 z-10 text-right text-xs">
+    <aside className="fixed right-2 top-16 z-10 text-right text-xs">
       <div className="flex items-center gap-1">
         <p>서울: {(data.main.temp - 273.15).toFixed(2)}°C</p>
         <p className="text-lg drop-shadow-md">{weatherIcon}</p>
