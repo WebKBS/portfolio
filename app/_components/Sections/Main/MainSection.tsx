@@ -14,7 +14,7 @@ const MainSection = () => {
               <br />
               <span>PORTFOLIO</span>
             </h2>
-            <div className="mb-8 flex justify-center gap-2 sm:mb-0 sm:justify-normal">
+            <div className="mb-8 flex flex-wrap justify-center gap-2 sm:mb-0 sm:justify-normal">
               <Link
                 href={"https://recodelog.com"}
                 className={`${buttonVariants({ variant: "outline", size: "sm" })} bg-violet-500/90`}
