@@ -1,6 +1,6 @@
 "use client";
 
-import useObserverAction from "@/hooks/observer";
+import useObserverAction from "@/hooks/useObserverAction";
 import { useEffect, useState } from "react";
 import SkillSvg from "./SkillSvg";
 
