@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { IWorks } from "@/types/worksType";
+import { shimmer, toBase64 } from "@/utils/imageSkeleton";
 
 const WorkItem = ({ work }: { work: IWorks }) => {
   const { setRouterModalState } = useRouterModalToggle();
@@ -33,6 +34,7 @@ const WorkItem = ({ work }: { work: IWorks }) => {
             width={300}
             height={300}
             className="absolute left-0 top-0 h-auto w-full object-cover"
+            placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(100, 100))}`}
           />
         </div>
         <div className="flex flex-col">

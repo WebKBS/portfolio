@@ -1,13 +1,14 @@
 import { namhaeImages } from "@/data/works/imageData/namhaeImages";
 import { StaticImageData } from "next/image";
 import { skillImageObject } from "@/data/SkillsData";
+import { recodelogImages } from "@/data/works/imageData/recodelogImages";
 
 export interface BestProject {
   id: string;
   title: string;
   description: string;
   period: string;
-  image: StaticImageData;
+  image: StaticImageData | string;
   url: string;
   detailUrl: string;
   skills: StaticImageData[];
@@ -32,20 +33,26 @@ export const bestProjectList: BestProject[] = [
       skillImageObject.typescript,
     ],
   },
-  // {
-  //   id: "portfolio",
-  //   title: "포트폴리오 웹사이트",
-  //   description: `개인 포트폴리오 웹사이트로, Next.js 14와 TypeScript를 기반으로 개발되었습니다.
-  // 주요 기능으로는 Intersection Observer API를 활용한 스크롤 애니메이션,
-  // Framer Motion을 활용한 페이지 전환 애니메이션,
-  // React Hook Form을 활용한 이메일 폼 및 유효성 검사,
-  // Dark Mode 토글 기능 등이 있습니다.
-  // 또한 SEO 최적화를 위해 Next.js의 Head 컴포넌트를 활용하고,
-  // Google Analytics를 통한 사용자 행동 분석을 구현했습니다.
-  // AWS S3와 CloudFront를 통한 이미지 업로드 및 배포를 구현했으며,
-  // GitHub Actions를 통한 CI/CD 파이프라인을 구축했습니다.`,
-  //   image: namhaeImages.desktopImage,
-  //   url: "https://german-village.kr/",
-  //   skills: [],
-  // },
+  {
+    id: "recodelog",
+    title: "Recodelog - 개발 블로그 플랫폼",
+    description: `Next.js 14와 VeliteJS를 활용하여 개발한 개인 기술 블로그 플랫폼입니다. 
+  MDX를 기반으로 한 콘텐츠 관리 시스템을 구축하여 효율적인 기술 문서 작성과 관리가 가능합니다.
+
+  Shadcn UI 컴포넌트와 Tailwind CSS를 활용하여 세련된 디자인을 구현했으며,
+  구글 다국어 번역 API를 통합하여 글로벌 독자들의 접근성을 높였습니다.
+
+  특히 브라우저 환경 디바이스 체크 페이지를 구축하여 사용자 환경에 따른 
+  최적화된 경험을 제공하며, SEO 최적화를 통해 주요 검색 엔진에서의 노출도를 
+  크게 향상시켰습니다.`,
+    period: "2024.03 ~ 운영중",
+    image: recodelogImages.desktopImage,
+    url: "https://recodelog.com",
+    detailUrl: "/works/recodelog",
+    skills: [
+      skillImageObject.next,
+      skillImageObject.react,
+      skillImageObject.typescript,
+    ],
+  },
 ] as const;

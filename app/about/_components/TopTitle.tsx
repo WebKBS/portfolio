@@ -22,6 +22,7 @@ const TopTitle = () => {
         alt="강범수"
         className="h-full w-auto object-cover sm:w-full"
         sizes="100vw"
+        placeholder="blur"
       />
       <div className={styles.coverShadow}></div>
       <div className="absolute left-0 top-0 mx-auto flex h-[400px] w-full max-w-screen-sm items-center px-6 md:left-1/2 md:h-[740px] md:max-w-screen-lg md:-translate-x-1/2">
