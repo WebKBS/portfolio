@@ -1,19 +1,10 @@
 "use client";
 import { cn } from "@/lib/utils";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { bestProjectList } from "@/data/bestProjectList";
 
-interface BestItemProps {
-  work: {
-    id: number;
-    title: string;
-    img: StaticImageData | string;
-    description: string;
-  };
-  index: number;
-}
-
-const BestItem = ({ work, index }: BestItemProps) => {
+const BestItem = () => {
   const itemRefs = useRef<(HTMLLIElement | null)[]>([]);
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
 
@@ -39,35 +30,39 @@ const BestItem = ({ work, index }: BestItemProps) => {
   }, [visibleIndex]);
 
   return (
-    <li
-      key={work.id}
-      ref={(el: never) => (itemRefs.current[index] = el)}
-      className={cn(
-        "sticky left-0 top-[100px] rounded-xl transition-all duration-700",
-        visibleIndex === index
-          ? `top-[100px] z-[1] scale-100 opacity-100`
-          : `top-[100px] scale-95 opacity-10`, //top-[${100 + index * 40}px]
-        ``,
-      )}
-    >
-      <div className="relative flex min-h-[80vh] overflow-hidden rounded-xl bg-zinc-800">
-        <div className="relative z-[2] flex w-full flex-col space-y-4 p-8 md:w-[50%]">
-          <h3 className="text-3xl font-semibold">{work.title}</h3>
-          <p className="">{work.description}</p>
-        </div>
-        <div className="absolute right-0 top-0 h-full w-full overflow-hidden transition duration-300">
-          <Image
-            src={work.img}
-            alt={work.title}
-            className={cn(
-              "absolute right-12 top-0 max-w-3xl -skew-x-6 object-cover transition-all duration-300 hover:scale-[1.02]",
+    <>
+      {bestProjectList.map((work, index) => (
+        <li
+          key={work.id}
+          ref={(el: never) => (itemRefs.current[index] = el)}
+          className={cn(
+            "sticky left-0 top-[100px] rounded-xl transition-all duration-700",
+            visibleIndex === index
+              ? `z-[1] scale-100 opacity-100`
+              : `scale-95 opacity-10`, //top-[${100 + index * 40}px]
+            ``,
+          )}
+        >
+          <div className="relative flex min-h-[80vh] overflow-hidden rounded-xl bg-zinc-800">
+            <div className="relative z-[2] flex w-full flex-col space-y-4 p-8 md:w-[50%]">
+              <h3 className="text-3xl font-semibold">{work.title}</h3>
+              <p className="">{work.description}</p>
+            </div>
+            <div className="absolute right-0 top-0 h-full w-full overflow-hidden transition duration-300">
+              <Image
+                src={work.image}
+                alt={work.title}
+                className={cn(
+                  "absolute right-12 top-0 max-w-3xl -skew-x-6 object-cover transition-all duration-300 hover:scale-[1.02]",
 
-              visibleIndex !== index ? "opacity-10" : "",
-            )}
-          />
-        </div>
-      </div>
-    </li>
+                  visibleIndex !== index ? "opacity-10" : "",
+                )}
+              />
+            </div>
+          </div>
+        </li>
+      ))}
+    </>
   );
 };
 
