@@ -5,6 +5,7 @@ import { bestProjectList } from "@/data/bestProjectList";
 import useStickyObserver from "@/hooks/useStickyObserver";
 import Link from "next/link";
 import { shimmer, toBase64 } from "@/utils/imageSkeleton";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const BestItem = () => {
   const { itemRefs, visibleIndex } = useStickyObserver(0.4);
@@ -24,7 +25,7 @@ const BestItem = () => {
           )}
         >
           <div className="relative flex min-h-[80vh] overflow-hidden rounded-xl bg-zinc-100 shadow-lg dark:bg-zinc-800">
-            <div className="relative z-[2] flex w-full flex-col space-y-4 whitespace-pre-line break-keep p-4 dark:bg-background/80 md:p-8 lg:w-[50%] lg:dark:bg-zinc-800/90">
+            <div className="relative z-[2] flex w-full flex-col space-y-4 whitespace-pre-line break-keep p-4 dark:bg-background/85 md:p-8 md:dark:bg-background/80 lg:w-[50%] lg:dark:bg-zinc-800/90">
               <h3 className="text-3xl font-semibold">{work.title}</h3>
               <Link
                 href={work.url}
@@ -54,8 +55,9 @@ const BestItem = () => {
               </div>
             </div>
             <div className="absolute right-0 top-0 h-full w-full overflow-hidden transition duration-300">
-              <Image
-                src={work.image}
+              <ResponsiveImage
+                desktop={work.desktopImage}
+                mobile={work.mobileImage}
                 alt={work.title}
                 className={cn(
                   "absolute right-12 top-0 max-w-3xl -skew-x-6 object-cover transition-all duration-300",
