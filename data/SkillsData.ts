@@ -36,13 +36,14 @@ export const SkillColor = {
   docker: "#2496ED",
   "asp.net core": "#512BD4",
 };
+
 export const SkillList = [
-  { percentage: 92, color: SkillColor.html, lang: "html" },
-  { percentage: 89, color: SkillColor.css, lang: "css" },
-  { percentage: 82, color: SkillColor.javascript, lang: "javascript" },
-  { percentage: 76, color: SkillColor.typescript, lang: "typescript" },
-  { percentage: 84, color: SkillColor.react, lang: "react" },
-  { percentage: 77, color: SkillColor.next, lang: "next" },
+  { percentage: 93, color: SkillColor.html, lang: "html" },
+  { percentage: 92, color: SkillColor.css, lang: "css" },
+  { percentage: 87, color: SkillColor.javascript, lang: "javascript" },
+  { percentage: 84, color: SkillColor.typescript, lang: "typescript" },
+  { percentage: 88, color: SkillColor.react, lang: "react" },
+  { percentage: 86, color: SkillColor.next, lang: "next" },
 ];
 
 export const SkillsBackground = (skills: string) => {

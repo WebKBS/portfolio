@@ -23,17 +23,16 @@ const SkillProgressItem = ({
 
   useEffect(() => {
     if (percentage !== null && percentage !== undefined) {
+      const step = Math.floor(percentage / 20);
       const interval = setInterval(() => {
         setCount((prevCount) => {
-          if (prevCount >= percentage) {
+          if (prevCount + step >= percentage) {
             clearInterval(interval);
-            return percentage;
+            return Math.floor(percentage);
           }
-
-          const step = (percentage - prevCount) / 10;
           return Math.floor(prevCount + step);
         });
-      }, 70);
+      }, 50);
 
       return () => clearInterval(interval);
     }
