@@ -1,7 +1,7 @@
-'use client'
-import React from 'react';
-import {Button} from "@/components/ui/button";
-import {useModalToggle} from "@/store/modal-store";
+"use client";
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { useModalToggle } from "@/store/modal-store";
 
 const GalleryButton = () => {
   const setIsPreviewModalOpen = useModalToggle(
@@ -11,7 +11,7 @@ const GalleryButton = () => {
   return (
     <Button
       size="sm"
-      variant={"secondary"}
+      className="bg-emerald-500 dark:bg-emerald-400"
       onClick={() => setIsPreviewModalOpen(true)}
     >
       Gallery

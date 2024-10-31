@@ -3,7 +3,7 @@ import Mockup from "@/components/Mockup/MockupAnimation";
 import { Badge } from "@/components/ui/badge";
 
 import { works } from "@/data/works/worksData";
-import useScrollHandler from "@/hooks/scrollEvent";
+import useScrollHandler from "@/hooks/useScrollHandler";
 import { useRouterModalToggle } from "@/store/modal-store";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";

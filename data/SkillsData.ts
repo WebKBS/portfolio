@@ -1,29 +1,28 @@
 import jsImage from "@/public/images/skills/js.png";
+import aboutJsImage from "@/public/images/skills/js.png";
 import tsImage from "@/public/images/skills/ts.png";
+import aboutTsImage from "@/public/images/skills/ts.png";
 import reactImage from "@/public/images/skills/react.png";
+import aboutReactImage from "@/public/images/skills/react.png";
 import nextImage from "@/public/images/skills/next-js.png";
+import aboutNextImage from "@/public/images/skills/next-js.png";
 import tailwindImage from "@/public/images/skills/tailwindcss.png";
 import sassImage from "@/public/images/skills/sass.png";
+import aboutSassImage from "@/public/images/skills/sass.png";
 import gitImage from "@/public/images/skills/git.png";
 import aspnetCoreImage from "@/public/images/skills/aspnet-core.png";
+import aspnetCore from "@/public/images/skills/aspnet-core.png";
 import awsImage from "@/public/images/skills/aws.png";
+import aws from "@/public/images/skills/aws.png";
 import cssImage from "@/public/images/skills/css.png";
-import htmlImage from "@/public/images/skills/html.png";
-import dockerImage from "@/public/images/skills/docker.png";
-
-import aboutHtmlImage from "@/public/images/skills/html.png";
 import aboutCssImage from "@/public/images/skills/css.png";
-import aboutSassImage from "@/public/images/skills/sass.png";
-import aboutJsImage from "@/public/images/skills/js.png";
-import aboutTsImage from "@/public/images/skills/ts.png";
-import aboutReactImage from "@/public/images/skills/react.png";
-import aboutNextImage from "@/public/images/skills/next-js.png";
+import htmlImage from "@/public/images/skills/html.png";
+import aboutHtmlImage from "@/public/images/skills/html.png";
+import dockerImage from "@/public/images/skills/docker.png";
 import aboutZustandImage from "@/public/images/skills/zustand.png";
 import aboutWebApiImage from "@/public/images/skills/web-api.png";
 
 import dockerLogo from "@/public/images/skills/docker-logo.png";
-import aspnetCore from "@/public/images/skills/aspnet-core.png";
-import aws from "@/public/images/skills/aws.png";
 
 export const SkillColor = {
   html: "#E34F26",
@@ -204,3 +203,18 @@ export const usableButIncomplete = [
       "ASP.NET Core를 활용하여 MVC 웹 View 페이지 및 라우팅을 구현할 수 있습니다.",
   },
 ];
+
+export const skillImageObject = {
+  html: htmlImage,
+  css: cssImage,
+  sass: sassImage,
+  javascript: jsImage,
+  typescript: tsImage,
+  react: reactImage,
+  next: nextImage,
+  tailwind: tailwindImage,
+  git: gitImage,
+  "asp.net core": aspnetCoreImage,
+  aws: awsImage,
+  docker: dockerImage,
+};

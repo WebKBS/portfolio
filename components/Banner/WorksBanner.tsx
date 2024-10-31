@@ -4,6 +4,7 @@ import { throttle } from "lodash";
 import Image, { StaticImageData } from "next/image";
 import { useEffect, useRef } from "react";
 import styles from "./WorksBanner.module.css";
+import { shimmer, toBase64 } from "@/utils/imageSkeleton";
 
 const WorksBanner = ({
   image,
@@ -54,6 +55,7 @@ const WorksBanner = ({
         alt="Works Banner"
         sizes="100vw"
         className={`absolute left-1/2 top-0 -translate-x-1/2 object-cover ${height}`}
+        placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(100, 100))}`}
       />
       <div
         className={`absolute left-0 top-0 z-0 h-full w-full ${styles.linearGradient}`}

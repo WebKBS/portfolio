@@ -5,6 +5,7 @@ import WorksSection from "@/app/_components/Sections/Works/WorksSection";
 import Weather from "@/components/Weather/Weather";
 import Contact from "./_components/Sections/Contact/Contact";
 import VerticalTitle from "./_components/Text/VerticalTitle";
+import BestSection from "@/app/_components/Sections/BestWorks/BestSection";
 
 export default async function Home() {
   return (
@@ -15,6 +16,7 @@ export default async function Home() {
         <MainSection />
         <SkillsSection />
         <SkillProgressSection />
+        <BestSection />
         <WorksSection />
         <Contact />
       </main>
