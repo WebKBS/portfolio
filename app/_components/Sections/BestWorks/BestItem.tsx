@@ -23,7 +23,7 @@ const BestItem = () => {
           )}
         >
           <div className="relative flex min-h-[80vh] overflow-hidden rounded-xl bg-zinc-100 shadow-lg dark:bg-zinc-800">
-            <div className="relative z-[2] flex w-full flex-col space-y-4 whitespace-pre-line break-keep p-8 md:w-[50%]">
+            <div className="relative z-[2] flex w-full flex-col space-y-4 whitespace-pre-line break-keep p-4 dark:bg-background/80 md:p-8 lg:w-[50%] lg:dark:bg-zinc-800/90">
               <h3 className="text-3xl font-semibold">{work.title}</h3>
               <Link href={work.url} className="text-lg text-blue-500 underline">
                 {work.url}
