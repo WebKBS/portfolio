@@ -8,11 +8,12 @@ import Preview from "../_components/Preview";
 import StackItem from "../_components/StackItem";
 import GalleryButton from "@/components/Buttons/GalleryButton";
 
-const WorksDetailPage = ({
-  params: { slug },
+const WorksDetailPage = async ({
+  params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) => {
+  const { slug } = await params;
   const data = works.find((work) => work.slug === slug);
 
   if (!data) {
