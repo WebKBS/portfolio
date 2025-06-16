@@ -2,15 +2,14 @@
 
 import { contactEmail } from "@/app/actions";
 import { useRouter } from "next/navigation";
-import { ChangeEvent, useEffect, useState } from "react";
-import { useFormState } from "react-dom";
+import { ChangeEvent, useActionState, useEffect, useState } from "react";
 import { z } from "zod";
 import FileField from "./FileField";
 import InputField from "./InputField";
 import SubmitButton from "./SubmitButton";
 
 const ContactForm = () => {
-  const [actionState, formAction] = useFormState(contactEmail, null);
+  const [actionState, formAction] = useActionState(contactEmail, null);
   const router = useRouter();
   const [validateState, setValidateState] = useState({
     username: false,
