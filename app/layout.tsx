@@ -5,9 +5,9 @@ import { ThemeProvider } from "@/provider/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import React from "react";
 import "./globals.css";
+import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,8 +28,8 @@ export default function RootLayout({
   modal: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" suppressHydrationWarning>
-      <body className={inter.className}>
+    <html lang="ko" suppressHydrationWarning className={inter.className}>
+      <body>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

@@ -1,6 +1,6 @@
 import { buttonVariants } from "@/components/ui/button";
-import { Cute_Font } from "next/font/google";
 import Link from "next/link";
+import { Cute_Font } from "next/font/google";
 
 const cuteFont = Cute_Font({
   weight: "400",

@@ -1,7 +1,7 @@
-import LottieComp from "@/components/Lottie/Lottie";
 import QrCode from "@/components/QrCode/QrCode";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
+import LottieClient from "@/components/Lottie/LottieClient";
 
 const MainSection = () => {
   return (
@@ -46,7 +46,7 @@ const MainSection = () => {
           </div>
           <QrCode url="https://portfolio-webkbs-projects.vercel.app/" />
         </div>
-        <LottieComp />
+        <LottieClient />
       </div>
       <div className="absolute bottom-6 left-0 break-keep px-5 text-center text-xs dark:text-yellow-300 sm:text-left lg:px-8">
         본 사이트는 포트폴리오 용도로 제작되었으며, 어떠한 상업적 목적으로
