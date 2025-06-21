@@ -1,4 +1,4 @@
-import BestItem from "@/app/_components/Sections/BestWorks/BestItem";
+import BestItem from "@/containers/home/Sections/BestWorks/BestItem";
 
 const BestList = () => {
   return (
