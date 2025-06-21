@@ -1,7 +1,7 @@
 import { aboutGoodSkills, usableButIncomplete } from "@/data/SkillsData";
 import Image from "next/image";
-import AboutSkillList from "./_components/AboutSkillList";
-import TopTitle from "./_components/TopTitle";
+import AboutSkillList from "../../containers/about/AboutSkillList";
+import TopTitle from "../../containers/about/TopTitle";
 
 export const metadata = {
   title: "About",
