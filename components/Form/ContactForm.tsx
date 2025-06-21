@@ -1,6 +1,6 @@
 "use client";
 
-import { contactEmail } from "@/app/actions";
+import { contactEmail } from "@/actions/contact.action";
 import { useRouter } from "next/navigation";
 import { ChangeEvent, useActionState, useEffect, useState } from "react";
 import { z } from "zod";

@@ -1,6 +1,6 @@
 import WorksBanner from "@/components/Banner/WorksBanner";
 import { works } from "@/data/works/worksData";
-import WorkItem from "../_components/Sections/Works/WorkItem";
+import WorkItem from "@/containers/home/Sections/Works/WorkItem";
 import PageTitle from "./_components/PageTitle";
 import worksBannerImage from "@/public/images/banner/works-banner.png";
 import { IWorks } from "@/types/worksType";
