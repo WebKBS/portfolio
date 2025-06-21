@@ -1,11 +1,11 @@
 import WorksBanner from "@/components/Banner/WorksBanner";
 import { works } from "@/data/works/worksData";
 import { notFound } from "next/navigation";
-import ContentTitle from "../_components/ContentTitle";
-import FunctionItem from "../_components/FunctionItem";
-import PageTitle from "../_components/PageTitle";
-import Preview from "../_components/Preview";
-import StackItem from "../_components/StackItem";
+import ContentTitle from "../../../containers/works/ContentTitle";
+import FunctionItem from "../../../containers/works/FunctionItem";
+import PageTitle from "../../../containers/works/PageTitle";
+import Preview from "../../../containers/works/Preview";
+import StackItem from "../../../containers/works/StackItem";
 import GalleryButton from "@/components/Buttons/GalleryButton";
 
 const WorksDetailPage = async ({
