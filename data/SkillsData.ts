@@ -20,6 +20,7 @@ import aboutHtmlImage from "@/public/images/skills/html.png";
 import dockerImage from "@/public/images/skills/docker.png";
 import aboutZustandImage from "@/public/images/skills/zustand.png";
 import aboutWebApiImage from "@/public/images/skills/web-api.png";
+import storybookImage from "@/public/icons/storybook-black.svg";
 
 import dockerLogo from "@/public/images/skills/docker-logo.png";
 
@@ -34,6 +35,7 @@ export const SkillColor = {
   sass: "#CC6699",
   docker: "#2496ED",
   "asp.net core": "#512BD4",
+  storybook: "#FE4785",
 };
 
 export const SkillList = [
@@ -71,6 +73,8 @@ export const SkillsBackground = (skills: string) => {
       return ["#000000", "#FFFFFF"];
     case "shadcn ui":
       return ["#000000", "#FFFFFF"];
+    case "storybook":
+      return [SkillColor.storybook, "#FFFFFF"];
     default:
       return ["#eeeeee", "#000000"];
   }
@@ -106,10 +110,6 @@ export const skillImages = [
     alt: "Git",
   },
   {
-    src: aspnetCoreImage,
-    alt: "ASP.NET Core",
-  },
-  {
     src: awsImage,
     alt: "AWS",
   },
@@ -124,6 +124,10 @@ export const skillImages = [
   {
     src: dockerImage,
     alt: "Docker",
+  },
+  {
+    src: storybookImage,
+    alt: "Storybook",
   },
 ];
 
