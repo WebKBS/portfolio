@@ -11,7 +11,6 @@ import sassImage from "@/public/images/skills/sass.png";
 import aboutSassImage from "@/public/images/skills/sass.png";
 import gitImage from "@/public/images/skills/git.png";
 import aspnetCoreImage from "@/public/images/skills/aspnet-core.png";
-import aspnetCore from "@/public/images/skills/aspnet-core.png";
 import awsImage from "@/public/images/skills/aws.png";
 import aws from "@/public/images/skills/aws.png";
 import cssImage from "@/public/images/skills/css.png";
@@ -196,12 +195,6 @@ export const usableButIncomplete = [
     title: "Docker",
     description:
       "Docker를 활용하여 컨테이너화된 애플리케이션을 개발 버전과 프로덕션 버전으로 구축할 수 있습니다.",
-  },
-  {
-    image: aspnetCore,
-    title: "ASP.NET Core",
-    description:
-      "ASP.NET Core를 활용하여 MVC 웹 View 페이지 및 라우팅을 구현할 수 있습니다.",
   },
 ];
 
