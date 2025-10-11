@@ -34,7 +34,7 @@ const getLevelText = (level?: string) => {
 
 const SkillCard = ({ skill }: { skill: SkillItem }) => {
   return (
-    <div className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:border-gray-700 dark:bg-gray-800">
+    <div className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:border-gray-700 dark:bg-gray-600">
       {/* Level badge in top-right corner */}
       {skill.level && (
         <span
@@ -43,7 +43,7 @@ const SkillCard = ({ skill }: { skill: SkillItem }) => {
           {getLevelText(skill.level)}
         </span>
       )}
-      
+
       <div className="flex flex-col items-center gap-3">
         <div className="relative h-14 w-14 transition-transform duration-300 group-hover:scale-110">
           <Image
@@ -80,7 +80,7 @@ const CategorizedSkills = ({ categories }: CategorizedSkillsProps) => {
             <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
               {category.category}
             </h2>
-            <div className="h-px flex-1 bg-gradient-to-r from-gray-300 to-transparent dark:from-gray-700"></div>
+            <div className="h-px flex-1 bg-gradient-to-r from-gray-300 to-transparent dark:from-gray-500"></div>
           </div>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
             {category.skills.map((skill, skillIndex) => (
