@@ -45,7 +45,7 @@ const SkillCard = ({ skill }: { skill: SkillItem }) => {
       )}
 
       <div className="flex flex-col items-center gap-3">
-        <div className="relative h-14 w-14 transition-transform duration-300 group-hover:scale-110">
+        <div className="relative h-16 w-16 transition-transform duration-300 group-hover:scale-110">
           <Image
             src={skill.image}
             alt={skill.title}
