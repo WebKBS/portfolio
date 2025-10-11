@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { SkillsBackground } from "@/data/SkillsData";
+import { SkillsBackground } from "@/data/aboutSkillsData";
 
 const StackItem = ({ stack }: { stack: string }) => {
   return (

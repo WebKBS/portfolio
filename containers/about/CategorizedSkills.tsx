@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { SkillCategory, SkillItem } from "@/data/SkillsData";
+import { SkillCategory, SkillItem } from "@/data/aboutSkillsData";
 
 interface CategorizedSkillsProps {
   categories: SkillCategory[];

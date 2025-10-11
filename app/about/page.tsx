@@ -1,4 +1,4 @@
-import { categorizedSkills } from "@/data/SkillsData";
+import { categorizedSkills } from "@/data/aboutSkillsData";
 import Image from "next/image";
 import CategorizedSkills from "../../containers/about/CategorizedSkills";
 import TopTitle from "../../containers/about/TopTitle";
@@ -21,9 +21,9 @@ const AboutPage = () => {
               카드에 마우스를 올리면 상세 설명을 확인할 수 있습니다.
             </p>
           </div>
-          
+
           <CategorizedSkills categories={categorizedSkills} />
-          
+
           <div className="mt-16 rounded-xl border border-gray-200 bg-gradient-to-br from-blue-50 to-purple-50 p-8 dark:border-gray-700 dark:from-gray-800 dark:to-gray-900">
             <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-gray-100">
               더 자세한 내용은 Notion에서 확인할 수 있습니다.

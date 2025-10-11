@@ -39,12 +39,7 @@ import storybookImage from "@/public/images/skills/storybook-black.svg";
 import dockerLogo from "@/public/images/skills/docker-logo.png";
 import { StaticImageData } from "next/image";
 
-// Placeholder for missing icons (user will add later)
-// Using a simple data URL as fallback
-const dummyIcon =
-  "data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='200' height='200' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='24' fill='%239ca3af' text-anchor='middle' dominant-baseline='middle'%3E%3F%3C/text%3E%3C/svg%3E";
-
-export const SkillColor = {
+export const skillColor = {
   html: "#E34F26",
   css: "#1572B6",
   javascript: "#F7DF1E",
@@ -58,43 +53,43 @@ export const SkillColor = {
   storybook: "#FE4785",
 };
 
-export const SkillList = [
-  { percentage: 93, color: SkillColor.html, lang: "html" },
-  { percentage: 92, color: SkillColor.css, lang: "css" },
-  { percentage: 87, color: SkillColor.javascript, lang: "javascript" },
-  { percentage: 84, color: SkillColor.typescript, lang: "typescript" },
-  { percentage: 88, color: SkillColor.react, lang: "react" },
-  { percentage: 86, color: SkillColor.next, lang: "next" },
+export const skillList = [
+  { percentage: 93, color: skillColor.html, lang: "html" },
+  { percentage: 92, color: skillColor.css, lang: "css" },
+  { percentage: 87, color: skillColor.javascript, lang: "javascript" },
+  { percentage: 84, color: skillColor.typescript, lang: "typescript" },
+  { percentage: 88, color: skillColor.react, lang: "react" },
+  { percentage: 86, color: skillColor.next, lang: "next" },
 ];
 
 export const SkillsBackground = (skills: string) => {
   switch (skills.toLocaleLowerCase()) {
     case "html":
-      return [SkillColor.html, "#FFFFFF"];
+      return [skillColor.html, "#FFFFFF"];
     case "css":
-      return [SkillColor.css, "#FFFFFF"];
+      return [skillColor.css, "#FFFFFF"];
     case "sass":
-      return [SkillColor.sass, "#FFFFFF"];
+      return [skillColor.sass, "#FFFFFF"];
     case "next.js":
-      return [SkillColor.next, "#FFFFFF"];
+      return [skillColor.next, "#FFFFFF"];
     case "react":
-      return [SkillColor.react, "#000000"];
+      return [skillColor.react, "#000000"];
     case "javascript":
-      return [SkillColor.javascript, "#000000"];
+      return [skillColor.javascript, "#000000"];
     case "typescript":
-      return [SkillColor.typescript, "#FFFFFF"];
+      return [skillColor.typescript, "#FFFFFF"];
     case "docker":
-      return [SkillColor.docker, "#FFFFFF"];
+      return [skillColor.docker, "#FFFFFF"];
     case "asp.net core":
-      return [SkillColor["asp.net core"], "#FFFFFF"];
+      return [skillColor["asp.net core"], "#FFFFFF"];
     case "tailwind css":
-      return [SkillColor.tailwind, "#FFFFFF"];
+      return [skillColor.tailwind, "#FFFFFF"];
     case "zustand":
       return ["#000000", "#FFFFFF"];
     case "shadcn ui":
       return ["#000000", "#FFFFFF"];
     case "storybook":
-      return [SkillColor.storybook, "#FFFFFF"];
+      return [skillColor.storybook, "#FFFFFF"];
     default:
       return ["#eeeeee", "#000000"];
   }

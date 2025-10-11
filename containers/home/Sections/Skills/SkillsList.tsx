@@ -1,4 +1,4 @@
-import { skillImages } from "@/data/SkillsData";
+import { skillImages } from "@/data/aboutSkillsData";
 import SkillItem from "./SkillItem";
 import styles from "./SkillsList.module.css";
 
