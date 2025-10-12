@@ -14,7 +14,7 @@ export interface PreviewImageType {
 
 export interface IWorks {
   published: boolean;
-  id: number;
+  id: string | number;
   title: string;
   description: string;
   thumbnail: StaticImageData | string;
