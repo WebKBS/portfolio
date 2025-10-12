@@ -1,19 +1,17 @@
 import {
   eurasiaImages,
   eurasiaPreviewImages,
-} from "@/data/works/imageData/eurasiaImages";
-import {
-  k2gbsImages,
-  k2gbsPreviewImages,
-} from "@/data/works/imageData/k2gbsImages";
+} from "@/data/imageData/eurasiaImages";
+import { k2gbsImages, k2gbsPreviewImages } from "@/data/imageData/k2gbsImages";
 import {
   dpangzImages,
   dpangzPreviewImages,
-} from "@/data/works/imageData/dpangzImages";
+} from "@/data/imageData/dpangzImages";
+import { IWorks } from "@/types/worksType";
 
 let index = 0;
 
-export const vstroWorks = [
+export const vstroWorks: IWorks[] = [
   {
     published: true,
     id: "vstro" + index++,

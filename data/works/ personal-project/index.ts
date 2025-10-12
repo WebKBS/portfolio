@@ -1,20 +1,21 @@
 import {
   timelogImages,
   timelogPreviewImages,
-} from "@/data/works/imageData/timelogImages";
+} from "@/data/imageData/timelogImages";
 import {
   recodelogImages,
   recodelogPreviewImages,
-} from "@/data/works/imageData/recodelogImages";
+} from "@/data/imageData/recodelogImages";
 import {
   portfolioImages,
   portfolioPreviewImages,
-} from "@/data/works/imageData/portfolioImages";
-import { deposImages } from "@/data/works/imageData/deposImages";
+} from "@/data/imageData/portfolioImages";
+import { deposImages } from "@/data/imageData/deposImages";
+import { IWorks } from "@/types/worksType";
 
 let index = 0;
 
-export const personalProject = [
+export const personalProject: IWorks[] = [
   {
     published: true,
     id: "personal" + index++,

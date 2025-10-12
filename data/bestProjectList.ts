@@ -1,7 +1,7 @@
-import { namhaeImages } from "@/data/works/imageData/namhaeImages";
+import { namhaeImages } from "@/data/imageData/namhaeImages";
 import { StaticImageData } from "next/image";
 import { skillImageObject } from "@/data/aboutSkillsData";
-import { recodelogImages } from "@/data/works/imageData/recodelogImages";
+import { recodelogImages } from "@/data/imageData/recodelogImages";
 
 export interface BestProject {
   id: string;

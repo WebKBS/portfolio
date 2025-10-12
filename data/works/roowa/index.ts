@@ -1,16 +1,14 @@
 import {
   namhaeImages,
   namhaePreviewImages,
-} from "@/data/works/imageData/namhaeImages";
-import { roowaintImages } from "@/data/works/imageData/roowaintImages";
-import {
-  roowaImages,
-  roowaPreviewImages,
-} from "@/data/works/imageData/roowaImages";
+} from "@/data/imageData/namhaeImages";
+import { roowaintImages } from "@/data/imageData/roowaintImages";
+import { roowaImages, roowaPreviewImages } from "@/data/imageData/roowaImages";
+import { IWorks } from "@/types/worksType";
 
 let index = 0;
 
-export const roowaWorks = [
+export const roowaWorks: IWorks[] = [
   {
     published: true,
     id: "roowa" + index++,
