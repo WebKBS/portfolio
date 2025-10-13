@@ -15,7 +15,7 @@ const MockupAnimation = ({
 }: {
   title: string;
   image: StaticImageData | string;
-  mobileImage: StaticImageData | string;
+  mobileImage: StaticImageData | string | null;
 }) => {
   const macBoxRef = useRef<HTMLDivElement | null>(null);
   const iphoneBoxRef = useRef<HTMLDivElement | null>(null);
@@ -88,38 +88,40 @@ const MockupAnimation = ({
           />
         </div>
       </div>
-      <div className={styles.iphoneBox}>
-        <Image
-          width={400}
-          height={400}
-          src={iphoneMockup}
-          alt="아이폰 목업"
-          className={styles.iphoneMockup}
-          priority
-        />
-        <div className={styles.iphoneImageBox} ref={iphoneBoxRef}>
-          <div className={styles.topBox}>
-            <Image
-              width={240}
-              height={240}
-              src={topMockup}
-              alt={title}
-              className={styles.topImage}
-            />
-          </div>
-          <Loading />
+      {mobileImage && (
+        <div className={styles.iphoneBox}>
           <Image
-            ref={iphoneImageRef}
             width={400}
             height={400}
-            src={mobileImage}
-            alt={title}
-            className={styles.iphoneImage}
-            onLoad={iphoneOnloadHandler}
-            loading="lazy"
+            src={iphoneMockup}
+            alt="아이폰 목업"
+            className={styles.iphoneMockup}
+            priority
           />
+          <div className={styles.iphoneImageBox} ref={iphoneBoxRef}>
+            <div className={styles.topBox}>
+              <Image
+                width={240}
+                height={240}
+                src={topMockup}
+                alt={title}
+                className={styles.topImage}
+              />
+            </div>
+            <Loading />
+            <Image
+              ref={iphoneImageRef}
+              width={400}
+              height={400}
+              src={mobileImage}
+              alt={title}
+              className={styles.iphoneImage}
+              onLoad={iphoneOnloadHandler}
+              loading="lazy"
+            />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

@@ -19,9 +19,9 @@ export interface IWorks {
   description: string;
   thumbnail: StaticImageData | string;
   image: StaticImageData | string;
-  mobileImage: StaticImageData | string;
+  mobileImage: StaticImageData | string | null;
   bannerImage: StaticImageData | string;
-  url: string;
+  url: string | null;
   date: string;
   tags: string[];
   slug: string;

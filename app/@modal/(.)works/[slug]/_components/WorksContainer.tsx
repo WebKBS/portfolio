@@ -52,10 +52,8 @@ const WorksContainer = ({ slug }: WorksContainerProps) => {
               <p>{data?.date}</p>
             </div>
             <div className="mb-2 text-sm text-green-500">
-              {data?.url === "empty" ? (
-                <span className="text-red-400">
-                  아쉽게도 URL이 없습니다. 🥲
-                </span>
+              {!data?.url ? (
+                <span className="text-red-400">URL이 제공되지 않습니다.</span>
               ) : (
                 <a href={data?.url} target="_blank">
                   {data?.url}

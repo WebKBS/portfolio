@@ -76,7 +76,7 @@ export const vstroWorks: IWorks[] = [
     image: k2gbsImages.desktopImage,
     mobileImage: k2gbsImages.mobileImage,
     bannerImage: k2gbsImages.bannerImage,
-    url: "empty",
+    url: null,
     date: "2023.09 ~ 2023.10",
     tags: [
       "반응형",
