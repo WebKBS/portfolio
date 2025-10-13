@@ -55,7 +55,7 @@ const WorksContainer = ({ slug }: WorksContainerProps) => {
               {!data?.url ? (
                 <span className="text-red-400">URL이 제공되지 않습니다.</span>
               ) : (
-                <a href={data?.url} target="_blank">
+                <a href={data?.url} target="_blank" rel="noopener noreferrer">
                   {data?.url}
                 </a>
               )}

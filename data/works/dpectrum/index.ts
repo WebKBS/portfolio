@@ -4,6 +4,39 @@ let index = 0;
 
 export const dpectrumWorks: IWorks[] = [
   {
+    published: false,
+    id: "dpectrum" + index++,
+    title: "BREAK 트레이딩 카드 거래 플랫폼",
+    description: "트레이딩 카드 거래 플랫폼 웹앱 개발",
+    thumbnail: "",
+    image: "",
+    mobileImage: null,
+    bannerImage: "",
+    url: null,
+    date: "2025.01 ~ 2025.04",
+    tags: ["Next.js", "TypeScript", "Zustand", "SWR", "Tailwind CSS"],
+    slug: "break",
+    body: "트레이딩 카드 거래 플랫폼 웹앱 개발 프로젝트로, 사용자들이 트레이딩 카드를 사고팔고 교환할 수 있는 기능을 제공합니다.",
+    contribution: "백엔드(2명) 디자이너(1명) 프론트엔드(2명) *기여도 70%",
+    detailContent: {
+      previewImages: [
+        {
+          desktopImage: "",
+          mobileImage: "",
+        },
+      ],
+      description: "",
+      insight: "",
+      stacks: ["", "", ""],
+      functions: [
+        {
+          function: "",
+          description: "",
+        },
+      ],
+    },
+  },
+  {
     published: true,
     id: "dpectrum" + index++,
     title: "UHC 백오피스",
@@ -13,11 +46,11 @@ export const dpectrumWorks: IWorks[] = [
     mobileImage: null,
     bannerImage: "",
     url: null,
-    date: "",
-    tags: ["", "", ""],
-    slug: "",
-    body: "",
-    contribution: "",
+    date: "2024.11 ~ 2025.01",
+    tags: ["React", "TypeScript", "Zustand", "SWR", "Tailwind CSS"],
+    slug: "uhc-backoffice",
+    body: "UHC 글로벌 호텔 서비스의 백오피스 개발 프로젝트로, 호텔 예약 관리, 고객 관리, 쿠폰 관리 등 다양한 기능을 포함하고 있습니다.",
+    contribution: "백엔드(2명) 디자이너(1명) 프론트엔드(2명) *기여도 80%",
     detailContent: {
       previewImages: [
         {

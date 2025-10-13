@@ -140,7 +140,7 @@ export const personalProject: IWorks[] = [
     image: portfolioImages.desktopImage,
     mobileImage: portfolioImages.mobileImage,
     bannerImage: portfolioImages.bannerImage,
-    url: "https://portfolio-webkbs-projects.vercel.app/",
+    url: "https://portfolio-xi-ochre-45.vercel.app",
     date: "2024.02",
     tags: [
       "반응형",
