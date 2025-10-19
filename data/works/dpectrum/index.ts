@@ -6,6 +6,45 @@ export const dpectrumWorks: IWorks[] = [
   {
     published: false,
     id: "dpectrum" + index++,
+    title: "GOLDIE 사업자 입찰 플랫폼",
+    description: "사업자 입찰 플랫폼 웹앱 개발",
+    thumbnail: "",
+    image: "",
+    mobileImage: null,
+    bannerImage: "",
+    url: null,
+    date: "2025.10 ~ 2026.02",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Zustand",
+      "Tanstack Query",
+      "Tailwind CSS",
+    ],
+    slug: "goldie-bid",
+    body: "사업자 입찰 플랫폼 웹앱 개발 프로젝트로, 사업자들이 다양한 입찰 금 판매 기회를 탐색하고 참여할 수 있는 기능을 제공합니다.",
+    contribution: "백엔드(1명) 디자이너(1명) 프론트엔드(1명)",
+    detailContent: {
+      previewImages: [
+        {
+          desktopImage: "",
+          mobileImage: "",
+        },
+      ],
+      description: "",
+      insight: "",
+      stacks: ["", "", ""],
+      functions: [
+        {
+          function: "",
+          description: "",
+        },
+      ],
+    },
+  },
+  {
+    published: false,
+    id: "dpectrum" + index++,
     title: "GOLDIE 금매입 서비스 플랫폼",
     description: "금매입 플랫폼 서비스 웹앱 개발",
     thumbnail: "",
@@ -22,7 +61,7 @@ export const dpectrumWorks: IWorks[] = [
       "Tailwind CSS",
     ],
     slug: "goldie",
-    body: "금매입 플랫폼 서비스 웹앱 개발 프로젝트로, 사용자들이 금을 매입하고 판매할 수 있는 기능을 제공합니다.",
+    body: "금매입 플랫폼 서비스 웹앱 개발 프로젝트로, 사용자들이 금을 매입하고 판매할 수 있는 기능을 제공합니다. 비대면으로 금매입 신청, 실시간 시세 확인, 안전한 거래 등을 지원합니다.",
     contribution: "백엔드(1명) 디자이너(1명) 프론트엔드(1명)",
     detailContent: {
       previewImages: [
