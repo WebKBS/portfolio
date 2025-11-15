@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { IWorks } from '@/types/worksType';
 import { shimmer, toBase64 } from '@/utils/imageSkeleton';
 
-const WorkItem = ({ work }: { work: IWorks }) => {
+const WorkItem = ({ work, isPortfolio }: { work: IWorks; isPortfolio?: boolean }) => {
   const { setRouterModalState } = useRouterModalToggle();
 
   const clickHandler = () => {
@@ -21,9 +21,8 @@ const WorkItem = ({ work }: { work: IWorks }) => {
       className='w-full rounded-xl border bg-white px-3 py-4 shadow-md transition-all duration-300 ease-in-out hover:shadow-lg sm:w-full dark:border-gray-700 dark:bg-gray-800'
     >
       <Link
-        href={`/works/${work.slug}`}
-        scroll={false}
-        onClick={clickHandler}
+        href={isPortfolio ? `/portfolio/${work.slug}` : `/works/${work.slug}`}
+        onClick={isPortfolio ? undefined : clickHandler}
         className='flex h-full flex-col gap-2'
       >
         <div className='relative mb-2 h-60 w-full overflow-hidden'>
