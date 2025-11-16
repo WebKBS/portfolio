@@ -1,4 +1,4 @@
-import { StaticImageData } from "next/image";
+import { StaticImageData } from 'next/image';
 
 export interface worksImageType {
   thumbnail: StaticImageData | string;
@@ -8,8 +8,8 @@ export interface worksImageType {
 }
 
 export interface PreviewImageType {
-  desktopImage: StaticImageData | string;
-  mobileImage: StaticImageData | string;
+  desktopImage: StaticImageData | string | null;
+  mobileImage: StaticImageData | string | null;
 }
 
 export interface IWorks {
@@ -28,10 +28,7 @@ export interface IWorks {
   body: string;
   contribution: string;
   detailContent: {
-    previewImages: {
-      desktopImage: StaticImageData | string;
-      mobileImage: StaticImageData | string;
-    }[];
+    previewImages: PreviewImageType[];
     description: string;
     insight: string;
     stacks: string[];
