@@ -1,4 +1,4 @@
-import { works } from '@/data/works/worksData';
+import { works } from '@/portfolio-data/works/worksData';
 
 import Link from 'next/link';
 import WorkItem from './WorkItem';

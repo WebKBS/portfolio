@@ -1,5 +1,5 @@
-import { Badge } from "@/components/ui/badge";
-import { SkillsBackground } from "@/data/aboutSkillsData";
+import { Badge } from '@/components/ui/badge';
+import { SkillsBackground } from '@/portfolio-data/aboutSkillsData';
 
 const StackItem = ({ stack }: { stack: string }) => {
   return (
@@ -9,7 +9,7 @@ const StackItem = ({ stack }: { stack: string }) => {
           background: SkillsBackground(stack)[0],
           color: SkillsBackground(stack)[1],
         }}
-        className="border-white"
+        className='border-white'
       >
         {stack}
       </Badge>

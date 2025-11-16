@@ -1,5 +1,5 @@
 import WorksBanner from '@/components/Banner/WorksBanner';
-import { works } from '@/data/works/worksData';
+import { works } from '@/portfolio-data/works/worksData';
 import { notFound } from 'next/navigation';
 import ContentTitle from '../../../containers/works/ContentTitle';
 import FunctionItem from '../../../containers/works/FunctionItem';
@@ -31,7 +31,7 @@ const WorksDetailPage = async ({ params }: { params: Promise<{ slug: string }> }
     <main className='flex-1'>
       <WorksBanner image={data.bannerImage} title={data.title} />
       <section className='z-[1] mx-auto h-full w-full max-w-screen-2xl px-5 py-6 lg:px-6 lg:py-14'>
-        {/*<PageTitle title={data.title} />*/}
+        {/*<PageTitle title={portfolio-data.title} />*/}
 
         {/* Hero / Mockup + CTAs */}
         <div className='mx-auto mb-10 max-w-5xl'>
