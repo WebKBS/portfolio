@@ -69,7 +69,11 @@ const WorksContainer = ({ slug }: WorksContainerProps) => {
             <div className='bg-background relative z-10 w-full pt-4'>{data?.body}</div>
           </div>
           <div className='relative z-10 px-6 py-6'>
-            <Mockup title={data!.title} image={data!.image} mobileImage={data!.mobileImage} />
+            <Mockup
+              title={data!.title}
+              desktopImage={data!.desktopImage}
+              mobileImage={data!.mobileImage}
+            />
           </div>
         </div>
       </div>
