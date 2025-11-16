@@ -1,8 +1,8 @@
-import { PreviewImageType, worksImageType } from "@/types/worksType";
-import thumbnailImage from "@/public/images/works/depos/thumbnail.png";
-import desktopImage from "@/public/images/works/depos/desktop.png";
-import mobileImage from "@/public/images/works/depos/mobile.png";
-import bannerImage from "@/public/images/works/depos/banner.png";
+import { PreviewImageType, worksImageType } from '@/types/worksType';
+import thumbnailImage from '@/public/images/works/personal-project/depos/thumbnail.png';
+import desktopImage from '@/public/images/works/personal-project/depos/desktop.png';
+import mobileImage from '@/public/images/works/personal-project/depos/mobile.png';
+import bannerImage from '@/public/images/works/personal-project/depos/banner.png';
 
 export const deposImages: worksImageType = {
   thumbnail: thumbnailImage,

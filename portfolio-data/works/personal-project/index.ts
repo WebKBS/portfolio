@@ -10,7 +10,10 @@ import {
   portfolioImages,
   portfolioPreviewImages,
 } from '@/portfolio-data/image-data/personal-project/portfolioImages';
-import { deposImages } from '@/portfolio-data/image-data/personal-project/deposImages';
+import {
+  deposImages,
+  deposPreviewImages,
+} from '@/portfolio-data/image-data/personal-project/deposImages';
 import { IWorks } from '@/types/worksType';
 
 let index = 0;
@@ -213,12 +216,7 @@ export const personalProject: IWorks[] = [
     body: '개인 프로젝트로 SH 주택임대공사의 임대료 보증금 상호전환 계산기를 만들었습니다. 사용자가 기본 보증금과 월 임대료를 입력하면 계약금과 보증금 및 월 임대료의 퍼센테이지를 자동으로 계산해줍니다. Zustand를 사용하여 상태를 관리하고, SEO를 최적화하고 PWA를 적용하여 웹앱 형식으로 개발하였습니다.',
     contribution: '100% 개인 프로젝트',
     detailContent: {
-      previewImages: [
-        {
-          desktopImage: deposImages.desktopImage,
-          mobileImage: deposImages.mobileImage,
-        },
-      ],
+      previewImages: deposPreviewImages,
       description:
         '개인 프로젝트로 SH 주택임대공사의 임대료 보증금 상호전환 계산기를 만들었습니다. 개인 프로젝트겸, 실효성이 있는 프로젝트를 하기위해 개발을 시작하였습니다. 프로젝트 배포까지 완료하고 공공임대주택 관련된 네이버 카페에 카페 회원들에게 공유하였습니다. 이후 반응이 좋았고, 더 많은 사람들이 사용할 수 있도록 개선하고 있습니다.',
       insight:

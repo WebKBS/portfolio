@@ -1,24 +1,24 @@
-import thumbnailImage from "@/public/images/works/namehae/thumbnail.png";
-import desktopImage from "@/public/images/works/namehae/desktop.png";
-import mobileImage from "@/public/images/works/namehae/mobile.png";
-import bannerImage from "@/public/images/works/namehae/banner.png";
+import thumbnailImage from '@/public/images/works/roowa/namehae/thumbnail.png';
+import desktopImage from '@/public/images/works/roowa/namehae/desktop.png';
+import mobileImage from '@/public/images/works/roowa/namehae/mobile.png';
+import bannerImage from '@/public/images/works/roowa/namehae/banner.png';
 
-import previewDesktopSlide1 from "@/public/images/works/namehae/slide/desktopSlide1.png";
-import previewMobileSlide1 from "@/public/images/works/namehae/slide/mobileSlide1.png";
-import previewDesktopSlide2 from "@/public/images/works/namehae/slide/desktopSlide2.png";
-import previewMobileSlide2 from "@/public/images/works/namehae/slide/mobileSlide2.png";
-import previewDesktopSlide3 from "@/public/images/works/namehae/slide/desktopSlide3.png";
-import previewMobileSlide3 from "@/public/images/works/namehae/slide/mobileSlide3.png";
-import previewDesktopSlide4 from "@/public/images/works/namehae/slide/desktopSlide4.png";
-import previewMobileSlide4 from "@/public/images/works/namehae/slide/mobileSlide4.png";
-import previewDesktopSlide5 from "@/public/images/works/namehae/slide/desktopSlide5.png";
-import previewMobileSlide5 from "@/public/images/works/namehae/slide/mobileSlide5.png";
-import previewDesktopSlide6 from "@/public/images/works/namehae/slide/desktopSlide6.png";
-import previewMobileSlide6 from "@/public/images/works/namehae/slide/mobileSlide6.png";
-import previewDesktopSlide7 from "@/public/images/works/namehae/slide/desktopSlide7.png";
-import previewMobileSlide7 from "@/public/images/works/namehae/slide/mobileSlide7.png";
-import previewDesktopSlide8 from "@/public/images/works/namehae/slide/desktopSlide8.png";
-import previewMobileSlide8 from "@/public/images/works/namehae/slide/mobileSlide8.png";
+import previewDesktopSlide1 from '@/public/images/works/roowa/namehae/slide/desktopSlide1.png';
+import previewMobileSlide1 from '@/public/images/works/roowa/namehae/slide/mobileSlide1.png';
+import previewDesktopSlide2 from '@/public/images/works/roowa/namehae/slide/desktopSlide2.png';
+import previewMobileSlide2 from '@/public/images/works/roowa/namehae/slide/mobileSlide2.png';
+import previewDesktopSlide3 from '@/public/images/works/roowa/namehae/slide/desktopSlide3.png';
+import previewMobileSlide3 from '@/public/images/works/roowa/namehae/slide/mobileSlide3.png';
+import previewDesktopSlide4 from '@/public/images/works/roowa/namehae/slide/desktopSlide4.png';
+import previewMobileSlide4 from '@/public/images/works/roowa/namehae/slide/mobileSlide4.png';
+import previewDesktopSlide5 from '@/public/images/works/roowa/namehae/slide/desktopSlide5.png';
+import previewMobileSlide5 from '@/public/images/works/roowa/namehae/slide/mobileSlide5.png';
+import previewDesktopSlide6 from '@/public/images/works/roowa/namehae/slide/desktopSlide6.png';
+import previewMobileSlide6 from '@/public/images/works/roowa/namehae/slide/mobileSlide6.png';
+import previewDesktopSlide7 from '@/public/images/works/roowa/namehae/slide/desktopSlide7.png';
+import previewMobileSlide7 from '@/public/images/works/roowa/namehae/slide/mobileSlide7.png';
+import previewDesktopSlide8 from '@/public/images/works/roowa/namehae/slide/desktopSlide8.png';
+import previewMobileSlide8 from '@/public/images/works/roowa/namehae/slide/mobileSlide8.png';
 
 export const namhaeImages = {
   thumbnail: thumbnailImage,
