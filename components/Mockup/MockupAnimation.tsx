@@ -1,21 +1,22 @@
-"use client";
+'use client';
 
-import topMockup from "@/public/images/mockup/iphone-top.png";
-import iphoneMockup from "@/public/images/mockup/iphone.png";
-import macMockup from "@/public/images/mockup/mac.png";
-import Image, { StaticImageData } from "next/image";
-import { useRef, useState } from "react";
-import Loading from "../Loading/LoadingSpinner";
-import styles from "./MockupAnimation.module.css";
+import topMockup from '@/public/images/mockup/iphone-top.png';
+import iphoneMockup from '@/public/images/mockup/iphone.png';
+import macMockup from '@/public/images/mockup/mac.png';
+import Image from 'next/image';
+import { useRef, useState } from 'react';
+import Loading from '../Loading/LoadingSpinner';
+import styles from './MockupAnimation.module.css';
+import { IWorks } from '@/types/worksType';
 
 const MockupAnimation = ({
   title,
-  image,
+  desktopImage,
   mobileImage,
 }: {
   title: string;
-  image: StaticImageData | string;
-  mobileImage: StaticImageData | string | null;
+  desktopImage: IWorks['desktopImage'];
+  mobileImage: IWorks['mobileImage'];
 }) => {
   const macBoxRef = useRef<HTMLDivElement | null>(null);
   const iphoneBoxRef = useRef<HTMLDivElement | null>(null);
@@ -40,13 +41,13 @@ const MockupAnimation = ({
   if (macBoxClientHeight && macImageRef.current) {
     macImageRef.current.animate(
       [
-        { transform: "translateY(0)" },
+        { transform: 'translateY(0)' },
         { transform: `translateY(calc(-100% + ${macBoxClientHeight}px))` },
       ],
       {
         duration: (macBoxClientHeight / 100) * 10000,
         iterations: Infinity,
-        direction: "alternate",
+        direction: 'alternate',
       },
     );
   }
@@ -54,7 +55,7 @@ const MockupAnimation = ({
   if (iphoneBoxClientHeight && iphoneImageRef.current) {
     iphoneImageRef.current.animate(
       [
-        { transform: "translateY(0)" },
+        { transform: 'translateY(0)' },
         {
           transform: `translateY(calc(-100% + ${iphoneBoxClientHeight}px))`,
         },
@@ -62,39 +63,37 @@ const MockupAnimation = ({
       {
         duration: (iphoneBoxClientHeight / 100) * 10000,
         iterations: Infinity,
-        direction: "alternate",
+        direction: 'alternate',
       },
     );
   }
 
   return (
     <div className={styles.mockupContent}>
-      <div className={styles.macBox}>
-        <Image
-          src={macMockup}
-          alt="맥북 목업"
-          className={styles.macMockup}
-          priority
-        />
-        <div className={styles.macImageBox} ref={macBoxRef}>
-          <Loading />
-          <Image
-            ref={macImageRef}
-            src={image}
-            alt={title}
-            className={styles.macImage}
-            onLoad={macOnloadHandler}
-            loading="lazy"
-          />
+      {desktopImage && (
+        <div className={styles.macBox}>
+          <Image src={macMockup} alt='맥북 목업' className={styles.macMockup} priority />
+          <div className={styles.macImageBox} ref={macBoxRef}>
+            <Loading />
+            <Image
+              ref={macImageRef}
+              src={desktopImage}
+              alt={title}
+              className={styles.macImage}
+              onLoad={macOnloadHandler}
+              loading='lazy'
+            />
+          </div>
         </div>
-      </div>
+      )}
+
       {mobileImage && (
         <div className={styles.iphoneBox}>
           <Image
             width={400}
             height={400}
             src={iphoneMockup}
-            alt="아이폰 목업"
+            alt='아이폰 목업'
             className={styles.iphoneMockup}
             priority
           />
@@ -117,7 +116,7 @@ const MockupAnimation = ({
               alt={title}
               className={styles.iphoneImage}
               onLoad={iphoneOnloadHandler}
-              loading="lazy"
+              loading='lazy'
             />
           </div>
         </div>

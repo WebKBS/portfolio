@@ -2,8 +2,8 @@ import { StaticImageData } from 'next/image';
 
 export interface worksImageType {
   thumbnail: StaticImageData | string;
-  desktopImage: StaticImageData | string;
-  mobileImage: StaticImageData | string;
+  desktopImage: StaticImageData | string | null;
+  mobileImage: StaticImageData | string | null;
   bannerImage: StaticImageData | string;
 }
 
@@ -18,7 +18,7 @@ export interface IWorks {
   title: string;
   description: string;
   thumbnail: StaticImageData | string;
-  image: StaticImageData | string;
+  desktopImage: StaticImageData | string | null;
   mobileImage: StaticImageData | string | null;
   bannerImage: StaticImageData | string;
   url: string | null;

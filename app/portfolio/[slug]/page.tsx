@@ -56,7 +56,11 @@ const WorksDetailPage = async ({ params }: { params: Promise<{ slug: string }> }
             </div>
           </div>
           <div className='bg-card mt-6 rounded-lg border p-4'>
-            <Mockup title={data.title} image={data.image} mobileImage={data.mobileImage} />
+            <Mockup
+              title={data.title}
+              desktopImage={data.desktopImage}
+              mobileImage={data.mobileImage}
+            />
           </div>
         </div>
 
@@ -106,7 +110,7 @@ const WorksDetailPage = async ({ params }: { params: Promise<{ slug: string }> }
                       {data.url}
                     </a>
                   ) : (
-                    <span className='text-red-300'>배포된 사이트가 없습니다.</span>
+                    <span className='text-red-300'>-</span>
                   )}
                 </div>
               </div>
