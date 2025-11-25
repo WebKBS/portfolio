@@ -4,7 +4,6 @@ import { contactEmail } from "@/actions/contact.action";
 import { useRouter } from "next/navigation";
 import { ChangeEvent, useActionState, useEffect, useState } from "react";
 import { z } from "zod";
-import FileField from "./FileField";
 import InputField from "./InputField";
 import SubmitButton from "./SubmitButton";
 
@@ -44,27 +43,27 @@ const ContactForm = () => {
     }
   }, [validateState, actionState?.success, router]);
 
-  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { files } = e.target;
-    const file = files && files.length ? files[0] : null;
-
-    if (file) {
-      if (
-        // 이미지 및 pdf 파일만 허용
-        !(file.type.match(/image.*/) || file.type.match(/application\/pdf/))
-      ) {
-        e.target.value = "";
-        alert("파일 형식은 image, PDF만 가능합니다.");
-        return;
-      }
-      if (file.size > 2097152) {
-        // 2MB 이상 파일은 허용하지 않음
-        e.target.value = "";
-        alert("파일 크기는 2MB 이하여야 합니다.");
-        return;
-      }
-    }
-  };
+  // const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+  //   const { files } = e.target;
+  //   const file = files && files.length ? files[0] : null;
+  //
+  //   if (file) {
+  //     if (
+  //       // 이미지 및 pdf 파일만 허용
+  //       !(file.type.match(/image.*/) || file.type.match(/application\/pdf/))
+  //     ) {
+  //       e.target.value = "";
+  //       alert("파일 형식은 image, PDF만 가능합니다.");
+  //       return;
+  //     }
+  //     if (file.size > 2097152) {
+  //       // 2MB 이상 파일은 허용하지 않음
+  //       e.target.value = "";
+  //       alert("파일 크기는 2MB 이하여야 합니다.");
+  //       return;
+  //     }
+  //   }
+  // };
   const validateField = (fieldName: string, value: string) => {
     let isValid = false;
     switch (fieldName) {
@@ -78,7 +77,7 @@ const ContactForm = () => {
         isValid = z.string().min(10).max(500).safeParse(value).success;
         break;
       case "email":
-        isValid = z.string().email().safeParse(value).success;
+        isValid = z.email().safeParse(value).success;
         break;
       default:
         break;
@@ -138,7 +137,7 @@ const ContactForm = () => {
         inputValue={inputValue.message}
         textarea={true}
       />
-      <FileField handleFileChange={handleFileChange} />
+      {/*<FileField handleFileChange={handleFileChange} />*/}
 
       <InputField
         label="이메일"

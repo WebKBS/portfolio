@@ -16,7 +16,7 @@ const schema = z.object({
     .string()
     .min(10, { message: "메시지는 10자 이상이어야 합니다." })
     .max(500, { message: "메시지는 500자 이하여야 합니다." }),
-  email: z.string().email({ message: "올바른 이메일 주소를 입력해주세요." }),
+  email: z.email({ message: "올바른 이메일 주소를 입력해주세요." }),
 });
 
 export const contactEmail = async (prevState: any, formData: FormData) => {
@@ -67,7 +67,7 @@ export const contactEmail = async (prevState: any, formData: FormData) => {
       return {
         success: false,
         message: "전송에 실패하였습니다.",
-        error: error.errors,
+        error: error.issues,
       };
     }
   }

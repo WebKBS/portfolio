@@ -6,6 +6,7 @@
 .macBox {
   position: relative;
   margin-bottom: 3rem;
+  flex:1;
 }
 .macMockup,
 .iphoneMockup {
@@ -36,6 +37,7 @@
 .iphoneBox {
   position: relative;
   margin-bottom: 1rem;
+  flex:1;
 }
 
 .iphoneImageBox {
