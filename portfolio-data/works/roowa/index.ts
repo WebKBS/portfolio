@@ -12,7 +12,7 @@ export const roowaWorks: IWorks[] = [
     title: '남해독일마을 리뉴얼',
     description: '남해문화관광재단 주최 남해독일마을 홍보 웹사이트 개발',
     thumbnail: namhaeImages.thumbnail,
-    image: namhaeImages.desktopImage,
+    desktopImage: namhaeImages.desktopImage,
     mobileImage: namhaeImages.mobileImage,
     bannerImage: namhaeImages.bannerImage,
     url: 'https://german-village.kr/',
@@ -65,7 +65,7 @@ export const roowaWorks: IWorks[] = [
     description:
       'Notion 데이테이스를 만들고 Notion API를 사용하여 데이터를 가져와서 보여주는 기업 웹사이트입니다.',
     thumbnail: roowaintImages.thumbnail,
-    image: roowaintImages.desktopImage,
+    desktopImage: roowaintImages.desktopImage,
     mobileImage: roowaintImages.mobileImage,
     bannerImage: roowaintImages.bannerImage,
     url: 'https://roowaint.kr',
@@ -127,7 +127,7 @@ export const roowaWorks: IWorks[] = [
     description:
       '기존 웹사이트를 리뉴얼하고 Notion 데이터 베이스를 활용하여 제작한 기업 웹사이트입니다.',
     thumbnail: roowaImages.thumbnail,
-    image: roowaImages.desktopImage,
+    desktopImage: roowaImages.desktopImage,
     mobileImage: roowaImages.mobileImage,
     bannerImage: roowaImages.bannerImage,
     url: 'https://roowa.kr',
