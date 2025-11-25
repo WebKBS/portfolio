@@ -7,7 +7,6 @@ import Preview from '../../../containers/works/Preview';
 import StackItem from '../../../containers/works/StackItem';
 import GalleryButton from '@/components/Buttons/GalleryButton';
 import Mockup from '@/components/Mockup/MockupAnimation';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 
 const WorksDetailPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
@@ -104,7 +103,7 @@ const WorksDetailPage = async ({ params }: { params: Promise<{ slug: string }> }
                   <span>{data.contribution}</span>
                 </div>
                 <div className='mb-2 text-sm'>
-                  <span className='text-muted-foreground mr-2'>배포:</span>
+                  <span className='text-muted-foreground mr-2'>URL:</span>
                   {hasUrl ? (
                     <a className='text-green-500' href={data.url!} target='_blank' rel='noreferrer'>
                       {data.url}
@@ -115,18 +114,18 @@ const WorksDetailPage = async ({ params }: { params: Promise<{ slug: string }> }
                 </div>
               </div>
 
-              {hasTags && (
-                <div className='mb-6 rounded-lg border p-5'>
-                  <h3 className='mb-3 text-lg font-semibold'>태그</h3>
-                  <ul className='flex flex-wrap gap-2'>
-                    {data.tags.map((tag, idx) => (
-                      <li key={idx}>
-                        <Badge>{tag}</Badge>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+              {/*{hasTags && (*/}
+              {/*  <div className='mb-6 rounded-lg border p-5'>*/}
+              {/*    <h3 className='mb-3 text-lg font-semibold'>태그</h3>*/}
+              {/*    <ul className='flex flex-wrap gap-2'>*/}
+              {/*      {data.tags.map((tag, idx) => (*/}
+              {/*        <li key={idx}>*/}
+              {/*          <Badge>{tag}</Badge>*/}
+              {/*        </li>*/}
+              {/*      ))}*/}
+              {/*    </ul>*/}
+              {/*  </div>*/}
+              {/*)}*/}
 
               {hasStacks && (
                 <div className='rounded-lg border p-5'>

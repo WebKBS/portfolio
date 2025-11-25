@@ -104,7 +104,7 @@ const WorksDetailPage = async ({ params }: { params: Promise<{ slug: string }> }
                   <span>{data.contribution}</span>
                 </div>
                 <div className='mb-2 text-sm'>
-                  <span className='text-muted-foreground mr-2'>배포:</span>
+                  <span className='text-muted-foreground mr-2'>URL:</span>
                   {hasUrl ? (
                     <a className='text-green-500' href={data.url!} target='_blank' rel='noreferrer'>
                       {data.url}
