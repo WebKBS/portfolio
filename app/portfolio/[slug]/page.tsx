@@ -49,7 +49,7 @@ const WorksDetailPage = async ({ params }: { params: Promise<{ slug: string }> }
                 </Button>
               ) : (
                 <Button variant='secondary' disabled>
-                  배포 준비중
+                  비공개
                 </Button>
               )}
               <GalleryButton />
