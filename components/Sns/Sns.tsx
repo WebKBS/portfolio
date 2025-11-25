@@ -4,7 +4,7 @@ import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { sns } from './Sns-data';
+import { sns } from '../../constants/Sns-data';
 
 const Sns = ({ className }: { className: string }) => {
   const { theme } = useTheme();
@@ -18,7 +18,7 @@ const Sns = ({ className }: { className: string }) => {
             ...item,
             icon: item.icon,
           };
-        })
+        }),
       );
     } else {
       setIcon(
@@ -27,7 +27,7 @@ const Sns = ({ className }: { className: string }) => {
             ...item,
             icon: item.iconBlack,
           };
-        })
+        }),
       );
     }
   }, [theme]);
@@ -36,13 +36,13 @@ const Sns = ({ className }: { className: string }) => {
     <ul className={className}>
       {sns.map((item, index) => (
         <li key={index} title={item.title}>
-          <Link href={item.link} target="_blank">
+          <Link href={item.link} target='_blank'>
             <Image
               src={icon[index].icon}
               alt={item.title}
               width={36}
               height={36}
-              className="rounded-md p-1 flex items-center dark:bg-gray-800 bg-gray-100"
+              className='flex items-center rounded-md bg-gray-100 p-1 dark:bg-gray-800'
             />
           </Link>
         </li>

@@ -8,8 +8,8 @@ export interface BestProject {
   title: string;
   description: string;
   period: string;
-  desktopImage: StaticImageData | string;
-  mobileImage: StaticImageData | string;
+  desktopImage: StaticImageData | string | null;
+  mobileImage: StaticImageData | string | null;
   url: string;
   detailUrl: string;
   skills: StaticImageData[];

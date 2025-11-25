@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { useMenuToggle } from "@/store/commen-store";
-import Link from "next/link";
-import { navigationData } from "./Navi-data";
+import { useMenuToggle } from '@/store/commen-store';
+import Link from 'next/link';
+import { navigationData } from '@/constants/Navi-data';
 
 const Navi = ({ className }: { className: string }) => {
   const { setToggleMenu } = useMenuToggle();

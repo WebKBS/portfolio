@@ -2,8 +2,8 @@ import React from 'react';
 import { getImageProps, ImageProps, StaticImageData } from 'next/image';
 
 interface IResponsiveImage extends Omit<ImageProps, 'src'> {
-  desktop: StaticImageData | string;
-  mobile: StaticImageData | string;
+  desktop: StaticImageData | string | null;
+  mobile: StaticImageData | string | null;
 }
 
 const ResponsiveImage = ({
@@ -17,35 +17,36 @@ const ResponsiveImage = ({
   placeholder,
   className,
 }: IResponsiveImage) => {
+  // 둘 다 없으면 렌더링 불가
+  if (!desktop && !mobile) return null;
+
   const commonProps = {
-    alt: alt,
+    alt,
     sizes: '100vw',
-    quality: quality,
-    priority: priority,
-    fill: fill,
+    quality,
+    priority,
+    fill,
     loading,
     placeholder,
   };
 
-  const {
-    props: { srcSet: desktopSrcSet },
-  } = getImageProps({
-    ...commonProps,
-    src: desktop,
-  });
+  // desktop props
+  const desktopProps = desktop ? getImageProps({ ...commonProps, src: desktop }) : null;
 
-  const {
-    props: { srcSet: mobileSrcSet, ...imgProps },
-  } = getImageProps({
-    ...commonProps,
-    src: mobile,
-  });
+  // mobile props
+  const mobileProps = mobile ? getImageProps({ ...commonProps, src: mobile }) : null;
+
+  const desktopSrcSet = desktopProps?.props.srcSet;
+  const mobileSrcSet = mobileProps?.props.srcSet;
+  const imgProps = mobileProps?.props ?? desktopProps?.props;
 
   return (
     <picture>
-      <source media='(min-width: 1240px)' srcSet={desktopSrcSet} />
-      <source srcSet={mobileSrcSet} />
-      <img {...imgProps} srcSet={mobileSrcSet} alt={alt} className={className} />
+      {desktopSrcSet && <source media='(min-width: 1240px)' srcSet={desktopSrcSet} />}
+
+      {mobileSrcSet && <source srcSet={mobileSrcSet} />}
+
+      <img {...imgProps} alt={alt} className={className} srcSet={mobileSrcSet || desktopSrcSet} />
     </picture>
   );
 };
