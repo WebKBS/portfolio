@@ -1,7 +1,7 @@
-import macMockup from "@/public/images/mockup/mac.png";
-import Image, { StaticImageData } from "next/image";
-import Loading from "../Loading/LoadingSpinner";
-import styles from "./MacMockup.module.css";
+import macMockup from '@/public/images/mockup/mac.png';
+import Image, { StaticImageData } from 'next/image';
+import Loading from '../Loading/LoadingSpinner';
+import styles from './MacMockup.module.css';
 
 interface MacMockupProps {
   src: StaticImageData | string;
@@ -15,9 +15,10 @@ const MacMockup = ({ src, title }: MacMockupProps) => {
         width={400}
         height={400}
         src={macMockup}
-        alt="맥북 목업"
+        alt='맥북 목업'
         className={styles.macMockup}
         priority
+        quality={100}
       />
       <div className={styles.macImageBox}>
         <Loading />
@@ -27,7 +28,7 @@ const MacMockup = ({ src, title }: MacMockupProps) => {
           src={src}
           alt={title}
           className={styles.macImage}
-          loading="lazy"
+          loading='lazy'
         />
       </div>
     </div>

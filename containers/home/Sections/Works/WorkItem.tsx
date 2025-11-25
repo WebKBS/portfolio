@@ -31,6 +31,7 @@ const WorkItem = ({ work, isPortfolio }: { work: IWorks; isPortfolio?: boolean }
             src={work.thumbnail}
             alt={work.title}
             fill
+            sizes={'33vw'}
             className='object-cover object-top'
             quality={100}
             placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(100, 100))}`}
