@@ -1,6 +1,7 @@
-import { Button, buttonVariants } from "@/components/ui/button";
-import { useRouterModalToggle } from "@/store/modal-store";
-import { useRouter } from "next/navigation";
+import { Button, buttonVariants } from '@/components/ui/button';
+import { useRouterModalToggle } from '@/store/modal-store';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const ButtonAction = ({ slug }: { slug: string }) => {
   const router = useRouter();
@@ -12,19 +13,20 @@ const ButtonAction = ({ slug }: { slug: string }) => {
   };
 
   return (
-    <div className="mx-auto flex w-full max-w-xs gap-2 bg-background p-3 md:ml-auto md:mr-0">
-      <Button className="flex-1" variant="outline" onClick={closeHandler}>
+    <div className='bg-background mx-auto flex w-full max-w-xs gap-2 p-3 md:mr-0 md:ml-auto'>
+      <Button className='flex-1' variant='outline' onClick={closeHandler}>
         닫기
       </Button>
-      <a
+      <Link
         className={buttonVariants({
-          variant: "secondary",
-          className: "flex-1",
+          variant: 'secondary',
+          className: 'flex-1',
         })}
-        href={`/works/${slug}`}
+        onClick={() => setRouterModalState(false)}
+        href={`/portfolio/${slug}`}
       >
         자세히 보기
-      </a>
+      </Link>
     </div>
   );
 };
